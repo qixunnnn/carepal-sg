@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57327B0E25BA0D65005F946B /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57327B0D25BA0D65005F946B /* Lato-Regular.ttf */; };
+		57327B1225BA0DF1005F946B /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57327B1125BA0DF1005F946B /* Lato-Bold.ttf */; };
+		57327B1525BA0E47005F946B /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57327B1425BA0E47005F946B /* Lato-Italic.ttf */; };
+		57327B1825BA0E57005F946B /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57327B1725BA0E57005F946B /* Lato-Black.ttf */; };
+		5758C7C725BD51DA00282514 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7C625BD51DA00282514 /* QuizViewController.swift */; };
+		5758C7D025BD597000282514 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5758C7D225BD597000282514 /* Localizable.strings */; };
+		5758C7D625BD657400282514 /* TranslateText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7D525BD657400282514 /* TranslateText.swift */; };
+		5758C7DB25BD771F00282514 /* Quiz2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7DA25BD771F00282514 /* Quiz2ViewController.swift */; };
+		5758C7DE25BD797100282514 /* Quiz3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7DD25BD797100282514 /* Quiz3ViewController.swift */; };
+		5758C7E125BD798300282514 /* Quiz4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7E025BD798300282514 /* Quiz4ViewController.swift */; };
+		5758C7E425BD79C500282514 /* Quiz5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7E325BD79C500282514 /* Quiz5ViewController.swift */; };
+		5758C7EC25BD88BB00282514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758C7EB25BD88BB00282514 /* Assets.xcassets */; };
+		5758C7F025BD8C0A00282514 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7EF25BD8C0A00282514 /* CheckBox.swift */; };
+		575BA13325BF51D800895053 /* Qixun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575BA13225BF51D800895053 /* Qixun.storyboard */; };
+		575BA13725BF51ED00895053 /* Junwei.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575BA13625BF51ED00895053 /* Junwei.storyboard */; };
+		575BA1AC25C05C8200895053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575BA1AA25C05C8100895053 /* MapViewController.swift */; };
+		578F394C25A4232D00E93A55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F394B25A4232D00E93A55 /* AppDelegate.swift */; };
+		578F394E25A4232D00E93A55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F394D25A4232D00E93A55 /* SceneDelegate.swift */; };
+		578F395025A4232D00E93A55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F394F25A4232D00E93A55 /* ViewController.swift */; };
+		578F395325A4232D00E93A55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 578F395125A4232D00E93A55 /* Main.storyboard */; };
+		578F395825A4232F00E93A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 578F395625A4232F00E93A55 /* LaunchScreen.storyboard */; };
+		5796FADC25C0A98F009C533A /* GoogleMapsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */; };
+		9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720091325BE0773006C2D80 /* SignUpViewController.swift */; };
+		9720091725BE0917006C2D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9720091625BE0917006C2D80 /* GoogleService-Info.plist */; };
+		9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720092E25BE1B1D006C2D80 /* LoginViewController.swift */; };
+		973244F125AD5B2F00D30935 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973244F025AD5B2F00D30935 /* HomeViewController.swift */; };
+		979A433025BF2688001D5999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A432F25BF2688001D5999 /* User.swift */; };
+		979A433725BF36F3001D5999 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A433625BF36F3001D5999 /* CreateProfileViewController.swift */; };
+		97EE120025AE9738002972CA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE11FF25AE9738002972CA /* News.swift */; };
+		97EE120325AE9792002972CA /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE120225AE9792002972CA /* NewsRequest.swift */; };
+		BD93A0960FD137404A4CDCD3 /* Pods_carepal_sgapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FC7FD1D98F45BB4AB4613D /* Pods_carepal_sgapp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1978412A7DEE6971C58F0C9A /* Pods-carepal@sgapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carepal@sgapp.release.xcconfig"; path = "Target Support Files/Pods-carepal@sgapp/Pods-carepal@sgapp.release.xcconfig"; sourceTree = "<group>"; };
+		54D520B6B0FC74428209531D /* Pods-carepal@sgapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carepal@sgapp.debug.xcconfig"; path = "Target Support Files/Pods-carepal@sgapp/Pods-carepal@sgapp.debug.xcconfig"; sourceTree = "<group>"; };
+		57327B0D25BA0D65005F946B /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		57327B1125BA0DF1005F946B /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		57327B1425BA0E47005F946B /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		57327B1725BA0E57005F946B /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		5758C7C625BD51DA00282514 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		5758C7CA25BD575E00282514 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		5758C7CB25BD575E00282514 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5758C7D125BD597000282514 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5758C7D325BD597500282514 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5758C7D525BD657400282514 /* TranslateText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateText.swift; sourceTree = "<group>"; };
+		5758C7DA25BD771F00282514 /* Quiz2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz2ViewController.swift; sourceTree = "<group>"; };
+		5758C7DD25BD797100282514 /* Quiz3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz3ViewController.swift; sourceTree = "<group>"; };
+		5758C7E025BD798300282514 /* Quiz4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz4ViewController.swift; sourceTree = "<group>"; };
+		5758C7E325BD79C500282514 /* Quiz5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz5ViewController.swift; sourceTree = "<group>"; };
+		5758C7EB25BD88BB00282514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5758C7EF25BD8C0A00282514 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		575BA13225BF51D800895053 /* Qixun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Qixun.storyboard; sourceTree = "<group>"; };
+		575BA13625BF51ED00895053 /* Junwei.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Junwei.storyboard; sourceTree = "<group>"; };
+		575BA1AA25C05C8100895053 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		578F394825A4232D00E93A55 /* carepal@sgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carepal@sgapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		578F394B25A4232D00E93A55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		578F394D25A4232D00E93A55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		578F394F25A4232D00E93A55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		578F395225A4232D00E93A55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		578F395725A4232F00E93A55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		578F395925A4232F00E93A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsHelper.swift; sourceTree = "<group>"; };
+		9720091325BE0773006C2D80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9720091625BE0917006C2D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9720092E25BE1B1D006C2D80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		973244F025AD5B2F00D30935 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		979A432F25BF2688001D5999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		979A433625BF36F3001D5999 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		97EE11FF25AE9738002972CA /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		97EE120225AE9792002972CA /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
+		E9FC7FD1D98F45BB4AB4613D /* Pods_carepal_sgapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carepal_sgapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		578F394525A4232D00E93A55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD93A0960FD137404A4CDCD3 /* Pods_carepal_sgapp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57327B1025BA0DDA005F946B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				57327B1725BA0E57005F946B /* Lato-Black.ttf */,
+				57327B1425BA0E47005F946B /* Lato-Italic.ttf */,
+				57327B1125BA0DF1005F946B /* Lato-Bold.ttf */,
+				57327B0D25BA0D65005F946B /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5758C7C125BD50CD00282514 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				5758C7C625BD51DA00282514 /* QuizViewController.swift */,
+				5758C7DA25BD771F00282514 /* Quiz2ViewController.swift */,
+				5758C7DD25BD797100282514 /* Quiz3ViewController.swift */,
+				5758C7E025BD798300282514 /* Quiz4ViewController.swift */,
+				5758C7E325BD79C500282514 /* Quiz5ViewController.swift */,
+				5758C7EF25BD8C0A00282514 /* CheckBox.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		578F393F25A4232D00E93A55 = {
+			isa = PBXGroup;
+			children = (
+				5758C7D225BD597000282514 /* Localizable.strings */,
+				578F394A25A4232D00E93A55 /* carepal@sgapp */,
+				578F394925A4232D00E93A55 /* Products */,
+				B033976CB89E2F7F56178B48 /* Pods */,
+				916A7A3992794399AA176A30 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		578F394925A4232D00E93A55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				578F394825A4232D00E93A55 /* carepal@sgapp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578F394A25A4232D00E93A55 /* carepal@sgapp */ = {
+			isa = PBXGroup;
+			children = (
+				575BA1AA25C05C8100895053 /* MapViewController.swift */,
+				5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */,
+				575BA13225BF51D800895053 /* Qixun.storyboard */,
+				575BA13625BF51ED00895053 /* Junwei.storyboard */,
+				5758C7C125BD50CD00282514 /* Quiz */,
+				57327B1025BA0DDA005F946B /* Fonts */,
+				578F394B25A4232D00E93A55 /* AppDelegate.swift */,
+				578F394D25A4232D00E93A55 /* SceneDelegate.swift */,
+				578F394F25A4232D00E93A55 /* ViewController.swift */,
+				578F395125A4232D00E93A55 /* Main.storyboard */,
+				578F395625A4232F00E93A55 /* LaunchScreen.storyboard */,
+				578F395925A4232F00E93A55 /* Info.plist */,
+				973244F025AD5B2F00D30935 /* HomeViewController.swift */,
+				97EE11FF25AE9738002972CA /* News.swift */,
+				97EE120225AE9792002972CA /* NewsRequest.swift */,
+				9720091625BE0917006C2D80 /* GoogleService-Info.plist */,
+				5758C7EB25BD88BB00282514 /* Assets.xcassets */,
+				5758C7D525BD657400282514 /* TranslateText.swift */,
+				9720091325BE0773006C2D80 /* SignUpViewController.swift */,
+				9720092E25BE1B1D006C2D80 /* LoginViewController.swift */,
+				979A432F25BF2688001D5999 /* User.swift */,
+				979A433625BF36F3001D5999 /* CreateProfileViewController.swift */,
+			);
+			path = "carepal@sgapp";
+			sourceTree = "<group>";
+		};
+		916A7A3992794399AA176A30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9FC7FD1D98F45BB4AB4613D /* Pods_carepal_sgapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B033976CB89E2F7F56178B48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54D520B6B0FC74428209531D /* Pods-carepal@sgapp.debug.xcconfig */,
+				1978412A7DEE6971C58F0C9A /* Pods-carepal@sgapp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		578F394725A4232D00E93A55 /* carepal@sgapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 578F395C25A4232F00E93A55 /* Build configuration list for PBXNativeTarget "carepal@sgapp" */;
+			buildPhases = (
+				DF13143A1AB51E19B6B4B028 /* [CP] Check Pods Manifest.lock */,
+				578F394425A4232D00E93A55 /* Sources */,
+				578F394525A4232D00E93A55 /* Frameworks */,
+				578F394625A4232D00E93A55 /* Resources */,
+				0F283504EBE49528CDE0029A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "carepal@sgapp";
+			productName = "carepal@sgapp";
+			productReference = 578F394825A4232D00E93A55 /* carepal@sgapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		578F394025A4232D00E93A55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					578F394725A4232D00E93A55 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 578F394325A4232D00E93A55 /* Build configuration list for PBXProject "carepal@sgapp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 578F393F25A4232D00E93A55;
+			productRefGroup = 578F394925A4232D00E93A55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				578F394725A4232D00E93A55 /* carepal@sgapp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		578F394625A4232D00E93A55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57327B1825BA0E57005F946B /* Lato-Black.ttf in Resources */,
+				578F395825A4232F00E93A55 /* LaunchScreen.storyboard in Resources */,
+				9720091725BE0917006C2D80 /* GoogleService-Info.plist in Resources */,
+				57327B1225BA0DF1005F946B /* Lato-Bold.ttf in Resources */,
+				578F395325A4232D00E93A55 /* Main.storyboard in Resources */,
+				5758C7D025BD597000282514 /* Localizable.strings in Resources */,
+				575BA13725BF51ED00895053 /* Junwei.storyboard in Resources */,
+				57327B1525BA0E47005F946B /* Lato-Italic.ttf in Resources */,
+				575BA13325BF51D800895053 /* Qixun.storyboard in Resources */,
+				5758C7EC25BD88BB00282514 /* Assets.xcassets in Resources */,
+				57327B0E25BA0D65005F946B /* Lato-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F283504EBE49528CDE0029A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carepal@sgapp/Pods-carepal@sgapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carepal@sgapp/Pods-carepal@sgapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carepal@sgapp/Pods-carepal@sgapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF13143A1AB51E19B6B4B028 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carepal@sgapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		578F394425A4232D00E93A55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97EE120325AE9792002972CA /* NewsRequest.swift in Sources */,
+				5758C7E425BD79C500282514 /* Quiz5ViewController.swift in Sources */,
+				5796FADC25C0A98F009C533A /* GoogleMapsHelper.swift in Sources */,
+				5758C7E125BD798300282514 /* Quiz4ViewController.swift in Sources */,
+				9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */,
+				979A433025BF2688001D5999 /* User.swift in Sources */,
+				5758C7DE25BD797100282514 /* Quiz3ViewController.swift in Sources */,
+				5758C7D625BD657400282514 /* TranslateText.swift in Sources */,
+				578F395025A4232D00E93A55 /* ViewController.swift in Sources */,
+				5758C7C725BD51DA00282514 /* QuizViewController.swift in Sources */,
+				578F394C25A4232D00E93A55 /* AppDelegate.swift in Sources */,
+				9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */,
+				578F394E25A4232D00E93A55 /* SceneDelegate.swift in Sources */,
+				97EE120025AE9738002972CA /* News.swift in Sources */,
+				575BA1AC25C05C8200895053 /* MapViewController.swift in Sources */,
+				973244F125AD5B2F00D30935 /* HomeViewController.swift in Sources */,
+				979A433725BF36F3001D5999 /* CreateProfileViewController.swift in Sources */,
+				5758C7F025BD8C0A00282514 /* CheckBox.swift in Sources */,
+				5758C7DB25BD771F00282514 /* Quiz2ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5758C7D225BD597000282514 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5758C7D125BD597000282514 /* en */,
+				5758C7D325BD597500282514 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		578F395125A4232D00E93A55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				578F395225A4232D00E93A55 /* Base */,
+				5758C7CA25BD575E00282514 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		578F395625A4232F00E93A55 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				578F395725A4232F00E93A55 /* Base */,
+				5758C7CB25BD575E00282514 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		578F395A25A4232F00E93A55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		578F395B25A4232F00E93A55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		578F395D25A4232F00E93A55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54D520B6B0FC74428209531D /* Pods-carepal@sgapp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 888MLP86M8;
+				INFOPLIST_FILE = "carepal@sgapp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sg.mad2.carepal-sgapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		578F395E25A4232F00E93A55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1978412A7DEE6971C58F0C9A /* Pods-carepal@sgapp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 888MLP86M8;
+				INFOPLIST_FILE = "carepal@sgapp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sg.mad2.carepal-sgapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		578F394325A4232D00E93A55 /* Build configuration list for PBXProject "carepal@sgapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				578F395A25A4232F00E93A55 /* Debug */,
+				578F395B25A4232F00E93A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		578F395C25A4232F00E93A55 /* Build configuration list for PBXNativeTarget "carepal@sgapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				578F395D25A4232F00E93A55 /* Debug */,
+				578F395E25A4232F00E93A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 578F394025A4232D00E93A55 /* Project object */;
+}

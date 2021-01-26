@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ig4-2m-dUm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Eu4-ZU-wWW">
+            <objects>
+                <viewController id="FlA-R9-f2b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7U1-na-5cS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_seniors" translatesAutoresizingMaskIntoConstraints="NO" id="FLm-Mg-pLF">
+                                <rect key="frame" x="7" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account? Sign up here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQA-vh-3jZ">
+                                <rect key="frame" x="82" y="833" width="265" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-lA-Vsu">
+                                <rect key="frame" x="52" y="763" width="311" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61788150379999995" green="0.19405014800000001" blue="0.12061369969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="Sign In with Singpass">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dNc-rB-Nb8" kind="presentation" modalTransitionStyle="crossDissolve" id="9fY-Io-Caj"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="8sg-Oh-Dat">
+                                <rect key="frame" x="88" y="286" width="238" height="258"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SGV-8n-twn"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qe8-bO-Kes"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="008-D5-DhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2632" y="157"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="Yo3-ZN-fWk">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="dNc-rB-Nb8" customClass="QuizViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAF-w5-x1T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="language" translatesAutoresizingMaskIntoConstraints="NO" id="KVQ-0h-nUD">
+                                <rect key="frame" x="0.0" y="0.0" width="449" height="911"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First time here?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw5-6r-3lU">
+                                <rect key="frame" x="135.5" y="80" width="143" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us answer a few questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dM-HN-3SP">
+                                <rect key="frame" x="37" y="111.5" width="340.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your preferred" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfO-ZP-dAs">
+                                <rect key="frame" x="45" y="220" width="327" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="language?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8x-zD-a9d">
+                                <rect key="frame" x="137" y="264" width="143" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0C9-Mv-F6y">
+                                <rect key="frame" x="186" y="126" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoo-Kg-CjR">
+                                <rect key="frame" x="70" y="372" width="277" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="English">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="EngBtn:" destination="dNc-rB-Nb8" eventType="touchUpInside" id="0JD-0K-0o5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YS6-ap-xs2">
+                                <rect key="frame" x="69" y="460" width="277" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="繁体中文">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ChiBtn:" destination="dNc-rB-Nb8" eventType="touchUpInside" id="2Hg-vH-FRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-Yh-BZK">
+                                <rect key="frame" x="69" y="548" width="277" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="Bahasa Melayu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-Zh-hXR">
+                                <rect key="frame" x="69" y="634" width="277" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="தமிழ்">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oVK-HA-OXb">
+                                <rect key="frame" x="69" y="819" width="277" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqg-qy-lv9">
+                                <rect key="frame" x="69" y="746" width="277" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66882127520000001" green="0.14685601000000001" blue="0.066593728960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="q1nextBtn:" destination="dNc-rB-Nb8" eventType="touchUpInside" id="QqX-Ik-DPz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG0-Io-vu1">
+                                <rect key="frame" x="195" y="824" width="27" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fKJ-uJ-kSt"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9dM-HN-3SP" firstAttribute="top" secondItem="Gw5-6r-3lU" secondAttribute="bottom" constant="6" id="HT6-7i-Ftq"/>
+                            <constraint firstItem="Gw5-6r-3lU" firstAttribute="top" secondItem="fKJ-uJ-kSt" secondAttribute="top" constant="36" id="dw2-cE-CKf"/>
+                            <constraint firstItem="9dM-HN-3SP" firstAttribute="centerX" secondItem="aAF-w5-x1T" secondAttribute="centerX" id="luh-X9-auc"/>
+                            <constraint firstItem="Gw5-6r-3lU" firstAttribute="centerX" secondItem="aAF-w5-x1T" secondAttribute="centerX" id="rwO-9Q-EuQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RT7-ce-dht"/>
+                    <connections>
+                        <outlet property="FirstTimeHereTF" destination="Gw5-6r-3lU" id="4rq-W7-Zs0"/>
+                        <outlet property="HelpUsAnsTF" destination="9dM-HN-3SP" id="sFf-iJ-GJm"/>
+                        <outlet property="PreferredTF" destination="gfO-ZP-dAs" id="jac-8O-4aZ"/>
+                        <outlet property="languageTF" destination="a8x-zD-a9d" id="dOA-JA-qTR"/>
+                        <outlet property="nextBtn" destination="kqg-qy-lv9" id="W2R-Bc-B5j"/>
+                        <outlet property="q1ProgressiveView" destination="oVK-HA-OXb" id="isR-az-K8S"/>
+                        <segue destination="Ouf-HW-8ks" kind="presentation" identifier="q1" modalTransitionStyle="crossDissolve" id="TQb-8z-Tox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ir-Lm-hkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1884" y="157"/>
+        </scene>
+        <!--Quiz2 View Controller-->
+        <scene sceneID="HDe-37-6R1">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ouf-HW-8ks" customClass="Quiz2ViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TqC-nw-rhR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.23000000417232513" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="zy5-IA-d0y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have any special" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-oW-fMi">
+                                <rect key="frame" x="38" y="126" width="338" height="41"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DBl-KE-LSl">
+                                <rect key="frame" x="68.5" y="817" width="277" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="Ulj-Ei-Bhg"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-Q8-whb">
+                                <rect key="frame" x="68.5" y="744" width="277" height="48"/>
+                                <color key="backgroundColor" red="0.61788150379999995" green="0.19405014800000001" blue="0.12061369969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="HC5-j3-Zsn"/>
+                                    <constraint firstAttribute="width" constant="277" id="b40-7r-tZi"/>
+                                    <constraint firstAttribute="height" constant="48" id="nbr-oQ-BfT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="NextBtn:" destination="Ouf-HW-8ks" eventType="touchUpInside" id="Te6-7f-OK0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugN-wx-YYF">
+                                <rect key="frame" x="190.5" y="826" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dietary habits?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1i-qo-2LR">
+                                <rect key="frame" x="101.5" y="175" width="211.5" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="DcS-en-t3I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-th-gQ0">
+                                <rect key="frame" x="89" y="273" width="236" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Cbq-SZ-FLV">
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z9-Fl-4FZ" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoY-IJ-UBP">
+                                                <rect key="frame" x="70" y="0.0" width="115" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-A7-u7Q">
+                                        <rect key="frame" x="0.0" y="80" width="135.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8V-5k-9UB" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-qE-FjP">
+                                                <rect key="frame" x="70" y="0.0" width="65.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Gk5-mT-Q9j">
+                                        <rect key="frame" x="0.0" y="160" width="225.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1l-72-l4O" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Pork(Halal)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-ga-Z2M">
+                                                <rect key="frame" x="70" y="0.0" width="155.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="GhJ-IN-gA1">
+                                        <rect key="frame" x="0.0" y="240" width="155" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBY-oy-FB9" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Beef" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8m-Af-CcT">
+                                                <rect key="frame" x="70" y="0.0" width="85" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-m4-5yv">
+                                        <rect key="frame" x="0.0" y="320" width="236" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb0-kU-Nr1">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-4I-IDI">
+                                                <rect key="frame" x="70" y="0.0" width="166" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr9-bH-MoE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-49-sD0">
+                                                        <rect key="frame" x="85.5" y="0.0" width="80.5" height="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ne-y0-HNV">
+                                <rect key="frame" x="38" y="61" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dNc-rB-Nb8" kind="presentation" modalTransitionStyle="crossDissolve" id="zFG-Zq-iFV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aek-NN-l5F"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8ne-y0-HNV" firstAttribute="leading" secondItem="Aek-NN-l5F" secondAttribute="leading" constant="38" id="0mB-pO-thn"/>
+                            <constraint firstAttribute="bottom" secondItem="zy5-IA-d0y" secondAttribute="bottom" id="8NE-H3-4gC"/>
+                            <constraint firstItem="XuU-Q8-whb" firstAttribute="top" secondItem="TdL-th-gQ0" secondAttribute="bottom" constant="121" id="98j-Gl-dwv"/>
+                            <constraint firstItem="TdL-th-gQ0" firstAttribute="centerX" secondItem="TqC-nw-rhR" secondAttribute="centerX" id="9XO-EZ-GJr"/>
+                            <constraint firstItem="ugN-wx-YYF" firstAttribute="top" secondItem="DBl-KE-LSl" secondAttribute="bottom" constant="5" id="FW0-GW-e4l"/>
+                            <constraint firstItem="DBl-KE-LSl" firstAttribute="top" secondItem="XuU-Q8-whb" secondAttribute="bottom" constant="25" id="G2h-QG-aBw"/>
+                            <constraint firstItem="Owa-oW-fMi" firstAttribute="top" secondItem="Aek-NN-l5F" secondAttribute="top" constant="82" id="N9T-Th-7AQ"/>
+                            <constraint firstItem="8ne-y0-HNV" firstAttribute="top" secondItem="Aek-NN-l5F" secondAttribute="top" constant="17" id="NLP-sX-fIg"/>
+                            <constraint firstItem="Owa-oW-fMi" firstAttribute="centerX" secondItem="TqC-nw-rhR" secondAttribute="centerX" id="R56-Jj-K4e"/>
+                            <constraint firstItem="K1i-qo-2LR" firstAttribute="top" secondItem="Owa-oW-fMi" secondAttribute="bottom" constant="8" id="Rba-u7-EKr"/>
+                            <constraint firstItem="zy5-IA-d0y" firstAttribute="top" secondItem="TqC-nw-rhR" secondAttribute="top" id="V43-Ka-6OV"/>
+                            <constraint firstItem="zy5-IA-d0y" firstAttribute="leading" secondItem="Aek-NN-l5F" secondAttribute="leading" id="Vt3-sV-FES"/>
+                            <constraint firstItem="TdL-th-gQ0" firstAttribute="centerY" secondItem="zy5-IA-d0y" secondAttribute="centerY" id="emm-UL-HsP"/>
+                            <constraint firstItem="TdL-th-gQ0" firstAttribute="centerX" secondItem="DBl-KE-LSl" secondAttribute="centerX" id="nKb-8M-7NH"/>
+                            <constraint firstItem="K1i-qo-2LR" firstAttribute="centerX" secondItem="TqC-nw-rhR" secondAttribute="centerX" id="rmv-ki-fXD"/>
+                            <constraint firstItem="TdL-th-gQ0" firstAttribute="top" secondItem="K1i-qo-2LR" secondAttribute="bottom" constant="59" id="vti-nn-kz2"/>
+                            <constraint firstItem="DBl-KE-LSl" firstAttribute="centerX" secondItem="TqC-nw-rhR" secondAttribute="centerX" id="w2p-4w-shd"/>
+                            <constraint firstItem="zy5-IA-d0y" firstAttribute="trailing" secondItem="Aek-NN-l5F" secondAttribute="trailing" id="wrv-oF-EOh"/>
+                            <constraint firstItem="TdL-th-gQ0" firstAttribute="centerX" secondItem="zy5-IA-d0y" secondAttribute="centerX" id="xJ3-1C-Cbj"/>
+                            <constraint firstItem="XuU-Q8-whb" firstAttribute="centerX" secondItem="TqC-nw-rhR" secondAttribute="centerX" id="z2N-FV-VaB"/>
+                            <constraint firstItem="Owa-oW-fMi" firstAttribute="centerX" secondItem="ugN-wx-YYF" secondAttribute="centerX" id="zkO-W1-6d6"/>
+                            <constraint firstItem="TdL-th-gQ0" firstAttribute="centerY" secondItem="TqC-nw-rhR" secondAttribute="centerY" id="ztu-ho-p1j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="70a-Fa-uEc"/>
+                    <connections>
+                        <outlet property="backBtn" destination="8ne-y0-HNV" id="6Lz-zB-vDk"/>
+                        <outlet property="beefBtn" destination="rBY-oy-FB9" id="TL5-Sn-mBK"/>
+                        <outlet property="beefTF" destination="k8m-Af-CcT" id="qQQ-yy-DOl"/>
+                        <outlet property="dietaryTF" destination="K1i-qo-2LR" id="Hho-vV-zOu"/>
+                        <outlet property="nextBtn" destination="XuU-Q8-whb" id="rKZ-XS-lyN"/>
+                        <outlet property="porkBtn" destination="E1l-72-l4O" id="hvC-ok-Mb0"/>
+                        <outlet property="porkTF" destination="jDh-ga-Z2M" id="LR6-im-RO3"/>
+                        <outlet property="progressPV" destination="DBl-KE-LSl" id="J8Y-kc-lwY"/>
+                        <outlet property="specialTF" destination="Owa-oW-fMi" id="sdM-Q4-9q0"/>
+                        <outlet property="veganBtn" destination="n8V-5k-9UB" id="SPs-aZ-Y3E"/>
+                        <outlet property="veganTF" destination="c0N-qE-FjP" id="pLC-Qn-3AR"/>
+                        <outlet property="vegetarainBtn" destination="8Z9-Fl-4FZ" id="EwE-PY-p6A"/>
+                        <outlet property="vegetarainTF" destination="PoY-IJ-UBP" id="zfI-8B-6AG"/>
+                        <segue destination="buc-qG-AJb" kind="presentation" identifier="q2" modalTransitionStyle="crossDissolve" id="zQg-m3-7kF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uHM-gw-YEA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="157"/>
+        </scene>
+        <!--Quiz3 View Controller-->
+        <scene sceneID="TfN-2J-0Uh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="buc-qG-AJb" customClass="Quiz3ViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jRH-is-tOO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.23000000417232513" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="I71-q2-3eD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have food allergy?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YID-6K-zgf">
+                                <rect key="frame" x="36" y="126" width="342.5" height="36"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Di-z6-cgi">
+                                <rect key="frame" x="80" y="265" width="254.5" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-Ai-bwE">
+                                        <rect key="frame" x="0.0" y="0.0" width="251.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyl-9w-nbp" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dairy and lactose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwJ-12-Tmr">
+                                                <rect key="frame" x="70" y="0.0" width="181.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jve-hG-ndl">
+                                        <rect key="frame" x="0.0" y="80" width="228" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr7-gG-Cid" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fish &amp; Shellfish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxf-Q3-OBU">
+                                                <rect key="frame" x="70" y="0.0" width="158" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-jd-zTX">
+                                        <rect key="frame" x="0.0" y="160" width="254.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXK-WR-ml1" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuts and Peanuts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbV-RG-0fz">
+                                                <rect key="frame" x="70" y="0.0" width="184.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="LzQ-rI-Ysg">
+                                        <rect key="frame" x="0.0" y="240" width="143" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYZ-QJ-0oL" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gluton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFU-5l-Ie5">
+                                                <rect key="frame" x="70" y="0.0" width="73" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZN7-ey-tce">
+                                        <rect key="frame" x="0.0" y="320" width="236" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnY-oE-fmH">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UQt-T2-yG1">
+                                                <rect key="frame" x="70" y="0.0" width="166" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyK-FT-AQm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NXL-Ld-HOt">
+                                                        <rect key="frame" x="85.5" y="0.0" width="80.5" height="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cet-Sl-rWv">
+                                <rect key="frame" x="38" y="61" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ouf-HW-8ks" kind="presentation" modalTransitionStyle="crossDissolve" id="sv8-Z7-taK"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-Ca-sbB">
+                                <rect key="frame" x="68.5" y="816" width="277" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="eSJ-9N-fZa"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhX-u1-qrh">
+                                <rect key="frame" x="68.5" y="743" width="277" height="48"/>
+                                <color key="backgroundColor" red="0.61788150379999995" green="0.19405014800000001" blue="0.12061369969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="0vA-h3-x17"/>
+                                    <constraint firstAttribute="width" constant="277" id="ECr-j8-n1T"/>
+                                    <constraint firstAttribute="height" constant="48" id="c8Y-zD-bYQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="NextBtn:" destination="buc-qG-AJb" eventType="touchUpInside" id="evz-0n-OnM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhq-jH-BeH">
+                                <rect key="frame" x="190.5" y="825" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tTM-he-KvQ"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0Di-z6-cgi" firstAttribute="centerX" secondItem="jRH-is-tOO" secondAttribute="centerX" id="5UX-nd-J1g"/>
+                            <constraint firstItem="YID-6K-zgf" firstAttribute="top" secondItem="tTM-he-KvQ" secondAttribute="top" constant="82" id="GbP-XW-0og"/>
+                            <constraint firstItem="I71-q2-3eD" firstAttribute="top" secondItem="jRH-is-tOO" secondAttribute="top" id="JTr-LY-e3E"/>
+                            <constraint firstItem="I71-q2-3eD" firstAttribute="leading" secondItem="tTM-he-KvQ" secondAttribute="leading" id="LgC-jk-gaL"/>
+                            <constraint firstItem="0Di-z6-cgi" firstAttribute="centerX" secondItem="hTM-Ca-sbB" secondAttribute="centerX" id="Lms-nw-Wk3"/>
+                            <constraint firstItem="hTM-Ca-sbB" firstAttribute="top" secondItem="VhX-u1-qrh" secondAttribute="bottom" constant="25" id="OAW-Ue-PDu"/>
+                            <constraint firstItem="VhX-u1-qrh" firstAttribute="centerX" secondItem="jRH-is-tOO" secondAttribute="centerX" id="OPM-qB-uaw"/>
+                            <constraint firstItem="VhX-u1-qrh" firstAttribute="top" secondItem="0Di-z6-cgi" secondAttribute="bottom" constant="128" id="ORC-z1-QQD"/>
+                            <constraint firstItem="Lhq-jH-BeH" firstAttribute="centerX" secondItem="jRH-is-tOO" secondAttribute="centerX" id="QRD-nS-n6U"/>
+                            <constraint firstItem="Lhq-jH-BeH" firstAttribute="top" secondItem="hTM-Ca-sbB" secondAttribute="bottom" constant="5" id="UPr-D8-6Dk"/>
+                            <constraint firstItem="0Di-z6-cgi" firstAttribute="centerX" secondItem="I71-q2-3eD" secondAttribute="centerX" id="dVK-t3-udL"/>
+                            <constraint firstItem="0Di-z6-cgi" firstAttribute="centerY" secondItem="I71-q2-3eD" secondAttribute="centerY" constant="-8" id="heH-RK-3ph"/>
+                            <constraint firstAttribute="bottom" secondItem="I71-q2-3eD" secondAttribute="bottom" id="luB-4N-ZOG"/>
+                            <constraint firstItem="0Di-z6-cgi" firstAttribute="centerY" secondItem="jRH-is-tOO" secondAttribute="centerY" constant="-8" id="p9Y-A4-Mvt"/>
+                            <constraint firstItem="YID-6K-zgf" firstAttribute="centerX" secondItem="jRH-is-tOO" secondAttribute="centerX" id="pa7-KQ-oC6"/>
+                            <constraint firstItem="Cet-Sl-rWv" firstAttribute="top" secondItem="tTM-he-KvQ" secondAttribute="top" constant="17" id="tDg-7P-zEN"/>
+                            <constraint firstItem="hTM-Ca-sbB" firstAttribute="centerX" secondItem="jRH-is-tOO" secondAttribute="centerX" id="ufg-9e-UvO"/>
+                            <constraint firstItem="Cet-Sl-rWv" firstAttribute="leading" secondItem="tTM-he-KvQ" secondAttribute="leading" constant="38" id="zLj-bC-iTR"/>
+                            <constraint firstItem="I71-q2-3eD" firstAttribute="trailing" secondItem="tTM-he-KvQ" secondAttribute="trailing" id="zwR-5C-0Hh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QfD-P0-VOF"/>
+                    <connections>
+                        <outlet property="allergyTF" destination="YID-6K-zgf" id="5tJ-P4-ZAs"/>
+                        <outlet property="backBtn" destination="Cet-Sl-rWv" id="u5b-mB-tG8"/>
+                        <outlet property="dairyBtn" destination="Fyl-9w-nbp" id="IqH-DS-bch"/>
+                        <outlet property="dairyTF" destination="xwJ-12-Tmr" id="ss0-rn-gj9"/>
+                        <outlet property="fishBtn" destination="Wr7-gG-Cid" id="OE2-L1-SO0"/>
+                        <outlet property="fishTF" destination="Uxf-Q3-OBU" id="IpV-Tc-kbK"/>
+                        <outlet property="gluttonBtn" destination="pYZ-QJ-0oL" id="diu-RB-cJL"/>
+                        <outlet property="gluttonTF" destination="NFU-5l-Ie5" id="6Ve-5e-Ry3"/>
+                        <outlet property="nextBtn" destination="VhX-u1-qrh" id="cmc-pI-bsd"/>
+                        <outlet property="nutsBtn" destination="cXK-WR-ml1" id="tAP-Es-xLA"/>
+                        <outlet property="nutsTF" destination="DbV-RG-0fz" id="Mzt-32-hyC"/>
+                        <outlet property="progressPV" destination="hTM-Ca-sbB" id="Shq-UQ-XeZ"/>
+                        <segue destination="ZWn-eA-WV6" kind="presentation" identifier="q3" modalTransitionStyle="crossDissolve" id="dN0-uZ-76N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzV-Oi-MF8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500.00000000000006" y="156.69642857142856"/>
+        </scene>
+        <!--Quiz4 View Controller-->
+        <scene sceneID="yAb-YB-Ol9">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ZWn-eA-WV6" customClass="Quiz4ViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iec-lG-Oao">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.23000000417232513" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="bHq-iL-kmv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="condition?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW3-Uf-zLv">
+                                <rect key="frame" x="137" y="155" width="140.5" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Sc7-oM-ajs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have medical" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnp-9t-N29">
+                                <rect key="frame" x="69.5" y="118" width="275" height="36"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG4-kO-qW9">
+                                <rect key="frame" x="38" y="61" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="buc-qG-AJb" kind="presentation" modalTransitionStyle="crossDissolve" id="MPk-hI-aCk"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-3g-Rac">
+                                <rect key="frame" x="69" y="273" width="284.5" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8gL-eh-eKJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="247.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wc-Lx-DPd" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Cholesterol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFW-sr-69N">
+                                                <rect key="frame" x="70" y="0.0" width="177.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="UuI-v5-zAf">
+                                        <rect key="frame" x="0.0" y="80" width="284.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbY-BZ-xqM" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Blood Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68f-Yf-1sQ">
+                                                <rect key="frame" x="70" y="0.0" width="214.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="arD-bA-iiZ">
+                                        <rect key="frame" x="0.0" y="160" width="164.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAr-Fu-rsQ" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diabetes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-eg-m2E">
+                                                <rect key="frame" x="70" y="0.0" width="94.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="t4u-qY-VOw">
+                                        <rect key="frame" x="0.0" y="240" width="153" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGO-sg-OTY" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obesity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OA-YO-7NI">
+                                                <rect key="frame" x="70" y="0.0" width="83" height="30"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="St2-tC-G62">
+                                        <rect key="frame" x="0.0" y="320" width="236" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9l-c1-83J" customClass="CheckBox" customModule="carepal_sgapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="CheckBox">
+                                                    <color key="titleColor" red="0.97098754450000002" green="0.94468160410000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZMo-ap-kzD">
+                                                <rect key="frame" x="70" y="0.0" width="166" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-ns-v3c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTu-xF-PbR">
+                                                        <rect key="frame" x="85.5" y="0.0" width="80.5" height="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0gW-A0-GGr">
+                                <rect key="frame" x="67" y="815" width="277" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="FA6-TH-ngK"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-bJ-wTB">
+                                <rect key="frame" x="67" y="742" width="277" height="48"/>
+                                <color key="backgroundColor" red="0.61788150379999995" green="0.19405014800000001" blue="0.12061369969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="Ns4-3F-ObN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="Zvc-8w-F41"/>
+                                    <constraint firstAttribute="height" constant="48" id="oJ7-hL-lbK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="NextBtn:" destination="ZWn-eA-WV6" eventType="touchUpInside" id="SFZ-gE-Was"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60%" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuQ-eR-ZA5">
+                                <rect key="frame" x="189" y="824" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C2J-Kb-I1v"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RJ3-3g-Rac" firstAttribute="centerY" secondItem="iec-lG-Oao" secondAttribute="centerY" id="4Jp-kX-mXb"/>
+                            <constraint firstItem="bHq-iL-kmv" firstAttribute="top" secondItem="iec-lG-Oao" secondAttribute="top" id="4ac-d8-bsb"/>
+                            <constraint firstItem="RJ3-3g-Rac" firstAttribute="centerX" secondItem="iec-lG-Oao" secondAttribute="centerX" constant="4.25" id="76i-2P-1nq"/>
+                            <constraint firstItem="BuQ-eR-ZA5" firstAttribute="centerX" secondItem="iec-lG-Oao" secondAttribute="centerX" constant="-1.25" id="9H8-Kh-naA"/>
+                            <constraint firstItem="BuQ-eR-ZA5" firstAttribute="top" secondItem="0gW-A0-GGr" secondAttribute="bottom" constant="5" id="9kC-lC-kui"/>
+                            <constraint firstItem="bHq-iL-kmv" firstAttribute="leading" secondItem="C2J-Kb-I1v" secondAttribute="leading" id="BeC-aH-lpQ"/>
+                            <constraint firstAttribute="bottom" secondItem="bHq-iL-kmv" secondAttribute="bottom" id="GZA-VR-HQl"/>
+                            <constraint firstItem="Hnp-9t-N29" firstAttribute="top" secondItem="C2J-Kb-I1v" secondAttribute="top" constant="74" id="J67-3v-IG5"/>
+                            <constraint firstItem="0gW-A0-GGr" firstAttribute="centerX" secondItem="iec-lG-Oao" secondAttribute="centerX" constant="-1.5" id="KO5-Eq-vHo"/>
+                            <constraint firstItem="PG4-kO-qW9" firstAttribute="leading" secondItem="C2J-Kb-I1v" secondAttribute="leading" constant="38" id="Mgz-FV-1X1"/>
+                            <constraint firstItem="PG4-kO-qW9" firstAttribute="top" secondItem="C2J-Kb-I1v" secondAttribute="top" constant="17" id="OEA-CI-cpc"/>
+                            <constraint firstItem="zW3-Uf-zLv" firstAttribute="centerX" secondItem="iec-lG-Oao" secondAttribute="centerX" id="PSb-bq-K8B"/>
+                            <constraint firstItem="bHq-iL-kmv" firstAttribute="trailing" secondItem="C2J-Kb-I1v" secondAttribute="trailing" id="Ssi-Id-XfQ"/>
+                            <constraint firstItem="0gW-A0-GGr" firstAttribute="top" secondItem="7Hi-bJ-wTB" secondAttribute="bottom" constant="25" id="dsd-Mu-RfO"/>
+                            <constraint firstItem="Hnp-9t-N29" firstAttribute="centerX" secondItem="iec-lG-Oao" secondAttribute="centerX" id="eKB-qQ-R27"/>
+                            <constraint firstItem="7Hi-bJ-wTB" firstAttribute="centerX" secondItem="iec-lG-Oao" secondAttribute="centerX" constant="-1.5" id="eS5-Ai-DWr"/>
+                            <constraint firstItem="zW3-Uf-zLv" firstAttribute="top" secondItem="Hnp-9t-N29" secondAttribute="bottom" constant="1" id="ict-At-ZGb"/>
+                            <constraint firstItem="RJ3-3g-Rac" firstAttribute="centerX" secondItem="bHq-iL-kmv" secondAttribute="centerX" constant="4.25" id="ktN-tJ-Lzx"/>
+                            <constraint firstItem="RJ3-3g-Rac" firstAttribute="centerX" secondItem="0gW-A0-GGr" secondAttribute="centerX" constant="5.75" id="mHF-dG-TIT"/>
+                            <constraint firstItem="RJ3-3g-Rac" firstAttribute="centerY" secondItem="bHq-iL-kmv" secondAttribute="centerY" id="vGM-2s-SRa"/>
+                            <constraint firstItem="7Hi-bJ-wTB" firstAttribute="top" secondItem="RJ3-3g-Rac" secondAttribute="bottom" constant="119" id="vI4-c3-cEq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1xK-xM-Vpa"/>
+                    <connections>
+                        <outlet property="backBtn" destination="PG4-kO-qW9" id="JsE-PE-Dqy"/>
+                        <outlet property="bloodPressureBtn" destination="AbY-BZ-xqM" id="sY0-DE-VPt"/>
+                        <outlet property="bloodPressureTF" destination="68f-Yf-1sQ" id="eya-Lt-3h1"/>
+                        <outlet property="cholesterolBtn" destination="3Wc-Lx-DPd" id="SQZ-H8-f22"/>
+                        <outlet property="cholesterolTF" destination="yFW-sr-69N" id="pV3-40-gCI"/>
+                        <outlet property="conditionTF" destination="zW3-Uf-zLv" id="Gbm-8G-o8b"/>
+                        <outlet property="diabetesBtn" destination="kAr-Fu-rsQ" id="z3f-fi-VhS"/>
+                        <outlet property="diabetesTF" destination="6FC-eg-m2E" id="wCo-eW-rC9"/>
+                        <outlet property="medicalTF" destination="Hnp-9t-N29" id="kDR-pG-6hg"/>
+                        <outlet property="nextBtn" destination="7Hi-bJ-wTB" id="dnu-Dt-WCF"/>
+                        <outlet property="obesityBtn" destination="cGO-sg-OTY" id="I3J-i9-Vf7"/>
+                        <outlet property="obesityTF" destination="0OA-YO-7NI" id="DH0-Fe-MRg"/>
+                        <outlet property="progressPV" destination="0gW-A0-GGr" id="5MT-dL-BUN"/>
+                        <segue destination="5jG-2d-0gs" kind="presentation" identifier="q4" modalTransitionStyle="crossDissolve" id="oVq-xN-q3F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpV-jc-rnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="157"/>
+        </scene>
+        <!--Quiz5 View Controller-->
+        <scene sceneID="hud-KP-eVf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="5jG-2d-0gs" customClass="Quiz5ViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVo-wV-khq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.23000000417232513" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="eD1-ie-7jo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weight?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-W1-Lct">
+                                <rect key="frame" x="154.5" y="155" width="105" height="36"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats your height and" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktc-sJ-EGR">
+                                <rect key="frame" x="55.5" y="118" width="303.5" height="36"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3v4-Ts-Ze6">
+                                <rect key="frame" x="69" y="811.5" width="276" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="OQx-Xf-NqP"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fi-Yj-ITo">
+                                <rect key="frame" x="68.5" y="738.5" width="277" height="48"/>
+                                <color key="backgroundColor" red="0.61788150379999995" green="0.19405014800000001" blue="0.12061369969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="BU1-kz-HWv"/>
+                                    <constraint firstAttribute="height" constant="48" id="elH-nG-x61"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="DoneBtn:" destination="5jG-2d-0gs" eventType="touchUpInside" id="Z5h-OO-ybG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80%" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSP-oV-Mu4">
+                                <rect key="frame" x="190.5" y="820.5" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma3-1N-FrT">
+                                <rect key="frame" x="38" y="61" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZWn-eA-WV6" kind="presentation" modalTransitionStyle="crossDissolve" id="yo0-f0-fxU"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="p6D-R8-uvB">
+                                <rect key="frame" x="70" y="331" width="274" height="283.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Weight in Kilogram" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmg-Yx-fbM">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="34.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="weightBtn:" destination="5jG-2d-0gs" eventType="editingDidEnd" id="HN6-UO-EsJ"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Height in Centimeters" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ei-uK-dYB">
+                                        <rect key="frame" x="0.0" y="124.5" width="274" height="34.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="heightBtn:" destination="5jG-2d-0gs" eventType="editingDidEnd" id="YFN-bZ-N6w"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9as-NR-y4Z">
+                                        <rect key="frame" x="0.0" y="249" width="274" height="34.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculated BMI:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIy-zv-psZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="168.5" height="34.5"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znd-CQ-lcM">
+                                                <rect key="frame" x="178.5" y="0.0" width="95.5" height="34.5"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Znd-CQ-lcM" secondAttribute="trailing" id="qOg-Xu-Tni"/>
+                                            <constraint firstItem="DIy-zv-psZ" firstAttribute="leading" secondItem="9as-NR-y4Z" secondAttribute="leading" id="yQe-nl-15d"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kmg-Yx-fbM" firstAttribute="leading" secondItem="p6D-R8-uvB" secondAttribute="leading" id="0hY-i8-87J"/>
+                                    <constraint firstAttribute="trailing" secondItem="9as-NR-y4Z" secondAttribute="trailing" id="MDe-hF-58l"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ei-uK-dYB" secondAttribute="trailing" id="SnP-xs-WPs"/>
+                                    <constraint firstItem="2ei-uK-dYB" firstAttribute="leading" secondItem="p6D-R8-uvB" secondAttribute="leading" id="Ugg-eZ-sZQ"/>
+                                    <constraint firstItem="9as-NR-y4Z" firstAttribute="leading" secondItem="p6D-R8-uvB" secondAttribute="leading" id="fCO-3g-278"/>
+                                    <constraint firstAttribute="trailing" secondItem="kmg-Yx-fbM" secondAttribute="trailing" id="uTM-ma-5wk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JWd-S1-Rss"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="hSP-oV-Mu4" firstAttribute="centerX" secondItem="tVo-wV-khq" secondAttribute="centerX" id="0P4-xA-nCf"/>
+                            <constraint firstItem="3v4-Ts-Ze6" firstAttribute="centerX" secondItem="tVo-wV-khq" secondAttribute="centerX" id="3lj-Lj-3Vy"/>
+                            <constraint firstItem="tfO-W1-Lct" firstAttribute="centerX" secondItem="tVo-wV-khq" secondAttribute="centerX" id="CII-3e-xOs"/>
+                            <constraint firstItem="Ktc-sJ-EGR" firstAttribute="top" secondItem="JWd-S1-Rss" secondAttribute="top" constant="74" id="Du2-lY-Oif"/>
+                            <constraint firstItem="JWd-S1-Rss" firstAttribute="trailing" secondItem="p6D-R8-uvB" secondAttribute="trailing" constant="70" id="OKC-5R-qEH"/>
+                            <constraint firstItem="2fi-Yj-ITo" firstAttribute="top" secondItem="p6D-R8-uvB" secondAttribute="bottom" constant="124" id="P2A-gz-Cc7"/>
+                            <constraint firstItem="3v4-Ts-Ze6" firstAttribute="top" secondItem="2fi-Yj-ITo" secondAttribute="bottom" constant="25" id="XUp-xd-bww"/>
+                            <constraint firstItem="p6D-R8-uvB" firstAttribute="leading" secondItem="JWd-S1-Rss" secondAttribute="leading" constant="70" id="ZEi-hn-KVZ"/>
+                            <constraint firstItem="2fi-Yj-ITo" firstAttribute="centerX" secondItem="tVo-wV-khq" secondAttribute="centerX" id="mz0-43-j6x"/>
+                            <constraint firstItem="Ktc-sJ-EGR" firstAttribute="centerX" secondItem="tVo-wV-khq" secondAttribute="centerX" id="saX-9C-Tue"/>
+                            <constraint firstItem="hSP-oV-Mu4" firstAttribute="top" secondItem="3v4-Ts-Ze6" secondAttribute="bottom" constant="5" id="tMe-aD-ZWd"/>
+                            <constraint firstItem="p6D-R8-uvB" firstAttribute="top" secondItem="tfO-W1-Lct" secondAttribute="bottom" constant="140" id="tij-FH-GWw"/>
+                            <constraint firstItem="tfO-W1-Lct" firstAttribute="top" secondItem="Ktc-sJ-EGR" secondAttribute="bottom" constant="1" id="vG3-XY-dsY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="q98-Wa-gpp"/>
+                    <connections>
+                        <outlet property="backBtn" destination="ma3-1N-FrT" id="k8n-ZJ-rrd"/>
+                        <outlet property="bmiLabel" destination="DIy-zv-psZ" id="Ssn-jg-0eM"/>
+                        <outlet property="bmiTF" destination="Znd-CQ-lcM" id="hPu-ee-etB"/>
+                        <outlet property="doneBtn" destination="2fi-Yj-ITo" id="voh-Xu-Juy"/>
+                        <outlet property="heightBtn" destination="2ei-uK-dYB" id="Fkl-nG-BYy"/>
+                        <outlet property="heightTF" destination="Ktc-sJ-EGR" id="hkR-dR-Uth"/>
+                        <outlet property="progressPV" destination="3v4-Ts-Ze6" id="jdA-Fb-ILG"/>
+                        <outlet property="weightBtn" destination="kmg-Yx-fbM" id="Y0C-c8-e2w"/>
+                        <outlet property="weightTF" destination="tfO-W1-Lct" id="uM9-Js-TTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nn-UW-scO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.66666666666674" y="156.69642857142856"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="QAu-al-rdT">
+            <objects>
+                <viewController id="veR-Dv-xpF" customClass="MapViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vfA-oY-sVS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MuX-da-9dK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="744"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPW-YX-gak">
+                                <rect key="frame" x="0.0" y="786" width="414" height="110"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="GFO-P7-2cd"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvS-rW-aN3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XWa-Yo-c2P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nPW-YX-gak" firstAttribute="leading" secondItem="XWa-Yo-c2P" secondAttribute="leading" id="Dg7-1i-lNz"/>
+                            <constraint firstItem="MuX-da-9dK" firstAttribute="top" secondItem="XWa-Yo-c2P" secondAttribute="top" id="JcV-UG-Hdy"/>
+                            <constraint firstItem="nPW-YX-gak" firstAttribute="trailing" secondItem="XWa-Yo-c2P" secondAttribute="trailing" id="TBy-Jx-vIQ"/>
+                            <constraint firstItem="MuX-da-9dK" firstAttribute="leading" secondItem="XWa-Yo-c2P" secondAttribute="leading" id="hv5-aM-ty5"/>
+                            <constraint firstAttribute="bottom" secondItem="nPW-YX-gak" secondAttribute="bottom" id="hzK-KE-n0H"/>
+                            <constraint firstItem="MuX-da-9dK" firstAttribute="trailing" secondItem="XWa-Yo-c2P" secondAttribute="trailing" id="jSz-Dt-h8K"/>
+                            <constraint firstItem="XWa-Yo-c2P" firstAttribute="bottom" secondItem="MuX-da-9dK" secondAttribute="bottom" constant="30" id="xmb-BU-dt9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="gSd-b9-yf7">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="UaT-0v-mIg"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infobarV" destination="nPW-YX-gak" id="QpI-eD-fDW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4AC-hk-ZCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2821.739130434783" y="156.69642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vbm-ph-M4d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ig4-2m-dUm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p7a-wd-m4N">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="veR-Dv-xpF" kind="relationship" relationship="rootViewController" id="shS-ST-z1s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45N-WA-9fl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.594202898551" y="156.69642857142856"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dN0-uZ-76N"/>
+        <segue reference="MPk-hI-aCk"/>
+        <segue reference="sv8-Z7-taK"/>
+        <segue reference="9fY-Io-Caj"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="CheckBox" width="30" height="30"/>
+        <image name="Logo" width="200" height="200"/>
+        <image name="food" width="717" height="864"/>
+        <image name="language" width="500" height="333"/>
+        <image name="pic_seniors" width="1440" height="900"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

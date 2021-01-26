@@ -1,0 +1,237 @@
+
+/* Class = "UITextField"; placeholder = "Weight in Kilogram"; ObjectID = "0el-cX-YcQ"; */
+"0el-cX-YcQ.placeholder" = "Weight in Kilogram";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "2ly-36-oVF"; */
+"2ly-36-oVF.title" = "Settings";
+
+/* Class = "UILabel"; text = "[Imported Cases]"; ObjectID = "3Db-IE-fUG"; */
+"3Db-IE-fUG.text" = "[Imported Cases]";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "4nu-ca-zYh"; */
+"4nu-ca-zYh.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "6Li-ll-Hq7"; */
+"6Li-ll-Hq7.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "Whats your height and"; ObjectID = "7Hv-Tb-Xfy"; */
+"7Hv-Tb-Xfy.text" = "Whats your height and";
+
+/* Class = "UILabel"; text = "Help us answer a few questions"; ObjectID = "86z-Ap-SAe"; */
+"86z-Ap-SAe.text" = "Help us answer a few questions";
+
+/* Class = "UILabel"; text = "Case Summary in Singapore"; ObjectID = "8ZH-Eg-0bB"; */
+"8ZH-Eg-0bB.text" = "Case Summary in Singapore";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "9Ae-5w-DbG"; */
+"9Ae-5w-DbG.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "None"; ObjectID = "9dz-xP-PeJ"; */
+"9dz-xP-PeJ.text" = "None";
+
+/* Class = "UILabel"; text = "Nuts and Peanuts"; ObjectID = "A94-lq-Lwl"; */
+"A94-lq-Lwl.text" = "Nuts and Peanuts";
+
+/* Class = "UINavigationItem"; title = "Covid-19 Cases"; ObjectID = "AOQ-96-VXa"; */
+"AOQ-96-VXa.title" = "Covid-19 Cases";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "BvH-Kn-NFT"; */
+"BvH-Kn-NFT.normalTitle" = "Tick";
+
+/* Class = "UILabel"; text = "Diabetes"; ObjectID = "Ce0-AK-VYn"; */
+"Ce0-AK-VYn.text" = "Diabetes";
+
+/* Class = "UIButton"; normalTitle = "Bahasa Melayu"; ObjectID = "DkM-AP-CkC"; */
+"DkM-AP-CkC.normalTitle" = "Bahasa Melayu";
+
+/* Class = "UILabel"; text = "20%"; ObjectID = "Fpf-do-RMV"; */
+"Fpf-do-RMV.text" = "20%";
+
+/* Class = "UITabBarItem"; title = "Reward"; ObjectID = "Gc8-xI-rMv"; */
+"Gc8-xI-rMv.title" = "Reward";
+
+/* Class = "UILabel"; text = "No Pork(Halal)"; ObjectID = "H1X-2q-MdV"; */
+"H1X-2q-MdV.text" = "No Pork(Halal)";
+
+/* Class = "UILabel"; text = "[Imported Cases]"; ObjectID = "IOO-wV-sig"; */
+"IOO-wV-sig.text" = "[Imported Cases]";
+
+/* Class = "UILabel"; text = "Do you have food allergy?"; ObjectID = "IP9-FX-g0Y"; */
+"IP9-FX-g0Y.text" = "Do you have food allergy?";
+
+/* Class = "UILabel"; text = "60%"; ObjectID = "JB0-f1-DAY"; */
+"JB0-f1-DAY.text" = "60%";
+
+/* Class = "UILabel"; text = "[Imported Cases]"; ObjectID = "JUY-3p-BPt"; */
+"JUY-3p-BPt.text" = "[Imported Cases]";
+
+/* Class = "UIButton"; normalTitle = "தமிழ்"; ObjectID = "JZS-Xq-WFh"; */
+"JZS-Xq-WFh.normalTitle" = "தமிழ்";
+
+/* Class = "UILabel"; text = "Do you have any special"; ObjectID = "Jrz-QP-s54"; */
+"Jrz-QP-s54.text" = "Do you have any special";
+
+/* Class = "UILabel"; text = "language?"; ObjectID = "KsA-aa-m9d"; */
+"KsA-aa-m9d.text" = "language?";
+
+/* Class = "UILabel"; text = "weight?"; ObjectID = "L6Z-Gb-rV7"; */
+"L6Z-Gb-rV7.text" = "weight?";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "LBr-4U-dcW"; */
+"LBr-4U-dcW.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "LK7-xl-mYf"; */
+"LK7-xl-mYf.normalTitle" = "Tick";
+
+/* Class = "UILabel"; text = "Obesity"; ObjectID = "MAQ-xd-kLB"; */
+"MAQ-xd-kLB.text" = "Obesity";
+
+/* Class = "UILabel"; text = "What is your preferred"; ObjectID = "Mcr-wT-aDE"; */
+"Mcr-wT-aDE.text" = "What is your preferred";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "O3M-W6-BUK"; */
+"O3M-W6-BUK.normalTitle" = "NEXT";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "OEo-M3-EvB"; */
+"OEo-M3-EvB.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "OHc-N3-gCe"; */
+"OHc-N3-gCe.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "PBU-NL-wYJ"; */
+"PBU-NL-wYJ.normalTitle" = "Tick";
+
+/* Class = "UILabel"; text = "Gluton"; ObjectID = "Pc8-jz-nP6"; */
+"Pc8-jz-nP6.text" = "Gluton";
+
+/* Class = "UILabel"; text = "Dairy and lactose"; ObjectID = "SMv-AX-sdr"; */
+"SMv-AX-sdr.text" = "Dairy and lactose";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "SgM-BO-JG1"; */
+"SgM-BO-JG1.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Sign In with Singpass"; ObjectID = "U72-bF-oYU"; */
+"U72-bF-oYU.normalTitle" = "Sign In with Singpass";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "UO0-z1-KSW"; */
+"UO0-z1-KSW.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "High Blood Pressure"; ObjectID = "WwM-cU-hR9"; */
+"WwM-cU-hR9.text" = "High Blood Pressure";
+
+/* Class = "UILabel"; text = "[Imported Cases]"; ObjectID = "Y1D-2D-DMG"; */
+"Y1D-2D-DMG.text" = "[Imported Cases]";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "Y7w-Zs-Vbv"; */
+"Y7w-Zs-Vbv.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "ZBe-hl-4Ll"; */
+"ZBe-hl-4Ll.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "0%"; ObjectID = "ZDi-Cq-gNB"; */
+"ZDi-Cq-gNB.text" = "0%";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "ZIu-z4-h1c"; */
+"ZIu-z4-h1c.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Vegan"; ObjectID = "ZiB-xf-cxv"; */
+"ZiB-xf-cxv.text" = "Vegan";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "Zrg-gT-s1u"; */
+"Zrg-gT-s1u.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "Zzd-jj-QIX"; */
+"Zzd-jj-QIX.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "ahO-PW-EU4"; */
+"ahO-PW-EU4.normalTitle" = "English";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "bw2-8n-w1z"; */
+"bw2-8n-w1z.normalTitle" = "Tick";
+
+/* Class = "UILabel"; text = "Do you have medical"; ObjectID = "cL6-QU-Tuk"; */
+"cL6-QU-Tuk.text" = "Do you have medical";
+
+/* Class = "UILabel"; text = "condition?"; ObjectID = "du4-2P-5L9"; */
+"du4-2P-5L9.text" = "condition?";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "ewo-rD-7Fy"; */
+"ewo-rD-7Fy.normalTitle" = "Tick";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "fJV-In-GoQ"; */
+"fJV-In-GoQ.title" = "Profile";
+
+/* Class = "UILabel"; text = "Total Number of Imported Cases in Singapore\n"; ObjectID = "hbx-Yi-h8t"; */
+"hbx-Yi-h8t.text" = "Total Number of Imported Cases in Singapore\n";
+
+/* Class = "UILabel"; text = "No Beef"; ObjectID = "heQ-F6-fa8"; */
+"heQ-F6-fa8.text" = "No Beef";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "hoR-9c-qGa"; */
+"hoR-9c-qGa.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Others:"; ObjectID = "hrH-1E-9DR"; */
+"hrH-1E-9DR.text" = "Others:";
+
+/* Class = "UILabel"; text = "60%"; ObjectID = "i6S-2K-4R8"; */
+"i6S-2K-4R8.text" = "60%";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "iDv-1X-Fhc"; */
+"iDv-1X-Fhc.normalTitle" = "Tick";
+
+/* Class = "UILabel"; text = "Vegetarian"; ObjectID = "kJ2-kh-fTa"; */
+"kJ2-kh-fTa.text" = "Vegetarian";
+
+/* Class = "UILabel"; text = "First time here?"; ObjectID = "muu-u7-da0"; */
+"muu-u7-da0.text" = "First time here?";
+
+/* Class = "UILabel"; text = "High Cholesterol"; ObjectID = "nnH-Jb-NEP"; */
+"nnH-Jb-NEP.text" = "High Cholesterol";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "ozm-61-067"; */
+"ozm-61-067.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "pV2-5C-g85"; */
+"pV2-5C-g85.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "paM-Is-0k5"; */
+"paM-Is-0k5.normalTitle" = "NEXT";
+
+/* Class = "UIButton"; normalTitle = "繁体中文"; ObjectID = "qwY-VY-FVs"; */
+"qwY-VY-FVs.normalTitle" = "繁体中文";
+
+/* Class = "UILabel"; text = "dietary habits?"; ObjectID = "rC1-8H-OUU"; */
+"rC1-8H-OUU.text" = "dietary habits?";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "sFs-A5-Vit"; */
+"sFs-A5-Vit.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "scx-jy-Ls2"; */
+"scx-jy-Ls2.normalTitle" = "Tick";
+
+/* Class = "UILabel"; text = "Others:"; ObjectID = "tCr-0P-MY8"; */
+"tCr-0P-MY8.text" = "Others:";
+
+/* Class = "UILabel"; text = "40%"; ObjectID = "tW3-vy-ed0"; */
+"tW3-vy-ed0.text" = "40%";
+
+/* Class = "UILabel"; text = "Others:"; ObjectID = "w8e-nc-qVn"; */
+"w8e-nc-qVn.text" = "Others:";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "ww1-o4-6LO"; */
+"ww1-o4-6LO.normalTitle" = "Tick";
+
+/* Class = "UIButton"; normalTitle = "Tick"; ObjectID = "xRn-hw-fFl"; */
+"xRn-hw-fFl.normalTitle" = "Tick";
+
+/* Class = "UILabel"; text = "None"; ObjectID = "y7n-gU-Uth"; */
+"y7n-gU-Uth.text" = "None";
+
+/* Class = "UILabel"; text = "Fish & Shellfish"; ObjectID = "yDT-uU-dyI"; */
+"yDT-uU-dyI.text" = "Fish & Shellfish";
+
+/* Class = "UILabel"; text = "Calculated BMI:"; ObjectID = "yOL-KI-RF8"; */
+"yOL-KI-RF8.text" = "Calculated BMI:";
+
+/* Class = "UILabel"; text = "Don't have an account? Sign up here"; ObjectID = "z3A-do-I8s"; */
+"z3A-do-I8s.text" = "Don't have an account? Sign up here";

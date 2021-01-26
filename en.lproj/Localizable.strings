@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  carepal@sgapp
+
+  Created by Yip jun wei on 24/1/21.
+  
+*/
+"quiz1_header1" = "First time here?";
+"quiz1_header2" = "Help us answer a few questions";
+"quiz1_header3" = "What is your preferred";
+"quiz1_header4" = "language";
+"quiz1_btn1" = "NEXT";
