@@ -176,30 +176,6 @@
             <point key="canvasLocation" x="-1700.0000000000002" y="869.86607142857144"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="f5X-4S-9iW">
-            <objects>
-                <viewController id="Jcc-TD-093" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mk7-Co-qqF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Math Solver" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr7-kK-0bH">
-                                <rect key="frame" x="0.0" y="166" width="414" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="46"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="8We-BQ-vUW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nov-uT-Vb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1681.1594202898552" y="1539.5089285714284"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="CNN-SE-GTh">
             <objects>
                 <viewController id="9oP-Mi-zh0" sceneMemberID="viewController">
@@ -211,7 +187,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yP-lE-gzT">
-                                <rect key="frame" x="129" y="131" width="13" height="22"/>
+                                <rect key="frame" x="129" y="264" width="13" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="13" id="DWr-Kr-Svu"/>
                                     <constraint firstAttribute="height" constant="22" id="ZRf-JH-mZs"/>
@@ -220,23 +196,23 @@
                                 <state key="normal" image="chevron.backward" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md0-gz-l2g">
-                                <rect key="frame" x="267.5" y="131" width="16.5" height="22"/>
+                                <rect key="frame" x="267.5" y="264" width="16.5" height="22"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.right" catalog="system"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAJ-Cy-MyK">
-                                <rect key="frame" x="158.5" y="129" width="97" height="26"/>
+                                <rect key="frame" x="158.5" y="262" width="97" height="26"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                 <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="LCS-Rp-Nb2">
-                                <rect key="frame" x="146" y="619" width="123" height="28"/>
+                                <rect key="frame" x="146" y="752" width="123" height="28"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Sce-ag-dj5">
-                                <rect key="frame" x="38" y="195.5" width="338" height="390"/>
+                                <rect key="frame" x="38" y="328.5" width="338" height="390"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yxv-8o-wgG">
                                         <rect key="frame" x="0.0" y="0.0" width="338" height="75"/>
@@ -585,6 +561,13 @@
                                     <constraint firstItem="XAP-8V-elP" firstAttribute="top" secondItem="Sce-ag-dj5" secondAttribute="top" constant="315" id="eOJ-rK-km4"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Math Solver" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id0-4h-ks6">
+                                <rect key="frame" x="0.0" y="58" width="414" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="41"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IRy-yn-T7F"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -605,12 +588,12 @@
                             <constraint firstItem="JAJ-Cy-MyK" firstAttribute="centerX" secondItem="iAX-P8-Val" secondAttribute="centerX" id="bKL-uS-ElL"/>
                             <constraint firstItem="md0-gz-l2g" firstAttribute="leading" secondItem="JAJ-Cy-MyK" secondAttribute="trailing" constant="12" id="duf-qc-GYj"/>
                             <constraint firstAttribute="bottom" secondItem="BLq-dM-u7i" secondAttribute="bottom" id="gHl-Ow-BLt"/>
-                            <constraint firstItem="6yP-lE-gzT" firstAttribute="top" secondItem="IRy-yn-T7F" secondAttribute="top" constant="87" id="hGl-QQ-cBE"/>
+                            <constraint firstItem="6yP-lE-gzT" firstAttribute="top" secondItem="IRy-yn-T7F" secondAttribute="top" constant="220" id="hGl-QQ-cBE"/>
                             <constraint firstItem="Sce-ag-dj5" firstAttribute="centerX" secondItem="iAX-P8-Val" secondAttribute="centerX" id="pVE-kD-Jg2"/>
                             <constraint firstItem="6yP-lE-gzT" firstAttribute="firstBaseline" secondItem="md0-gz-l2g" secondAttribute="firstBaseline" id="tB0-MR-eEf"/>
                             <constraint firstItem="md0-gz-l2g" firstAttribute="centerY" secondItem="JAJ-Cy-MyK" secondAttribute="centerY" id="usf-rh-QFS"/>
-                            <constraint firstItem="JAJ-Cy-MyK" firstAttribute="top" secondItem="IRy-yn-T7F" secondAttribute="top" constant="85" id="wdI-6q-has"/>
-                            <constraint firstItem="IRy-yn-T7F" firstAttribute="bottom" secondItem="LCS-Rp-Nb2" secondAttribute="bottom" constant="215" id="ym8-UG-88j"/>
+                            <constraint firstItem="JAJ-Cy-MyK" firstAttribute="top" secondItem="IRy-yn-T7F" secondAttribute="top" constant="218" id="wdI-6q-has"/>
+                            <constraint firstItem="IRy-yn-T7F" firstAttribute="bottom" secondItem="LCS-Rp-Nb2" secondAttribute="bottom" constant="82" id="ym8-UG-88j"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1886,6 +1869,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="3zi-xs-BUY"/>
         <segue reference="yo0-f0-fxU"/>
         <segue reference="MPk-hI-aCk"/>
         <segue reference="sv8-Z7-taK"/>
