@@ -27,6 +27,7 @@ class GamesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         statusLabel.alpha = 0
+        overrideUserInterfaceStyle = .light
         // Do any additional setup after loading the view.
        
         
@@ -78,6 +79,7 @@ class GamesViewController: UIViewController {
             if(score > 0)
             {
                 score -= 1
+                scoreLabel.text = String(score)
             }
             statusLabel.text = "Wrong!"
             statusLabel.textColor = UIColor(red: 159/255.0, green: 0, blue: 0, alpha: 1)

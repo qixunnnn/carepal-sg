@@ -48,7 +48,7 @@ class Quiz5ViewController: UIViewController {
     
     @IBAction func DoneBtn(_ sender: Any) {
         
-        performSegue(withIdentifier: "", sender: nil)
+        performSegue(withIdentifier: "q5", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

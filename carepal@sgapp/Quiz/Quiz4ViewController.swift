@@ -27,6 +27,7 @@ class Quiz4ViewController: UIViewController {
     @IBOutlet weak var progressPV: UIProgressView!
     
     @IBAction func NextBtn(_ sender: Any) {
+        overrideUserInterfaceStyle = .light
         if(cholesterolBtn.isSelected){
             
         }
