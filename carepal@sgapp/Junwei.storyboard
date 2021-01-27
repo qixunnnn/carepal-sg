@@ -253,15 +253,25 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc3-g2-Xh3">
+                                                        <rect key="frame" x="1" y="1" width="75" height="73"/>
+                                                        <connections>
+                                                            <segue destination="Vjp-Su-QAL" kind="presentation" modalPresentationStyle="fullScreen" id="3zi-xs-BUY"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="mc3-g2-Xh3" secondAttribute="trailing" constant="1" id="0UP-yx-Sds"/>
                                                     <constraint firstItem="mrL-QW-vJL" firstAttribute="centerX" secondItem="mgL-td-meJ" secondAttribute="centerX" id="29n-QP-ucP"/>
                                                     <constraint firstAttribute="bottom" secondItem="mrL-QW-vJL" secondAttribute="bottom" id="4S7-AO-SWG"/>
                                                     <constraint firstItem="mgL-td-meJ" firstAttribute="leading" secondItem="PI6-bT-Bm0" secondAttribute="leading" constant="32" id="D6l-X3-o9c"/>
                                                     <constraint firstItem="mrL-QW-vJL" firstAttribute="centerY" secondItem="mgL-td-meJ" secondAttribute="centerY" id="DJ3-Vn-bCj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mc3-g2-Xh3" secondAttribute="bottom" constant="1" id="JN0-3Z-29U"/>
                                                     <constraint firstAttribute="trailing" secondItem="mrL-QW-vJL" secondAttribute="trailing" id="OeR-cv-M25"/>
                                                     <constraint firstItem="mrL-QW-vJL" firstAttribute="top" secondItem="PI6-bT-Bm0" secondAttribute="top" id="RWc-Fk-15o"/>
+                                                    <constraint firstItem="mc3-g2-Xh3" firstAttribute="leading" secondItem="PI6-bT-Bm0" secondAttribute="leading" constant="1" id="UTL-um-oBt"/>
+                                                    <constraint firstItem="mc3-g2-Xh3" firstAttribute="top" secondItem="PI6-bT-Bm0" secondAttribute="top" constant="1" id="g4z-9g-675"/>
                                                     <constraint firstItem="mgL-td-meJ" firstAttribute="top" secondItem="PI6-bT-Bm0" secondAttribute="top" constant="24" id="ozY-1c-LfY"/>
                                                     <constraint firstItem="mrL-QW-vJL" firstAttribute="leading" secondItem="PI6-bT-Bm0" secondAttribute="leading" id="pxA-dv-XvK"/>
                                                 </constraints>
@@ -1681,10 +1691,10 @@
             </objects>
             <point key="canvasLocation" x="-2610.144927536232" y="869.86607142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Games View Controller-->
         <scene sceneID="Knw-0f-fhT">
             <objects>
-                <viewController id="Vjp-Su-QAL" sceneMemberID="viewController">
+                <viewController id="Vjp-Su-QAL" customClass="GamesViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f8s-DY-3WN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1723,17 +1733,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fDt-g5-Mxc">
-                                <rect key="frame" x="198" y="187" width="100" height="28"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fDt-g5-Mxc">
+                                <rect key="frame" x="198" y="187" width="123" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pku-i5-OST">
-                                        <rect key="frame" x="0.0" y="0.0" width="58" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="50"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ky-aI-yGm">
-                                        <rect key="frame" x="73" y="0.0" width="27" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ky-aI-yGm">
+                                        <rect key="frame" x="73" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1819,16 +1829,28 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QXy-ar-siC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cic-LZ-cKF" firstAttribute="top" secondItem="KIO-XR-aiF" secondAttribute="bottom" constant="8" symbolic="YES" id="0dx-jD-wkH"/>
                             <constraint firstItem="bkd-yW-ojv" firstAttribute="top" secondItem="Cic-LZ-cKF" secondAttribute="bottom" constant="27" id="JDs-lm-Q2h"/>
                             <constraint firstItem="KIO-XR-aiF" firstAttribute="top" secondItem="QXy-ar-siC" secondAttribute="top" constant="22" id="JRC-D8-bYc"/>
+                            <constraint firstItem="fDt-g5-Mxc" firstAttribute="leading" secondItem="bkd-yW-ojv" secondAttribute="trailing" constant="56" id="ZWv-jp-ohH"/>
+                            <constraint firstItem="fDt-g5-Mxc" firstAttribute="top" secondItem="Cic-LZ-cKF" secondAttribute="bottom" constant="27" id="eNG-AX-Bq3"/>
                             <constraint firstItem="Cic-LZ-cKF" firstAttribute="leading" secondItem="QXy-ar-siC" secondAttribute="leading" constant="49" id="mnA-oc-kd0"/>
                             <constraint firstItem="bkd-yW-ojv" firstAttribute="leading" secondItem="QXy-ar-siC" secondAttribute="leading" constant="49" id="rFU-pt-VGK"/>
                             <constraint firstItem="KIO-XR-aiF" firstAttribute="leading" secondItem="QXy-ar-siC" secondAttribute="leading" constant="11" id="zRg-1H-MQl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="equationLabel" destination="hW3-pf-hsw" id="VjF-mT-LtJ"/>
+                        <outlet property="levelLabel" destination="PGn-6P-m9P" id="H8k-Wt-q67"/>
+                        <outlet property="option1Btn" destination="IeW-8r-mg9" id="nUM-KS-gP3"/>
+                        <outlet property="option2Btn" destination="kAx-97-vrK" id="dSB-tI-SBZ"/>
+                        <outlet property="option3Btn" destination="Yf5-Ie-BYR" id="ZeR-06-dMg"/>
+                        <outlet property="option4Btn" destination="50Z-g3-der" id="igW-GN-Mhk"/>
+                        <outlet property="scoreLabel" destination="z0d-Yz-84j" id="Qxa-4s-8BX"/>
+                        <outlet property="timeLabel" destination="4ky-aI-yGm" id="a9O-5w-xTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrh-Ka-8SC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
