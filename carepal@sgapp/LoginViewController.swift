@@ -24,6 +24,10 @@ class LoginViewController: UIViewController {
         let email = emailTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        if email == "" || password == "" {
+            self.alert(message: "Please fill in all empty field", title: "Empty Field")
+        }
+        
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil
             {
@@ -45,5 +49,9 @@ class LoginViewController: UIViewController {
 
         self.present(alert, animated: true)
     }
-
+    
+    @IBAction func signUpBtn(_ sender: Any) {
+        performSegue(withIdentifier: "loginToSignUp", sender: nil)
+    }
+    
 }

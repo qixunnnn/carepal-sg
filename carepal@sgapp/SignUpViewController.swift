@@ -25,12 +25,12 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func validateFields() -> String? {
+    func validateFields() -> String{
         
-        if emailTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || reEnterTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        if emailTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" || reEnterTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill in all fields"
         }
-        else if(passwordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) != reEnterTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines)){
+        else if(passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines) != reEnterTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)){
             return "Password and re-type password does not match"
             
         }
@@ -42,15 +42,15 @@ class SignUpViewController: UIViewController {
             return "Password must contains characters and one special characters and is minimum six char long."
         }
         
-        return nil
+        return ""
     }
     
     
     @IBAction func signUpBtn(_ sender: Any) {
         let error = validateFields()
         
-        if error != nil {
-            alert(message: error!, title: "Failed to create")
+        if error != "" {
+            self.alert(message: error, title: "Failed to create")
         }
         else
         {
@@ -72,10 +72,10 @@ class SignUpViewController: UIViewController {
                         "Contact": "nil" as NSString,
                         "Points": 0 as NSNumber]
                     
-                    self.database.child("users").setValue(result!.user.uid)
+                    self.database.child("users").child(result!.user.uid)
                     self.database.child("users").child(result!.user.uid).setValue(userInfo)
                     
-                    self.performSegue(withIdentifier: "mySegueID", sender: nil)
+                    self.performSegue(withIdentifier: "signUpToProfile", sender: nil)
                 }
             }
         }
@@ -96,4 +96,9 @@ class SignUpViewController: UIViewController {
 
         self.present(alert, animated: true)
     }
+    
+    @IBAction func backLoginBtn(_ sender: Any) {
+        performSegue(withIdentifier: "signUpToLogin", sender: nil)
+    }
+    
 }
