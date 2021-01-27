@@ -631,13 +631,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First time here?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw5-6r-3lU">
-                                <rect key="frame" x="134.5" y="80" width="145.5" height="24.5"/>
+                                <rect key="frame" x="135.5" y="80" width="143" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us answer a few questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dM-HN-3SP">
-                                <rect key="frame" x="29" y="110.5" width="356" height="30"/>
+                                <rect key="frame" x="37" y="111.5" width="340.5" height="30"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1725,7 +1725,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0d-Yz-84j">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0d-Yz-84j">
                                         <rect key="frame" x="79.5" y="0.0" width="13.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1750,14 +1750,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Board" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-g1-ZlE">
-                                <rect key="frame" x="-16" y="268" width="446" height="356"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Board" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-g1-ZlE">
+                                <rect key="frame" x="0.0" y="237" width="414" height="446"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6/3 = ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW3-pf-hsw">
-                                <rect key="frame" x="127" y="382" width="161" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW3-pf-hsw">
+                                <rect key="frame" x="207" y="382" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1774,6 +1772,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="FirstBtn:" destination="Vjp-Su-QAL" eventType="touchUpInside" id="EWo-xB-Wo6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yf5-Ie-BYR">
                                 <rect key="frame" x="20" y="747" width="181" height="57"/>
@@ -1788,6 +1789,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ThirdBtn:" destination="Vjp-Su-QAL" eventType="touchUpInside" id="ldp-IE-ZlJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50Z-g3-der">
                                 <rect key="frame" x="213" y="747" width="181" height="57"/>
@@ -1802,6 +1806,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="FourthBtn:" destination="Vjp-Su-QAL" eventType="touchUpInside" id="BQz-ue-KDz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAx-97-vrK">
                                 <rect key="frame" x="213" y="673" width="181" height="57"/>
@@ -1816,6 +1823,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SecondBtn:" destination="Vjp-Su-QAL" eventType="touchUpInside" id="4Dh-Eg-XPO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIO-XR-aiF">
                                 <rect key="frame" x="11" y="66" width="47" height="44"/>
@@ -1826,18 +1836,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="Vjp-Su-QAL" eventType="touchUpInside" id="uIS-XX-TtK"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnb-Wh-qMy">
+                                <rect key="frame" x="165.5" y="813" width="83.5" height="41.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="29"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QXy-ar-siC"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cic-LZ-cKF" firstAttribute="top" secondItem="KIO-XR-aiF" secondAttribute="bottom" constant="8" symbolic="YES" id="0dx-jD-wkH"/>
+                            <constraint firstItem="Xnb-Wh-qMy" firstAttribute="centerX" secondItem="f8s-DY-3WN" secondAttribute="centerX" id="41V-uq-TQh"/>
+                            <constraint firstItem="hW3-pf-hsw" firstAttribute="top" secondItem="fDt-g5-Mxc" secondAttribute="bottom" constant="145" id="G64-3O-qbU"/>
                             <constraint firstItem="bkd-yW-ojv" firstAttribute="top" secondItem="Cic-LZ-cKF" secondAttribute="bottom" constant="27" id="JDs-lm-Q2h"/>
                             <constraint firstItem="KIO-XR-aiF" firstAttribute="top" secondItem="QXy-ar-siC" secondAttribute="top" constant="22" id="JRC-D8-bYc"/>
+                            <constraint firstItem="bjW-g1-ZlE" firstAttribute="leading" secondItem="QXy-ar-siC" secondAttribute="leading" id="Smf-QZ-XuW"/>
                             <constraint firstItem="fDt-g5-Mxc" firstAttribute="leading" secondItem="bkd-yW-ojv" secondAttribute="trailing" constant="56" id="ZWv-jp-ohH"/>
+                            <constraint firstItem="QXy-ar-siC" firstAttribute="bottom" secondItem="Xnb-Wh-qMy" secondAttribute="bottom" constant="7.5" id="bGD-Oc-NcH"/>
                             <constraint firstItem="fDt-g5-Mxc" firstAttribute="top" secondItem="Cic-LZ-cKF" secondAttribute="bottom" constant="27" id="eNG-AX-Bq3"/>
                             <constraint firstItem="Cic-LZ-cKF" firstAttribute="leading" secondItem="QXy-ar-siC" secondAttribute="leading" constant="49" id="mnA-oc-kd0"/>
+                            <constraint firstItem="hW3-pf-hsw" firstAttribute="centerX" secondItem="f8s-DY-3WN" secondAttribute="centerX" id="pPs-HK-9ry"/>
                             <constraint firstItem="bkd-yW-ojv" firstAttribute="leading" secondItem="QXy-ar-siC" secondAttribute="leading" constant="49" id="rFU-pt-VGK"/>
+                            <constraint firstItem="bjW-g1-ZlE" firstAttribute="trailing" secondItem="QXy-ar-siC" secondAttribute="trailing" id="xE5-pH-kDP"/>
+                            <constraint firstItem="bjW-g1-ZlE" firstAttribute="top" secondItem="fDt-g5-Mxc" secondAttribute="bottom" id="z1i-Gr-Ncd"/>
                             <constraint firstItem="KIO-XR-aiF" firstAttribute="leading" secondItem="QXy-ar-siC" secondAttribute="leading" constant="11" id="zRg-1H-MQl"/>
                         </constraints>
                     </view>
@@ -1849,7 +1875,9 @@
                         <outlet property="option3Btn" destination="Yf5-Ie-BYR" id="ZeR-06-dMg"/>
                         <outlet property="option4Btn" destination="50Z-g3-der" id="igW-GN-Mhk"/>
                         <outlet property="scoreLabel" destination="z0d-Yz-84j" id="Qxa-4s-8BX"/>
+                        <outlet property="statusLabel" destination="Xnb-Wh-qMy" id="4Md-bS-tZW"/>
                         <outlet property="timeLabel" destination="4ky-aI-yGm" id="a9O-5w-xTh"/>
+                        <segue destination="9oP-Mi-zh0" kind="presentation" identifier="gameback" modalPresentationStyle="fullScreen" id="A72-nq-cvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrh-Ka-8SC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1861,7 +1889,8 @@
         <segue reference="yo0-f0-fxU"/>
         <segue reference="MPk-hI-aCk"/>
         <segue reference="sv8-Z7-taK"/>
-        <segue reference="9fY-Io-Caj"/>
+        <segue reference="zFG-Zq-iFV"/>
+        <segue reference="A72-nq-cvF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Board" width="513" height="446"/>
