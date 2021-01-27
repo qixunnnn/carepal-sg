@@ -8,16 +8,30 @@
 import UIKit
 
 class DailyCaseViewController: UIViewController {
-
+    @IBOutlet weak var activeLbl: UILabel!
+    @IBOutlet weak var communityLbl: UILabel!
+    @IBOutlet weak var stableLbl: UILabel!
+    @IBOutlet weak var dischargedLbl: UILabel!
+    @IBOutlet weak var criticalLbl: UILabel!
+    @IBOutlet weak var decessedLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = "https://api.apify.com/v2/key-value-stores/yaPbKe9e5Et61bl7W/records/LATEST?disableRedirect=true"
-        getData(from: url)
+        let APIInfo = getData(from: url)
+        
+        activeLbl.text = String(APIInfo.activeCases)
+        communityLbl.text = String(APIInfo.inCommunityFacilites)
+        stableLbl.text = String(APIInfo.stableHospitalized)
+        dischargedLbl.text = String(APIInfo.discharged)
+        criticalLbl.text = String(APIInfo.criticalHospitalized)
+        decessedLbl.text = String(APIInfo.deceased)
+        
     }
     
     private func getData(from url: String)
     {
-        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
+        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { [self]data, response, error in
             guard let data = data, error == nil else {
                 print("something went wrong")
                 return
@@ -33,16 +47,11 @@ class DailyCaseViewController: UIViewController {
             {
                 print("failed to convert \(error.localizedDescription)")
             }
-
-            guard let json = response else {
+            
+            guard let json = response else
+            {
                 return
             }
-            //print(json.sourceURL)
-            print(json.criticalHospitalized)
-            print(json.inCommunityFacilites)
-            print(json.recovered)
-            print(json.lastUpdatedAtApify)
-            print(json.activeCases)
         })
         task.resume()
     }

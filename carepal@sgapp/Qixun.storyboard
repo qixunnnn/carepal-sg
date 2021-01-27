@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yJm-UW-Qr1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EdP-Mq-iM5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -116,140 +116,212 @@
         <!--Covid-19 Cases-->
         <scene sceneID="Etf-WB-Rge">
             <objects>
-                <viewController id="EdP-Mq-iM5" sceneMemberID="viewController">
+                <viewController id="EdP-Mq-iM5" customClass="DailyCaseViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ds-KW-DB9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQB-8o-W2Y">
-                                <rect key="frame" x="34" y="309" width="347" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Total Number of Imported Cases in Singapore
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Case Summary in Singapore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwA-oJ-kTk">
-                                <rect key="frame" x="100" y="487" width="215" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcB-pK-Ciw">
-                                <rect key="frame" x="34" y="348" width="347" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJt-fP-xfr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1162"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7WY-Wo-IHm">
-                                        <rect key="frame" x="1" y="46" width="345" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVv-Hu-4ik" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Imported Cases]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf3-jZ-XsH">
-                                                <rect key="frame" x="106" y="20" width="133" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemPinkColor"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_medical_care_movn" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-Fp-aMp">
+                                                <rect key="frame" x="30" y="30" width="354" height="162"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="162" id="E2k-ff-BD5"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DORSCON Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwA-oJ-kTk">
+                                                <rect key="frame" x="30" y="222" width="354" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQw-JZ-tJ1">
+                                                <rect key="frame" x="87" y="255.5" width="240" height="56.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4f-ey-FfT">
+                                                        <rect key="frame" x="83" y="15" width="74" height="27"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Cases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Miy-Sj-53x">
+                                                <rect key="frame" x="30" y="411" width="354" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dY8-Qv-tdo">
-                                        <rect key="frame" x="1" y="1" width="345" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyI-Q9-2nv">
-                                <rect key="frame" x="34" y="648" width="181" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-92-g6U">
-                                        <rect key="frame" x="1" y="46" width="179" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Imported Cases]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klB-z9-Zie">
-                                                <rect key="frame" x="23" y="29" width="133" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemPinkColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ5-PD-sft">
+                                                <rect key="frame" x="20" y="342" width="374" height="29"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">The ‘Disease Outbreak Response System Condition' (DORSCON) is a colour-coded framework that shows you the current disease situation.</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="Lato-Italic"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-i5-dh4">
-                                        <rect key="frame" x="1" y="1" width="179" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.45037388280000001" blue="0.4215065992" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nnx-vy-9CE">
-                                <rect key="frame" x="34" y="523" width="347" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMU-tb-88u">
-                                        <rect key="frame" x="1" y="46" width="345" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Imported Cases]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c02-sI-fOD">
-                                                <rect key="frame" x="106" y="29" width="133" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Active cases]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDG-Mt-IvS">
+                                                <rect key="frame" x="30" y="451.5" width="354" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemPinkColor"/>
+                                                <color key="textColor" systemColor="systemGreenColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9eZ-3t-2CX">
-                                        <rect key="frame" x="1" y="1" width="345" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.61788150379999995" green="0.20889443469999999" blue="0.04804967668" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFW-bj-jK0">
-                                <rect key="frame" x="200" y="648" width="181" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swE-kT-2jn">
-                                        <rect key="frame" x="1" y="46" width="179" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Imported Cases]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2q-aT-4iu">
-                                                <rect key="frame" x="23" y="29" width="133" height="21"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="n59-Ey-9ca">
+                                                <rect key="frame" x="43" y="515" width="328.5" height="61"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cdJ-13-tr3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133" height="61"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Community" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-Sv-Egi">
+                                                                <rect key="frame" x="0.0" y="0.0" width="133" height="25.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[In comm]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyO-pq-2Qd">
+                                                                <rect key="frame" x="0.0" y="40.5" width="133" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y89-kf-Eog">
+                                                        <rect key="frame" x="210" y="0.0" width="118.5" height="61"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospitalized" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwb-gp-9LL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="25.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Hospitalized]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtR-we-kZV">
+                                                                <rect key="frame" x="0.0" y="40.5" width="118.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discharged" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LY-wj-vCx">
+                                                <rect key="frame" x="30" y="682" width="354" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[DIscharged]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-sF-RsN">
+                                                <rect key="frame" x="157" y="716" width="100" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="f5O-1v-zfn">
+                                                <rect key="frame" x="53" y="771" width="308.5" height="61"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-RL-4g1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="164" height="61"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospitalized" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58e-3q-6Ek">
+                                                                <rect key="frame" x="0.0" y="0.0" width="164" height="25.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Critical Hospitalized]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THc-Xs-W7i">
+                                                                <rect key="frame" x="0.0" y="40.5" width="164" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y8n-fc-anG">
+                                                        <rect key="frame" x="241" y="0.0" width="67.5" height="61"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kup-yh-6NH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="25.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Dead]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-wH-vUs">
+                                                                <rect key="frame" x="0.0" y="40.5" width="67.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rei-ki-cNK">
-                                        <rect key="frame" x="1" y="1" width="179" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="OQ9-Fp-aMp" firstAttribute="leading" secondItem="qVv-Hu-4ik" secondAttribute="leading" constant="30" id="3Si-yP-w7l"/>
+                                            <constraint firstItem="xwA-oJ-kTk" firstAttribute="leading" secondItem="qVv-Hu-4ik" secondAttribute="leading" constant="30" id="DoK-PI-wGi"/>
+                                            <constraint firstItem="xwA-oJ-kTk" firstAttribute="top" secondItem="OQ9-Fp-aMp" secondAttribute="bottom" constant="30" id="Hsz-ND-975"/>
+                                            <constraint firstItem="WQw-JZ-tJ1" firstAttribute="leading" secondItem="qVv-Hu-4ik" secondAttribute="leading" constant="87" id="IeI-LI-lSp"/>
+                                            <constraint firstItem="WQw-JZ-tJ1" firstAttribute="centerX" secondItem="xwA-oJ-kTk" secondAttribute="centerX" id="MYY-8E-nrC"/>
+                                            <constraint firstItem="WQw-JZ-tJ1" firstAttribute="top" secondItem="xwA-oJ-kTk" secondAttribute="bottom" constant="8" symbolic="YES" id="ORj-4z-ueA"/>
+                                            <constraint firstAttribute="trailing" secondItem="pJ5-PD-sft" secondAttribute="trailing" constant="20" id="Oxe-N4-wUS"/>
+                                            <constraint firstItem="pJ5-PD-sft" firstAttribute="leading" secondItem="qVv-Hu-4ik" secondAttribute="leading" constant="20" id="WzS-m2-6nI"/>
+                                            <constraint firstAttribute="trailing" secondItem="Miy-Sj-53x" secondAttribute="trailing" constant="30" id="atp-c7-Pg3"/>
+                                            <constraint firstItem="oDG-Mt-IvS" firstAttribute="leading" secondItem="qVv-Hu-4ik" secondAttribute="leading" constant="30" id="dos-WA-V9u"/>
+                                            <constraint firstItem="OQ9-Fp-aMp" firstAttribute="top" secondItem="qVv-Hu-4ik" secondAttribute="top" constant="30" id="eak-vY-kK0"/>
+                                            <constraint firstItem="oDG-Mt-IvS" firstAttribute="top" secondItem="Miy-Sj-53x" secondAttribute="bottom" constant="15" id="juE-kn-CZS"/>
+                                            <constraint firstItem="Miy-Sj-53x" firstAttribute="top" secondItem="pJ5-PD-sft" secondAttribute="bottom" constant="40" id="mBD-GL-5Gb"/>
+                                            <constraint firstAttribute="trailing" secondItem="xwA-oJ-kTk" secondAttribute="trailing" constant="30" id="nge-F8-edF"/>
+                                            <constraint firstItem="Miy-Sj-53x" firstAttribute="leading" secondItem="qVv-Hu-4ik" secondAttribute="leading" constant="30" id="ojU-5Z-ww2"/>
+                                            <constraint firstAttribute="bottom" secondItem="WQw-JZ-tJ1" secondAttribute="bottom" constant="888" id="sy9-un-UxQ"/>
+                                            <constraint firstAttribute="height" constant="1200" id="uKk-az-fMn"/>
+                                            <constraint firstItem="pJ5-PD-sft" firstAttribute="top" secondItem="WQw-JZ-tJ1" secondAttribute="bottom" constant="30" id="vZs-o0-i5k"/>
+                                            <constraint firstAttribute="trailing" secondItem="OQ9-Fp-aMp" secondAttribute="trailing" constant="30" id="weF-Ib-wd1"/>
+                                            <constraint firstAttribute="trailing" secondItem="oDG-Mt-IvS" secondAttribute="trailing" constant="30" id="xyR-1v-MpN"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-Fp-aMp">
-                                <rect key="frame" x="34" y="122" width="347" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <constraints>
+                                    <constraint firstItem="qVv-Hu-4ik" firstAttribute="leading" secondItem="UJt-fP-xfr" secondAttribute="leading" id="UA9-3d-vaN"/>
+                                    <constraint firstItem="qVv-Hu-4ik" firstAttribute="top" secondItem="UJt-fP-xfr" secondAttribute="top" id="bn1-D5-hUE"/>
+                                    <constraint firstAttribute="trailing" secondItem="qVv-Hu-4ik" secondAttribute="trailing" id="l7M-hh-4td"/>
+                                    <constraint firstAttribute="bottom" secondItem="qVv-Hu-4ik" secondAttribute="bottom" id="qYL-7g-b7T"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YX6-BF-f9N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UJt-fP-xfr" secondAttribute="bottom" id="CgL-pn-kll"/>
+                            <constraint firstItem="UJt-fP-xfr" firstAttribute="trailing" secondItem="YX6-BF-f9N" secondAttribute="trailing" id="QQp-Gf-bCa"/>
+                            <constraint firstItem="UJt-fP-xfr" firstAttribute="leading" secondItem="YX6-BF-f9N" secondAttribute="leading" id="VYX-Ql-s8G"/>
+                            <constraint firstItem="UJt-fP-xfr" firstAttribute="top" secondItem="YX6-BF-f9N" secondAttribute="top" id="gFG-kK-7Au"/>
+                            <constraint firstItem="qVv-Hu-4ik" firstAttribute="width" secondItem="7Ds-KW-DB9" secondAttribute="width" id="p8v-ch-A5x"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Covid-19 Cases" id="a9T-bz-f0y"/>
+                    <size key="freeformSize" width="414" height="1250"/>
+                    <connections>
+                        <outlet property="activeLbl" destination="oDG-Mt-IvS" id="Dtm-P4-h2L"/>
+                        <outlet property="communityLbl" destination="wyO-pq-2Qd" id="7dt-RJ-mbd"/>
+                        <outlet property="criticalLbl" destination="THc-Xs-W7i" id="p9X-fo-Q9E"/>
+                        <outlet property="decessedLbl" destination="0PU-wH-vUs" id="qWI-cP-lRU"/>
+                        <outlet property="dischargedLbl" destination="RBX-sF-RsN" id="OXl-aG-A66"/>
+                        <outlet property="stableLbl" destination="XtR-we-kZV" id="Ava-v8-n5d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmK-bi-kPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -664,7 +736,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyr-f8-Mha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2765.217391304348" y="79.6875"/>
+            <point key="canvasLocation" x="2749" y="455"/>
         </scene>
         <!--Home-->
         <scene sceneID="UGx-20-mSg">
@@ -696,6 +768,7 @@
         <image name="hospital" width="930" height="525"/>
         <image name="pic_seniors" width="1440" height="900"/>
         <image name="undraw_Short_bio_re_fmx0-1" width="625.64495849609375" height="417.05929565429688"/>
+        <image name="undraw_medical_care_movn" width="888" height="618.10601806640625"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -705,8 +778,8 @@
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
