@@ -20,12 +20,12 @@ class DailyCaseViewController: UIViewController {
         let url = "https://api.apify.com/v2/key-value-stores/yaPbKe9e5Et61bl7W/records/LATEST?disableRedirect=true"
         let APIInfo = getData(from: url)
         
-        activeLbl.text = String(APIInfo.activeCases)
-        communityLbl.text = String(APIInfo.inCommunityFacilites)
-        stableLbl.text = String(APIInfo.stableHospitalized)
-        dischargedLbl.text = String(APIInfo.discharged)
-        criticalLbl.text = String(APIInfo.criticalHospitalized)
-        decessedLbl.text = String(APIInfo.deceased)
+//        activeLbl.text = String(APIInfo.activeCases)
+//        communityLbl.text = String(APIInfo.inCommunityFacilites)
+//        stableLbl.text = String(APIInfo.stableHospitalized)
+//        dischargedLbl.text = String(APIInfo.discharged)
+//        criticalLbl.text = String(APIInfo.criticalHospitalized)
+//        decessedLbl.text = String(APIInfo.deceased)
         
     }
     
