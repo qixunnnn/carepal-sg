@@ -13,41 +13,44 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url = "http://newsapi.org/v2/top-headlines?country=sg&apiKey=049b4f64c5ff4c6a9a4cde43c7300cd9"
-        getData(from: url)
+
+//        let url = "http://newsapi.org/v2/top-headlines?country=sg&apiKey=049b4f64c5ff4c6a9a4cde43c7300cd9"
+//        getData(from: url)
         
     }
+    //This is api count
     
-    private func getData(from url: String)
-    {
-        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
-            guard let data = data, error == nil else {
-                print("something went wrong")
-                return
-            }
-            print("have data")
-            // have data
-            var welcome:Welcome?
-            do
-            {
-                welcome = try JSONDecoder().decode(Welcome.self, from: data)
-            }
-            catch
-            {
-                print("failed to convert \(error.localizedDescription)")
-            }
-
-            guard let json = welcome else {
-                return
-            }
-
-            for i in json.articles
-            {
-                print(i)
-            }
-        })
-        task.resume()
-    }
+    //This is news
+//    private func getData(from url: String)
+//    {
+//        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
+//            guard let data = data, error == nil else {
+//                print("something went wrong")
+//                return
+//            }
+//            print("have data")
+//            // have data
+//            var welcome:Welcome?
+//            do
+//            {
+//                welcome = try JSONDecoder().decode(Welcome.self, from: data)
+//            }
+//            catch
+//            {
+//                print("failed to convert \(error.localizedDescription)")
+//            }
+//
+//            guard let json = welcome else {
+//                return
+//            }
+//
+//            for i in json.articles
+//            {
+//                print(i)
+//            }
+//        })
+//        task.resume()
+//    }
 
     /*
     // MARK: - Navigation

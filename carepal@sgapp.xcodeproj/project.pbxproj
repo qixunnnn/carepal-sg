@@ -36,6 +36,8 @@
 		973244F125AD5B2F00D30935 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973244F025AD5B2F00D30935 /* HomeViewController.swift */; };
 		979A433025BF2688001D5999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A432F25BF2688001D5999 /* User.swift */; };
 		979A433725BF36F3001D5999 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A433625BF36F3001D5999 /* CreateProfileViewController.swift */; };
+		97A0385F25C1F9CF0079CEBE /* CovidAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0385E25C1F9CF0079CEBE /* CovidAPI.swift */; };
+		97A0386225C1FF2B0079CEBE /* DailyCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0386125C1FF2B0079CEBE /* DailyCaseViewController.swift */; };
 		97EE120025AE9738002972CA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE11FF25AE9738002972CA /* News.swift */; };
 		97EE120325AE9792002972CA /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE120225AE9792002972CA /* NewsRequest.swift */; };
 		BD93A0960FD137404A4CDCD3 /* Pods_carepal_sgapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FC7FD1D98F45BB4AB4613D /* Pods_carepal_sgapp.framework */; };
@@ -78,6 +80,8 @@
 		973244F025AD5B2F00D30935 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		979A432F25BF2688001D5999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		979A433625BF36F3001D5999 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		97A0385E25C1F9CF0079CEBE /* CovidAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAPI.swift; sourceTree = "<group>"; };
+		97A0386125C1FF2B0079CEBE /* DailyCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCaseViewController.swift; sourceTree = "<group>"; };
 		97EE11FF25AE9738002972CA /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		97EE120225AE9792002972CA /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		E9FC7FD1D98F45BB4AB4613D /* Pods_carepal_sgapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carepal_sgapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +168,8 @@
 				9720092E25BE1B1D006C2D80 /* LoginViewController.swift */,
 				979A432F25BF2688001D5999 /* User.swift */,
 				979A433625BF36F3001D5999 /* CreateProfileViewController.swift */,
+				97A0385E25C1F9CF0079CEBE /* CovidAPI.swift */,
+				97A0386125C1FF2B0079CEBE /* DailyCaseViewController.swift */,
 			);
 			path = "carepal@sgapp";
 			sourceTree = "<group>";
@@ -322,12 +328,14 @@
 				578F394C25A4232D00E93A55 /* AppDelegate.swift in Sources */,
 				9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */,
 				578F394E25A4232D00E93A55 /* SceneDelegate.swift in Sources */,
+				97A0386225C1FF2B0079CEBE /* DailyCaseViewController.swift in Sources */,
 				97EE120025AE9738002972CA /* News.swift in Sources */,
 				575BA1AC25C05C8200895053 /* MapViewController.swift in Sources */,
 				973244F125AD5B2F00D30935 /* HomeViewController.swift in Sources */,
 				979A433725BF36F3001D5999 /* CreateProfileViewController.swift in Sources */,
 				5758C7F025BD8C0A00282514 /* CheckBox.swift in Sources */,
 				5758C7DB25BD771F00282514 /* Quiz2ViewController.swift in Sources */,
+				97A0385F25C1F9CF0079CEBE /* CovidAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
