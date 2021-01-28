@@ -38,6 +38,7 @@ class Quiz3ViewController: UIViewController {
         performSegue(withIdentifier: "q3", sender: nil)
     }
     override func viewDidLoad() {
+        overrideUserInterfaceStyle = .light
         super.viewDidLoad()
         progressPV.progress = 0.4
         // Do any additional setup after loading the view.

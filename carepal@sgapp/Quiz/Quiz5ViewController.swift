@@ -42,13 +42,13 @@ class Quiz5ViewController: UIViewController {
         {
             let w = Double(weightBtn.text!)!
             let h = Double(heightBtn.text!)! / 100
-            bmiTF.text = String(format: "%.2f",w/(h * 2))
+            bmiTF.text = String(format: "%.2f",w/(h * h))
         }
     }
     
     @IBAction func DoneBtn(_ sender: Any) {
         
-        performSegue(withIdentifier: "", sender: nil)
+        performSegue(withIdentifier: "q5", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
