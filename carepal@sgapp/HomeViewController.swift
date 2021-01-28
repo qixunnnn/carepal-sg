@@ -12,45 +12,38 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+         //Do any additional setup after loading the view.
+//        let source = Source(id: "null", name: "Endofound.org")
+//        let articles = Article(source: source, author: "Endofound.org", title: "Everything You Need to Know About Cervical Cancer - Endometriosis Foundation of America - The Blossom", description: "January is Cervical Health Awareness Month", url: "https://www.endofound.org/everything-you-need-to-know-about-cervical-cancer", urlToImage: "https://www.endofound.org/member_files/object_files/endofound.org/2021/01/28/january_is_cervical_health_awareness_month.png", publishedAt: 2021-01-28T16:46:33Z, content: "January is Cervical Health Awareness Month. This month, various organizations embark on campaigns geared towards increasing awareness and public education on cervical cancer in their communities, enc… [+5979 chars]")
+        //let sample = News(status: "ok", totalResults: 70, articles:)
+        getData { (News) in
 
-//        let url = "http://newsapi.org/v2/top-headlines?country=sg&apiKey=049b4f64c5ff4c6a9a4cde43c7300cd9"
-//        getData(from: url)
-        
+        }
     }
-    //This is api count
-    
-    //This is news
-//    private func getData(from url: String)
-//    {
-//        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
-//            guard let data = data, error == nil else {
-//                print("something went wrong")
-//                return
-//            }
-//            print("have data")
-//            // have data
-//            var welcome:Welcome?
-//            do
-//            {
-//                welcome = try JSONDecoder().decode(Welcome.self, from: data)
-//            }
-//            catch
-//            {
-//                print("failed to convert \(error.localizedDescription)")
-//            }
-//
-//            guard let json = welcome else {
-//                return
-//            }
-//
-//            for i in json.articles
-//            {
-//                print(i)
-//            }
-//        })
-//        task.resume()
-//    }
+    //    This is news
+    private func getData(completionHandler: @escaping (News) -> Void)
+    {
+        let url = "http://newsapi.org/v2/top-headlines?country=sg&apiKey=049b4f64c5ff4c6a9a4cde43c7300cd9"
+
+        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
+            guard let data = data, error == nil else {
+                print("something went wrong")
+                return
+            }
+            print("have data")
+            // have data
+            do
+            {
+                let response = try JSONDecoder().decode(News.self, from: data)
+                completionHandler(response)
+            }
+            catch
+            {
+                print("failed to convert \(error.localizedDescription)")
+            }
+        })
+        task.resume()
+    }
 
     /*
     // MARK: - Navigation

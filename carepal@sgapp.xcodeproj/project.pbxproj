@@ -39,7 +39,6 @@
 		97A0385F25C1F9CF0079CEBE /* CovidAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0385E25C1F9CF0079CEBE /* CovidAPI.swift */; };
 		97A0386225C1FF2B0079CEBE /* DailyCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0386125C1FF2B0079CEBE /* DailyCaseViewController.swift */; };
 		97EE120025AE9738002972CA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE11FF25AE9738002972CA /* News.swift */; };
-		97EE120325AE9792002972CA /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE120225AE9792002972CA /* NewsRequest.swift */; };
 		BD93A0960FD137404A4CDCD3 /* Pods_carepal_sgapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FC7FD1D98F45BB4AB4613D /* Pods_carepal_sgapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 		97A0385E25C1F9CF0079CEBE /* CovidAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAPI.swift; sourceTree = "<group>"; };
 		97A0386125C1FF2B0079CEBE /* DailyCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCaseViewController.swift; sourceTree = "<group>"; };
 		97EE11FF25AE9738002972CA /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		97EE120225AE9792002972CA /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		E9FC7FD1D98F45BB4AB4613D /* Pods_carepal_sgapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carepal_sgapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,7 +158,6 @@
 				578F395925A4232F00E93A55 /* Info.plist */,
 				973244F025AD5B2F00D30935 /* HomeViewController.swift */,
 				97EE11FF25AE9738002972CA /* News.swift */,
-				97EE120225AE9792002972CA /* NewsRequest.swift */,
 				9720091625BE0917006C2D80 /* GoogleService-Info.plist */,
 				5758C7EB25BD88BB00282514 /* Assets.xcassets */,
 				5758C7D525BD657400282514 /* TranslateText.swift */,
@@ -314,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97EE120325AE9792002972CA /* NewsRequest.swift in Sources */,
 				5758C7E425BD79C500282514 /* Quiz5ViewController.swift in Sources */,
 				5796FADC25C0A98F009C533A /* GoogleMapsHelper.swift in Sources */,
 				5758C7E125BD798300282514 /* Quiz4ViewController.swift in Sources */,
