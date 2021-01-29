@@ -69,7 +69,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
        
         // Do any additional setup after loading the view.
     }
-   
+    
     @IBAction func centerMapOnUserLocation(_ sender: Any) {
         guard let coordinate = locationManager.location?.coordinate else {return}
         let region = MKCoordinateRegion(center:coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
@@ -94,7 +94,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         location = currentlocation
         if(tapped)
         {
-            if let previousLocationNew = previousLocation as CLLocation?
+            if (previousLocation != nil)
             {
                 //case if previous location exists
                
@@ -131,10 +131,22 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         tapped = true
-        destination = np
+        //destination = np
         calculatingRLbl.isHidden = false
         activityIndicator.startAnimating()
         
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString((view.annotation?.subtitle)!!) { (placemarks, error) in
+            guard
+                let placemarks = placemarks,
+                let location = placemarks.first?.location
+                
+            else {
+                // handle no location found
+                return
+            }
+            self.destination = location.coordinate
+        }
        // print(view.annotation?.title!!)
         //print(view.annotation?.subtitle!!)
     }
@@ -156,8 +168,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                 if let route = unwrappedResponse.routes.first {
                     let step = route.steps[1]
                     let distance = String(format:"%.2f", step.distance)
-                    stepLbl.text = "In \(distance)meters \(step.instructions)"
-                    route.expectedTravelTime/60
+                    stepLbl.text = "In \(distance)m \(step.instructions)"
+                    timeLbl.text = String(format:"ETA: %.2fmin",route.expectedTravelTime/60)
+                    
                     //show on map
                     
                     self.mapView.addOverlay(route.polyline)
@@ -205,7 +218,7 @@ class CustomAnnotationView: MKPinAnnotationView {  // or nowadays, you might use
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
 
         canShowCallout = true
-        rightCalloutAccessoryView = UIButton(type: .contactAdd)
+        rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         
         
     }
