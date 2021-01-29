@@ -11,16 +11,23 @@ import CoreLocation
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var stepLbl: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var calculatingRLbl: UILabel!
+    var previousLocation : CLLocation!
     let locationManager = CLLocationManager()
-    @IBOutlet weak var showlocationIMG: UIImageView!
     let np = CLLocationCoordinate2D(latitude: 1.333498666, longitude: 103.772830242)
     var destination = CLLocationCoordinate2D.init()
     var tapped = false
     var location: CLLocation!
+    public var currentCoordinates: CLLocationCoordinate2D!
     var directionsArray: [MKDirections] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.hidesWhenStopped = true
+        calculatingRLbl.isHidden = true
         overrideUserInterfaceStyle = .light
         mapView.delegate = self
         mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
@@ -68,7 +75,10 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         let region = MKCoordinateRegion(center:coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(region, animated: true)
     }
-   
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!,fromLocation oldLocation: CLLocation!)
+    {
+       
+    }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //let locValue:CLLocationCoordinate2D = manager.location!.coordinate
 
@@ -80,37 +90,53 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
 //        annotation.title = "Me"
 //        annotation.subtitle = "current location"
 //        mapView.addAnnotation(annotation)
-        
-        guard (locations.last != nil) else {
-            return
-        }
-        self.location = locations.last as CLLocation?
-        
+        guard let currentlocation = locations.last else {return}
+        location = currentlocation
         if(tapped)
         {
-            showRouteOnMap(pickupCoordinate: locations.last!.coordinate, destinationCoordinate: destination)
-        }
-        else
-        {
+            if let previousLocationNew = previousLocation as CLLocation?
+            {
+                //case if previous location exists
+               
+                if previousLocation.distance(from: currentlocation) > 10 {
+                   //show route
+                    
+                        showRouteOnMap(pickupCoordinate: currentlocation.coordinate, destinationCoordinate: destination)
+                        
+                    previousLocation = currentlocation
+                }
+            }
+            else{
+                //in case previous location doesn't exist
+                //show route
+               
+                    showRouteOnMap(pickupCoordinate: currentlocation.coordinate, destinationCoordinate: destination)
+                   
+                previousLocation = currentlocation
+            }
             
         }
-
+        
+        
+        mapView.userTrackingMode = .followWithHeading
         //centerMap(locValue)
     }
+  
+    
     func resetMapView(withNew directions:MKDirections)
     {
         mapView.removeOverlays(mapView.overlays)
-        directionsArray.append(directions)
-        let _ = directionsArray.map {$0.cancel()}
-        directionsArray.removeLast()
         
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         tapped = true
         destination = np
-        print(view.annotation?.title!!)
-        print(view.annotation?.subtitle!!)
+        calculatingRLbl.isHidden = false
+        activityIndicator.startAnimating()
+        
+       // print(view.annotation?.title!!)
+        //print(view.annotation?.subtitle!!)
     }
     func showRouteOnMap(pickupCoordinate: CLLocationCoordinate2D, destinationCoordinate: CLLocationCoordinate2D) {
 
@@ -128,11 +154,17 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                 
                 //for getting just one route
                 if let route = unwrappedResponse.routes.first {
+                    let step = route.steps[1]
+                    let distance = String(format:"%.2f", step.distance)
+                    stepLbl.text = "In \(distance)meters \(step.instructions)"
+                    route.expectedTravelTime/60
                     //show on map
                     
                     self.mapView.addOverlay(route.polyline)
                     //set the map area to show the route
                     self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets.init(top: 80.0, left: 20.0, bottom: 100.0, right: 20.0), animated: true)
+                    calculatingRLbl.isHidden = true
+                    activityIndicator.stopAnimating()
                 }
 
                 //if you want to show multiple routes then you can get all routes in a loop in the following statement
@@ -147,17 +179,10 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
          return renderer
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
+
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation { return nil }
@@ -180,7 +205,9 @@ class CustomAnnotationView: MKPinAnnotationView {  // or nowadays, you might use
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
 
         canShowCallout = true
-        rightCalloutAccessoryView = UIButton(type: .infoLight)
+        rightCalloutAccessoryView = UIButton(type: .contactAdd)
+        
+        
     }
 
     required init?(coder aDecoder: NSCoder) {
