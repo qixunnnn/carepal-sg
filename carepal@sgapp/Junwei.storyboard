@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FlA-R9-f2b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KYA-Jv-atN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -1617,17 +1617,10 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="MuX-da-9dK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xvS-rW-aN3">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="kfZ-u2-kem"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-2v-wZD">
-                                <rect key="frame" x="336" y="728" width="59" height="59"/>
+                                <rect key="frame" x="336" y="617" width="59" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="Il7-wJ-QoU"/>
                                     <constraint firstAttribute="height" constant="59" id="NFa-LQ-UqK"/>
@@ -1637,15 +1630,68 @@
                                     <action selector="centerMapOnUserLocation:" destination="veR-Dv-xpF" eventType="touchUpInside" id="VKk-5p-myy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculating Route..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbr-Ir-27G">
+                                <rect key="frame" x="135" y="665" width="144" height="21"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cik-DF-UkV">
+                                <rect key="frame" x="110" y="665" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xvS-rW-aN3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kfZ-u2-kem"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpY-uR-E9O">
+                                <rect key="frame" x="0.0" y="720" width="414" height="176"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbk-ra-QDy">
+                                        <rect key="frame" x="207" y="17" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dp4-SY-NNr">
+                                        <rect key="frame" x="388" y="41" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Wbk-ra-QDy" firstAttribute="top" secondItem="gpY-uR-E9O" secondAttribute="top" constant="17" id="67n-4C-dyk"/>
+                                    <constraint firstItem="dp4-SY-NNr" firstAttribute="top" secondItem="Wbk-ra-QDy" secondAttribute="bottom" constant="24" id="SoL-tt-g6C"/>
+                                    <constraint firstItem="Wbk-ra-QDy" firstAttribute="centerX" secondItem="gpY-uR-E9O" secondAttribute="centerX" id="jJP-o6-Bp1"/>
+                                    <constraint firstAttribute="height" constant="176" id="kkh-Hi-xod"/>
+                                    <constraint firstAttribute="trailing" secondItem="dp4-SY-NNr" secondAttribute="trailing" constant="26" id="mMS-Ce-1PU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XWa-Yo-c2P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XWa-Yo-c2P" firstAttribute="bottom" secondItem="DnN-2v-wZD" secondAttribute="bottom" constant="26" id="MyP-Pq-TPk"/>
-                            <constraint firstItem="xvS-rW-aN3" firstAttribute="top" secondItem="XWa-Yo-c2P" secondAttribute="top" id="Nst-XE-3TR"/>
+                            <constraint firstItem="gpY-uR-E9O" firstAttribute="leading" secondItem="XWa-Yo-c2P" secondAttribute="leading" id="58y-Nr-sdA"/>
+                            <constraint firstItem="cik-DF-UkV" firstAttribute="top" secondItem="xvS-rW-aN3" secondAttribute="bottom" constant="533" id="AIi-3x-03h"/>
+                            <constraint firstItem="gpY-uR-E9O" firstAttribute="top" secondItem="DnN-2v-wZD" secondAttribute="bottom" constant="44" id="IOE-ik-CJ3"/>
+                            <constraint firstItem="gpY-uR-E9O" firstAttribute="trailing" secondItem="XWa-Yo-c2P" secondAttribute="trailing" id="JY8-h6-a6I"/>
+                            <constraint firstItem="Xbr-Ir-27G" firstAttribute="top" secondItem="xvS-rW-aN3" secondAttribute="bottom" constant="533" id="Opx-LS-rGx"/>
                             <constraint firstItem="XWa-Yo-c2P" firstAttribute="trailing" secondItem="DnN-2v-wZD" secondAttribute="trailing" constant="19" id="StH-vh-zIs"/>
+                            <constraint firstItem="xvS-rW-aN3" firstAttribute="top" secondItem="MuX-da-9dK" secondAttribute="top" id="TOe-qY-gld"/>
                             <constraint firstItem="xvS-rW-aN3" firstAttribute="leading" secondItem="MuX-da-9dK" secondAttribute="leading" id="cxk-f4-qMC"/>
+                            <constraint firstItem="gpY-uR-E9O" firstAttribute="top" secondItem="Xbr-Ir-27G" secondAttribute="bottom" constant="34" id="ftE-4U-Rh9"/>
+                            <constraint firstItem="Xbr-Ir-27G" firstAttribute="centerX" secondItem="vfA-oY-sVS" secondAttribute="centerX" id="pUw-6e-wjU"/>
                             <constraint firstItem="xvS-rW-aN3" firstAttribute="trailing" secondItem="MuX-da-9dK" secondAttribute="trailing" id="vup-1u-ZOt"/>
+                            <constraint firstItem="Xbr-Ir-27G" firstAttribute="leading" secondItem="cik-DF-UkV" secondAttribute="trailing" constant="5" id="zcC-wE-2IR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="gSd-b9-yf7">
@@ -1654,7 +1700,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="cik-DF-UkV" id="NCp-v5-027"/>
+                        <outlet property="calculatingRLbl" destination="Xbr-Ir-27G" id="ohD-um-HLK"/>
                         <outlet property="mapView" destination="MuX-da-9dK" id="iBR-Yg-KJM"/>
+                        <outlet property="stepLbl" destination="Wbk-ra-QDy" id="pSI-8g-WRc"/>
+                        <outlet property="timeLbl" destination="dp4-SY-NNr" id="kEM-7e-EHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AC-hk-ZCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1921,11 +1971,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="oVq-xN-q3F"/>
         <segue reference="jsi-T8-Akx"/>
         <segue reference="yo0-f0-fxU"/>
         <segue reference="MPk-hI-aCk"/>
         <segue reference="sv8-Z7-taK"/>
-        <segue reference="zFG-Zq-iFV"/>
+        <segue reference="9fY-Io-Caj"/>
         <segue reference="A72-nq-cvF"/>
     </inferredMetricsTieBreakers>
     <resources>
