@@ -19,6 +19,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     var previousLocation : CLLocation!
     let locationManager = CLLocationManager()
     let np = CLLocationCoordinate2D(latitude: 1.333498666, longitude: 103.772830242)
+    let jp = CLLocationCoordinate2D(latitude: 1.3400319732, longitude: 103.704087184)
     var destination = CLLocationCoordinate2D.init()
     var tapped = false
     var location: CLLocation!
