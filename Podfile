@@ -11,8 +11,7 @@ target 'carepal@sgapp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  
-  #pod 'GoogleMaps', '4.1.0'
-
+  pod 'QRCode','~>2.0'
+  pod 'BarcodeScanner'
 
 end
