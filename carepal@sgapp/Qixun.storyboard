@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhp-pi-Rvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6390" y="17"/>
+            <point key="canvasLocation" x="6432" y="275"/>
         </scene>
         <!--News Table View Controller-->
         <scene sceneID="NiI-fC-0wd">
@@ -125,8 +125,8 @@
                                                 <constraint firstAttribute="height" constant="110" id="phM-Tl-KkE"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q87-eb-73G">
-                                            <rect key="frame" x="172" y="12" width="232" height="74"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q87-eb-73G">
+                                            <rect key="frame" x="172" y="12" width="232" height="18"/>
                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -142,12 +142,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="gkC-wL-0mx" secondAttribute="trailing" constant="10" id="1TV-NE-dDU"/>
                                         <constraint firstItem="gkC-wL-0mx" firstAttribute="leading" secondItem="Xg3-Gb-l9y" secondAttribute="trailing" constant="10" id="26y-Yc-Sa6"/>
                                         <constraint firstItem="Xg3-Gb-l9y" firstAttribute="leading" secondItem="sSM-ur-rJQ" secondAttribute="leading" constant="5" id="7ky-Ns-gWg"/>
-                                        <constraint firstItem="Q87-eb-73G" firstAttribute="top" secondItem="sSM-ur-rJQ" secondAttribute="top" constant="12" id="F11-aA-DYe"/>
-                                        <constraint firstItem="Q87-eb-73G" firstAttribute="leading" secondItem="Xg3-Gb-l9y" secondAttribute="trailing" constant="10" id="Ztc-9h-Cwj"/>
-                                        <constraint firstAttribute="trailing" secondItem="Q87-eb-73G" secondAttribute="trailing" constant="10" id="Zvq-IY-ARD"/>
+                                        <constraint firstItem="Q87-eb-73G" firstAttribute="top" secondItem="sSM-ur-rJQ" secondAttribute="top" constant="12" id="YL2-yO-fD1"/>
                                         <constraint firstItem="gkC-wL-0mx" firstAttribute="top" secondItem="sSM-ur-rJQ" secondAttribute="topMargin" constant="83" id="a9X-Fw-rBf"/>
-                                        <constraint firstItem="gkC-wL-0mx" firstAttribute="top" secondItem="Q87-eb-73G" secondAttribute="bottom" constant="8" symbolic="YES" id="gpq-aM-lah"/>
+                                        <constraint firstItem="Q87-eb-73G" firstAttribute="leading" secondItem="Xg3-Gb-l9y" secondAttribute="trailing" constant="10" id="aJm-2r-kEy"/>
                                         <constraint firstAttribute="bottom" secondItem="Xg3-Gb-l9y" secondAttribute="bottom" constant="3" id="vFl-zV-XAg"/>
+                                        <constraint firstAttribute="trailing" secondItem="Q87-eb-73G" secondAttribute="trailing" constant="10" id="xUh-AJ-xbM"/>
                                         <constraint firstItem="Xg3-Gb-l9y" firstAttribute="top" secondItem="sSM-ur-rJQ" secondAttribute="top" constant="3" id="xbM-BE-zFB"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -163,6 +162,9 @@
                             <outlet property="delegate" destination="8mF-ld-YaY" id="udM-Kz-g7b"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="Lmb-w7-j5I" id="Aip-DC-Llx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMB-B2-A9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

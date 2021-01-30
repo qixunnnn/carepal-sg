@@ -11,25 +11,26 @@ class NewsTableViewCell:UITableViewCell {
     @IBOutlet weak var headerImg: UIImageView!
     @IBOutlet weak var titleText: UILabel!
     @IBOutlet weak var dateText: UILabel!
+    
 }
 
-class NewsTableViewController: UITableViewController {
+class NewsTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var fetchArticles = [Article]()
     var allImages = [UIImage]()
+    var filteredData: [String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         getData {
             self.tableView.reloadData()
         }
-//        tableView.delegate = self
-//        tableView.dataSource = self
     }
 
     // MARK: - Table view data source
@@ -46,10 +47,12 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
-        let cNew = fetchArticles[indexPath.row] //Passing later
+        //let cNew = fetchArticles[indexPath.row] //Passing later
         
         cell.titleText?.text = fetchArticles[indexPath.row].title
+        
         cell.titleText.numberOfLines = 0
+        cell.titleText.sizeToFit()
         
         //Convert URL to image
         if fetchArticles[indexPath.row].urlToImage != nil {
@@ -62,61 +65,22 @@ class NewsTableViewController: UITableViewController {
                 }
             }
         }
+        cell.headerImg.layer.cornerRadius = 10
+        
         
         //Convert string to date
-        let dateFormatter = DateFormatter()
+        //let dateFormatter = DateFormatter()
         let date = fetchArticles[indexPath.row].publishedAt
-        let x = dateFormatter.date(from: date)
-        cell.dateText.text = x?.asString()
+        cell.dateText.text = date
         return cell
     }
     
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let url = URL(string: fetchArticles[indexPath.row].url) else { return }
+        UIApplication.shared.open(url)
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //Retrieve Data
     private func getData(completed: @escaping () -> ())
     {
         let url = "http://newsapi.org/v2/top-headlines?country=sg&category=health&apiKey=049b4f64c5ff4c6a9a4cde43c7300cd9"
@@ -146,7 +110,28 @@ class NewsTableViewController: UITableViewController {
         })
         task.resume()
     }
+    //Search Bar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredData = []
+        
+        if searchText == "" {
+            for a in fetchArticles {
+                filteredData.append(a.title)
+            }
+        }
+        else
+        {
+            for a in fetchArticles {
+                if a.title.lowercased().contains(searchText.lowercased()) {
+                    filteredData.append(a.title)
+                }
+            }
+            self.tableView.reloadData()
+        }
+    }
 }
+
+//Convert Date
 extension Date
 {
     func asString() -> String {
