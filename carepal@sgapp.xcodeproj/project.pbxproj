@@ -32,6 +32,7 @@
 		57AF0F0B25C1B886003FD640 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF0F0A25C1B886003FD640 /* GamesViewController.swift */; };
 		57AF0F0E25C20638003FD640 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF0F0D25C20638003FD640 /* MapsViewController.swift */; };
 		57B4AD2025C43EAB00222FAE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B4AD1F25C43EAB00222FAE /* MapKit.framework */; };
+		57B4AD2C25C6227000222FAE /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD2B25C6227000222FAE /* RewardViewController.swift */; };
 		9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720091325BE0773006C2D80 /* SignUpViewController.swift */; };
 		9720091725BE0917006C2D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9720091625BE0917006C2D80 /* GoogleService-Info.plist */; };
 		9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720092E25BE1B1D006C2D80 /* LoginViewController.swift */; };
@@ -78,6 +79,7 @@
 		57AF0F0A25C1B886003FD640 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		57AF0F0D25C20638003FD640 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		57B4AD1F25C43EAB00222FAE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		57B4AD2B25C6227000222FAE /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		9720091325BE0773006C2D80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9720091625BE0917006C2D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9720092E25BE1B1D006C2D80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */,
 				575BA13225BF51D800895053 /* Qixun.storyboard */,
 				575BA13625BF51ED00895053 /* Junwei.storyboard */,
+				57B4AD2B25C6227000222FAE /* RewardViewController.swift */,
 				57AF0F0D25C20638003FD640 /* MapsViewController.swift */,
 				57AF0F0A25C1B886003FD640 /* GamesViewController.swift */,
 				5758C7C125BD50CD00282514 /* Quiz */,
@@ -338,6 +341,7 @@
 				97A0386225C1FF2B0079CEBE /* DailyCaseViewController.swift in Sources */,
 				97BE8AD625C47CA9007571C6 /* NewsTableViewController.swift in Sources */,
 				97EE120025AE9738002972CA /* News.swift in Sources */,
+				57B4AD2C25C6227000222FAE /* RewardViewController.swift in Sources */,
 				575BA1AC25C05C8200895053 /* MapViewController.swift in Sources */,
 				973244F125AD5B2F00D30935 /* HomeViewController.swift in Sources */,
 				979A433725BF36F3001D5999 /* CreateProfileViewController.swift in Sources */,
@@ -432,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -488,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
