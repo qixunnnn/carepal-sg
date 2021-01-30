@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class Quiz3ViewController: UIViewController {
 
@@ -22,19 +24,36 @@ class Quiz3ViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var progressPV: UIProgressView!
     
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
+    
     @IBAction func NextBtn(_ sender: Any) {
+        
+        var dairy:String = "nil"
+        var fish:String = "nil"
+        var nuts:String = "nil"
+        var glutton:String = "nil"
+        
         if(dairyBtn.isSelected){
-            
+            dairy = "true"
         }
         if(fishBtn.isSelected){
-            
+            fish = "true"
         }
         if(nutsBtn.isSelected){
-            
+            nuts = "true"
         }
         if(gluttonBtn.isSelected){
-            
+            glutton = "true"
         }
+        
+        let Details: [String: Any] = [
+            "dairy":dairy as NSString,
+            "fish": fish as NSString,
+            "nuts": nuts as NSString,
+            "gluttons": glutton as NSString]
+        
+        self.database.child("users").child(userID!).child("allergy").setValue(Details)
         performSegue(withIdentifier: "q3", sender: nil)
     }
     override func viewDidLoad() {

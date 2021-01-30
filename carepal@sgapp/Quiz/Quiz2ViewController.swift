@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class Quiz2ViewController: UIViewController {
 
@@ -28,7 +30,8 @@ class Quiz2ViewController: UIViewController {
     @IBOutlet weak var porkBtn: UIButton!
     @IBOutlet weak var beefBtn: UIButton!
     
-   
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,18 +44,32 @@ class Quiz2ViewController: UIViewController {
     }
     
     @IBAction func NextBtn(_ sender: Any) {
+        
+        var vegetarian:String = "nil"
+        var vegan:String = "nil"
+        var pork:String = "nil"
+        var beef:String = "nil"
+        
         if(vegetarainBtn.isSelected){
-            
+            vegetarian = "true"
         }
         if(veganBtn.isSelected){
-            
+            vegan = "true"
         }
         if(porkBtn.isSelected){
-            
+            pork = "true"
         }
         if(beefBtn.isSelected){
-            
+            beef = "true"
         }
+        let Details: [String: Any] = [
+            "vegetarian":vegetarian as NSString,
+            "vegan": vegan as NSString,
+            "pork": pork as NSString,
+            "beef": beef as NSString]
+        
+        self.database.child("users").child(userID!).child("dietary").setValue(Details)
+
         performSegue(withIdentifier: "q2", sender: nil)
     }
   

@@ -66,14 +66,14 @@ class SignUpViewController: UIViewController {
                 {
                     
                     //User will be created and store in firebase
-                    let userInfo: [String: Any] = [
-                        "FirstName":"nil" as NSString,
-                        "LastName": "nil" as NSString,
-                        "Contact": "nil" as NSString,
-                        "Points": 0 as NSNumber]
-                    
+//                    let userInfo: [String: Any] = [
+//                        "FirstName":"nil" as NSString,
+//                        "LastName": "nil" as NSString,
+//                        "Contact": "nil" as NSString,
+//                        "Points": 0 as NSNumber]
+//                    
                     self.database.child("users").child(result!.user.uid)
-                    self.database.child("users").child(result!.user.uid).setValue(userInfo)
+//                    self.database.child("users").child(result!.user.uid).setValue(userInfo)
                     
                     self.performSegue(withIdentifier: "signUpToProfile", sender: nil)
                 }

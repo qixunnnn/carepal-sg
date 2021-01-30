@@ -20,7 +20,7 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
     
     var fetchArticles = [Article]()
     var allImages = [UIImage]()
-    var filteredData: [String]!
+    var filteredData: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,7 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
         getData {
             self.tableView.reloadData()
         }
+        print(self.filteredData.count)
     }
 
     // MARK: - Table view data source
@@ -42,7 +43,8 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return fetchArticles.count
+        //return fetchArticles.count
+        return filteredData.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,7 +100,12 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
                 self.fetchArticles = response.articles
                 //completionHandler(response)
                 //print(self.fetchArticles)
+                for x in response.articles
+                {
+                    self.filteredData.append(x.title)
+                }
                 DispatchQueue.main.sync {
+
                     completed()
                 }
 

@@ -56,6 +56,7 @@ class CreateProfileViewController: UIViewController {
                 else
                 {
                     print("Data saved successfully")
+                    self.performSegue(withIdentifier: "ProfileToSurvey", sender: self)
                 }
             }
         }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class Quiz5ViewController: UIViewController {
 
@@ -20,6 +22,8 @@ class Quiz5ViewController: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     @IBOutlet weak var progressPV: UIProgressView!
     
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
     
     @IBAction func weightBtn(_ sender: Any) {
         if(heightBtn.text == "" || weightBtn.text == "")
@@ -47,8 +51,21 @@ class Quiz5ViewController: UIViewController {
     }
     
     @IBAction func DoneBtn(_ sender: Any) {
+        let error = validateFields()
         
-        performSegue(withIdentifier: "q5", sender: nil)
+        if error != "" {
+            self.alert(message: error, title: "")
+        }
+        else
+        {
+            let Details: [String: Any] = [
+                "height": heightTF.text! as NSString,
+                "weight": weightTF.text! as NSString,
+                "bmi": bmiTF.text! as NSString]
+            
+            self.database.child("users").child(userID!).child("heightandweight").setValue(Details)
+            performSegue(withIdentifier: "q5", sender: nil)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +76,22 @@ class Quiz5ViewController: UIViewController {
     }
     @objc func dismissKeyboard(){
         view.endEditing(true)
+    }
+    
+    func alert(message: String, title:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+    }
+    func validateFields() -> String{
+        
+        if heightTF.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" || weightTF.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            return "Please fill in all fields"
+        }
+        return ""
     }
 
     /*

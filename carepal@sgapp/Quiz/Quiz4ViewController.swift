@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class Quiz4ViewController: UIViewController {
     
@@ -26,20 +28,41 @@ class Quiz4ViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var progressPV: UIProgressView!
     
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
+    
     @IBAction func NextBtn(_ sender: Any) {
         overrideUserInterfaceStyle = .light
+        
+        var cholesterol:String = "nil"
+        var bloodPressure:String = "nil"
+        var diabetes:String = "nil"
+        var obesity:String = "nil"
+        
         if(cholesterolBtn.isSelected){
-            
+            cholesterol = "true"
         }
         if(bloodPressureBtn.isSelected){
-            
+            bloodPressure = "true"
+
         }
         if(diabetesBtn.isSelected){
-            
+            diabetes = "true"
+
         }
         if(obesityBtn.isSelected){
-            
+            obesity = "true"
+
         }
+        
+        let Details: [String: Any] = [
+            "cholesterol":cholesterol as NSString,
+            "bloodPressure": bloodPressure as NSString,
+            "diabetes": diabetes as NSString,
+            "obesity": obesity as NSString]
+        
+        self.database.child("users").child(userID!).child("medical").setValue(Details)
+        
         performSegue(withIdentifier: "q4", sender: nil)
     }
     override func viewDidLoad() {
