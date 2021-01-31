@@ -34,6 +34,7 @@
 		57B4AD2025C43EAB00222FAE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B4AD1F25C43EAB00222FAE /* MapKit.framework */; };
 		57B4AD2C25C6227000222FAE /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD2B25C6227000222FAE /* RewardViewController.swift */; };
 		57B4AD4225C6F25100222FAE /* RedeemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD4125C6F25000222FAE /* RedeemTableViewController.swift */; };
+		57B4AD4925C746EA00222FAE /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD4825C746EA00222FAE /* DonateViewController.swift */; };
 		9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720091325BE0773006C2D80 /* SignUpViewController.swift */; };
 		9720091725BE0917006C2D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9720091625BE0917006C2D80 /* GoogleService-Info.plist */; };
 		9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720092E25BE1B1D006C2D80 /* LoginViewController.swift */; };
@@ -82,6 +83,7 @@
 		57B4AD1F25C43EAB00222FAE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		57B4AD2B25C6227000222FAE /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		57B4AD4125C6F25000222FAE /* RedeemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemTableViewController.swift; sourceTree = "<group>"; };
+		57B4AD4825C746EA00222FAE /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		9720091325BE0773006C2D80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9720091625BE0917006C2D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9720092E25BE1B1D006C2D80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */,
 				575BA13225BF51D800895053 /* Qixun.storyboard */,
 				575BA13625BF51ED00895053 /* Junwei.storyboard */,
+				57B4AD4825C746EA00222FAE /* DonateViewController.swift */,
 				57B4AD4125C6F25000222FAE /* RedeemTableViewController.swift */,
 				57B4AD2B25C6227000222FAE /* RewardViewController.swift */,
 				57AF0F0D25C20638003FD640 /* MapsViewController.swift */,
@@ -332,6 +335,7 @@
 				5758C7E125BD798300282514 /* Quiz4ViewController.swift in Sources */,
 				57AF0F0B25C1B886003FD640 /* GamesViewController.swift in Sources */,
 				9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */,
+				57B4AD4925C746EA00222FAE /* DonateViewController.swift in Sources */,
 				979A433025BF2688001D5999 /* User.swift in Sources */,
 				5758C7DE25BD797100282514 /* Quiz3ViewController.swift in Sources */,
 				5758C7D625BD657400282514 /* TranslateText.swift in Sources */,
