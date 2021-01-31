@@ -24,6 +24,14 @@ class RedeemTableViewController: UITableViewController {
           "30% off NTUC products",
           "50% off delivery using GrabFood"
         ]
+    let CellPoints: Array<String> =
+        ["500 Points",
+         "750 Points",
+         "500 Points",
+         "275 Points",
+          "900 Points",
+          "275 Points"
+        ]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 103
@@ -54,6 +62,7 @@ class RedeemTableViewController: UITableViewController {
         cell.TitleLbl.text = String(CellTitle[indexPath.row])
         cell.DetailLbl.text = String(CellDetails[indexPath.row])
         cell.LogoImg.image = UIImage(named: String(CellTitle[indexPath.row]))
+        cell.UseNotBtn.setTitle(String(CellPoints[indexPath.row]), for: .normal)
 
       
         return cell
