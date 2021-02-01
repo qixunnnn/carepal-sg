@@ -9,18 +9,21 @@ import UIKit
 
 class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
+    var cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
     let checkedImage = UIImage(named: "TickBox")! as UIImage
     let uncheckedImage = UIImage(named: "CheckBox")! as UIImage
     let darkgrey = UIColor.init(red: 205/255, green: 205/255, blue: 205/255, alpha: 1)
     let black = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
+    var cart = UserDefaults.standard.object(forKey: "Cart") as! [String]
+    
     @IBOutlet weak var all: UIButton!
     @IBAction func AllBtn(_ sender: Any) {
-     
+        print(cart)
         all.setTitleColor(black, for: .normal)
         essentials.setTitleColor(darkgrey, for: .normal)
         canned.setTitleColor(darkgrey, for: .normal)
         condiments.setTitleColor(darkgrey, for: .normal)
+        cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
         collectionView.reloadData()
     }
    
@@ -33,6 +36,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         essentials.setTitleColor(darkgrey, for: .normal)
         canned.setTitleColor(darkgrey, for: .normal)
         condiments.setTitleColor(black, for: .normal)
+        cannedFood = ["HOSEN Longan","HOSEN Rambutan"]
         collectionView.reloadData()
     }
     @IBAction func essentialsBtn(_ sender: Any) {
@@ -40,6 +44,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         essentials.setTitleColor(black, for: .normal)
         canned.setTitleColor(darkgrey, for: .normal)
         condiments.setTitleColor(darkgrey, for: .normal)
+        cannedFood = ["Xiang Men Peanut","HOSEN Mushroom"]
         collectionView.reloadData()
     }
     
@@ -48,6 +53,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         essentials.setTitleColor(darkgrey, for: .normal)
         canned.setTitleColor(black, for: .normal)
         condiments.setTitleColor(darkgrey, for: .normal)
+        cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna"]
         collectionView.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,16 +65,39 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GetEssentialCollectionViewCell", for: indexPath) as! GetEssentialCollectionViewCell
         cell.configue(withImg: UIImage(named:cannedFood[indexPath.row])!, withTitle: cannedFood[indexPath.row])
         cell.checkBoxAction = { [self]sender in
+            print(cell.checkBox.isSelected)
             if(cell.checkBox.isSelected)
             {
                 cell.checkBox.setImage(self.uncheckedImage, for: UIControl.State.normal)
                 cell.checkBox.isSelected = false
+                if let index = cart.firstIndex(of: cell.title.text!){
+                    cart.remove(at: index)
+                }
             }
             else
             {
                 cell.checkBox.isSelected = true
                 cell.checkBox.setImage(self.checkedImage, for: UIControl.State.normal)
+                cart.append(cell.title.text!)
             }
+        }
+        if(!cart.isEmpty)
+        {
+            if(cart.contains(cell.title.text!))
+            {
+                cell.checkBox.isSelected = true
+                cell.checkBox.setImage(self.checkedImage, for: UIControl.State.normal)
+            }
+            else
+            {
+                cell.checkBox.setImage(self.uncheckedImage, for: UIControl.State.normal)
+                cell.checkBox.isSelected = false
+            }
+        }
+        else
+        {
+            cell.checkBox.setImage(self.uncheckedImage, for: UIControl.State.normal)
+            cell.checkBox.isSelected = false
         }
         
             return cell
@@ -76,7 +105,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GetEssentialCollectionViewCell
-        
+        //print(cell.title!)
         //display item info
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -96,6 +125,8 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+       
         // Do any additional setup after loading the view.
     }
     

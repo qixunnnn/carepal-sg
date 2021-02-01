@@ -13,9 +13,14 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var quizStoryboardID = 0
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        let defaults = UserDefaults.standard
+        let array: [NSString] = [NSString]()
+        defaults.set(array, forKey: "Cart")
+        defaults.synchronize()
         //GMSServices.provideAPIKey("AIzaSyAPUkVAyyKkDhAs2mdcK94edrxlclPX430")
         return true
     }
