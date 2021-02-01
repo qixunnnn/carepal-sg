@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class GamesViewController: UIViewController {
     var count = 60
@@ -24,6 +26,11 @@ class GamesViewController: UIViewController {
     @IBOutlet weak var option3Btn: UIButton!
     @IBOutlet weak var option4Btn: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
+    
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
+    var points:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         statusLabel.alpha = 0
@@ -124,12 +131,18 @@ class GamesViewController: UIViewController {
             }
             else
             {
+                database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    self.points = value?["Points"] as? Int ?? 0 //cUser points
+                    
+                }
+                database.child("users").child(userID!).child("Points").setValue(points+30)
+                
                 alert = UIAlertController(title: "Game Over!", message: "Thank you for playing your final score is \(score), the maximum points you can get from this stage is 30", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Play Again", style: .default, handler: {action in
                     //restart game
                     self.restartGame()
                 }))
-
             }
            
         
