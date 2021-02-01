@@ -35,6 +35,9 @@
 		57B4AD2C25C6227000222FAE /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD2B25C6227000222FAE /* RewardViewController.swift */; };
 		57B4AD4225C6F25100222FAE /* RedeemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD4125C6F25000222FAE /* RedeemTableViewController.swift */; };
 		57B4AD4925C746EA00222FAE /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD4825C746EA00222FAE /* DonateViewController.swift */; };
+		57B4AD4C25C7678A00222FAE /* GetEssentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD4B25C7678900222FAE /* GetEssentialViewController.swift */; };
+		57B4AD5725C76A4300222FAE /* GetEssentialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD5525C76A4300222FAE /* GetEssentialCollectionViewCell.swift */; };
+		57B4AD5825C76A4300222FAE /* GetEssentialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B4AD5625C76A4300222FAE /* GetEssentialCollectionViewCell.xib */; };
 		9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720091325BE0773006C2D80 /* SignUpViewController.swift */; };
 		9720091725BE0917006C2D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9720091625BE0917006C2D80 /* GoogleService-Info.plist */; };
 		9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720092E25BE1B1D006C2D80 /* LoginViewController.swift */; };
@@ -84,6 +87,9 @@
 		57B4AD2B25C6227000222FAE /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		57B4AD4125C6F25000222FAE /* RedeemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemTableViewController.swift; sourceTree = "<group>"; };
 		57B4AD4825C746EA00222FAE /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		57B4AD4B25C7678900222FAE /* GetEssentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEssentialViewController.swift; sourceTree = "<group>"; };
+		57B4AD5525C76A4300222FAE /* GetEssentialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEssentialCollectionViewCell.swift; sourceTree = "<group>"; };
+		57B4AD5625C76A4300222FAE /* GetEssentialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetEssentialCollectionViewCell.xib; sourceTree = "<group>"; };
 		9720091325BE0773006C2D80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9720091625BE0917006C2D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9720092E25BE1B1D006C2D80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */,
 				575BA13225BF51D800895053 /* Qixun.storyboard */,
 				575BA13625BF51ED00895053 /* Junwei.storyboard */,
+				57B4AD4B25C7678900222FAE /* GetEssentialViewController.swift */,
 				57B4AD4825C746EA00222FAE /* DonateViewController.swift */,
 				57B4AD4125C6F25000222FAE /* RedeemTableViewController.swift */,
 				57B4AD2B25C6227000222FAE /* RewardViewController.swift */,
@@ -177,6 +184,8 @@
 				97EE11FF25AE9738002972CA /* News.swift */,
 				9720091625BE0917006C2D80 /* GoogleService-Info.plist */,
 				5758C7EB25BD88BB00282514 /* Assets.xcassets */,
+				57B4AD5525C76A4300222FAE /* GetEssentialCollectionViewCell.swift */,
+				57B4AD5625C76A4300222FAE /* GetEssentialCollectionViewCell.xib */,
 				5758C7D525BD657400282514 /* TranslateText.swift */,
 				9720091325BE0773006C2D80 /* SignUpViewController.swift */,
 				9720092E25BE1B1D006C2D80 /* LoginViewController.swift */,
@@ -277,6 +286,7 @@
 				57327B1525BA0E47005F946B /* Lato-Italic.ttf in Resources */,
 				575BA13325BF51D800895053 /* Qixun.storyboard in Resources */,
 				5758C7EC25BD88BB00282514 /* Assets.xcassets in Resources */,
+				57B4AD5825C76A4300222FAE /* GetEssentialCollectionViewCell.xib in Resources */,
 				57327B0E25BA0D65005F946B /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +353,8 @@
 				578F395025A4232D00E93A55 /* ViewController.swift in Sources */,
 				5758C7C725BD51DA00282514 /* QuizViewController.swift in Sources */,
 				578F394C25A4232D00E93A55 /* AppDelegate.swift in Sources */,
+				57B4AD4C25C7678A00222FAE /* GetEssentialViewController.swift in Sources */,
+				57B4AD5725C76A4300222FAE /* GetEssentialCollectionViewCell.swift in Sources */,
 				9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */,
 				578F394E25A4232D00E93A55 /* SceneDelegate.swift in Sources */,
 				97A0386225C1FF2B0079CEBE /* DailyCaseViewController.swift in Sources */,
