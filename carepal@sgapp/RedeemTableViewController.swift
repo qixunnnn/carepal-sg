@@ -6,8 +6,16 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class RedeemTableViewController: UITableViewController {
+    
+    @IBOutlet weak var pointsLbl: UIButton!
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
+    var points:Int = 0
+    
     let CellTitle: Array<String> =
         ["PandaMart",
          "NTUC Fairprice",
@@ -25,26 +33,35 @@ class RedeemTableViewController: UITableViewController {
           "50% off delivery using GrabFood"
         ]
     let CellPoints: Array<String> =
-        ["500 Points",
-         "750 Points",
-         "500 Points",
-         "275 Points",
-          "900 Points",
-          "275 Points"
+        ["500",
+         "750",
+         "500",
+         "275",
+          "900",
+          "275"
         ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 103
         overrideUserInterfaceStyle = .light
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.points = value?["Points"] as? Int ?? 0 //cUser points
+            self.pointsLbl.setTitle(String(self.points), for: .normal)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.points = value?["Points"] as? Int ?? 0 //cUser points
+            self.pointsLbl.setTitle(String(self.points), for: .normal)
+        }
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -62,13 +79,52 @@ class RedeemTableViewController: UITableViewController {
         cell.TitleLbl.text = String(CellTitle[indexPath.row])
         cell.DetailLbl.text = String(CellDetails[indexPath.row])
         cell.LogoImg.image = UIImage(named: String(CellTitle[indexPath.row]))
-        cell.UseNotBtn.setTitle(String(CellPoints[indexPath.row]), for: .normal)
-
+        cell.UseNotBtn.setTitle(String(CellPoints[indexPath.row]) + " Points", for: .normal)
       
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print()
         //go into page
+        let alert = UIAlertController(title: "Are you sure?", message: "Are you sure you want to purchase  \(CellDetails[indexPath.row]) ?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            let newPoints = self.points - Int(self.CellPoints[indexPath.row])!
+            
+            if(newPoints > 0)
+            {
+                var xz:Int = 0
+                self.database.child("users").child(self.userID!).child("Points").setValue(newPoints)
+                self.alert(message: "You have purchase successfully",title: "Successfully purchased")
+                self.database.child("users").child(self.userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
+                    let value = snapshot.value as? [String:Any]
+                    print(value)
+                    //xz = value?[self.CellTitle] as? Int ?? 0
+                    //now can 1 only idk why the fuck
+                }
+                self.database.child("users").child(self.userID!).child("vouchers").child(self.CellTitle[indexPath.row] + " " + self.CellDetails[indexPath.row]).setValue(xz+1)
+                
+                tableView.reloadData()
+            }
+            else
+            {
+                self.alert(message: "You don't have enough points",title: "Unable to redeem")
+            }
+            tableView.reloadData()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func alert(message:String, title:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
     }
 
     /*
