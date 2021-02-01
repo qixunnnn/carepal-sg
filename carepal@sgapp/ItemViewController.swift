@@ -9,6 +9,11 @@ import UIKit
 
 class ItemViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var AllergyLbl: UILabel!
+    @IBOutlet weak var PriceLbl: UILabel!
+    @IBOutlet weak var AddToCartBtn: UIButton!
+    var 
     override func viewDidLoad() {
         super.viewDidLoad()
 

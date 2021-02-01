@@ -10,6 +10,7 @@ import UIKit
 class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
+    var price = [1.45,2.10,3.50,5.0,1.2,0.9,6.0,1.2]
     let checkedImage = UIImage(named: "TickBox")! as UIImage
     let uncheckedImage = UIImage(named: "CheckBox")! as UIImage
     let darkgrey = UIColor.init(red: 205/255, green: 205/255, blue: 205/255, alpha: 1)
@@ -68,7 +69,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
         UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GetEssentialCollectionViewCell", for: indexPath) as! GetEssentialCollectionViewCell
-        cell.configue(withImg: UIImage(named:cannedFood[indexPath.row])!, withTitle: cannedFood[indexPath.row])
+        cell.configue(withImg: UIImage(named:cannedFood[indexPath.row])!, withTitle: cannedFood[indexPath.row], withPrice: <#Double#> )
         cell.checkBoxAction = { [self]sender in
             print(cell.checkBox.isSelected)
             if(cell.checkBox.isSelected)
@@ -110,8 +111,9 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GetEssentialCollectionViewCell
-        var data = cell
-       // let 
+//        var data = [cell.title.text,cell.price.text]
+//        let destinationVC = ItemViewController()
+//        destinationVC.
         //print(cell.title!)
         //display item info
     }

@@ -29,10 +29,10 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayam Brand Baked Beans" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-eL-Tzs">
-                        <rect key="frame" x="0.0" y="172" width="174" height="55"/>
+                        <rect key="frame" x="0.0" y="200" width="174" height="27"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.32548582549999999" green="0.32548791170000002" blue="0.32549339529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU6-NH-uu2">
@@ -42,24 +42,38 @@
                             <action selector="checkBoxBtnA:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BNk-qf-YEB"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.45" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-CI-aHa">
+                        <rect key="frame" x="0.0" y="172" width="174" height="28"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="69y-x8-AKz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="fbK-eL-Tzs" firstAttribute="top" secondItem="azH-Ad-Lbe" secondAttribute="bottom" id="803-cl-jd8"/>
+                <constraint firstAttribute="trailing" secondItem="hRR-CI-aHa" secondAttribute="trailing" id="9gP-Ve-GmG"/>
+                <constraint firstItem="fbK-eL-Tzs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9xN-jA-mkS"/>
                 <constraint firstAttribute="trailing" secondItem="pU6-NH-uu2" secondAttribute="trailing" constant="11" id="Htr-P5-cgV"/>
-                <constraint firstItem="fbK-eL-Tzs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XnD-ar-AQM"/>
+                <constraint firstItem="hRR-CI-aHa" firstAttribute="top" secondItem="pU6-NH-uu2" secondAttribute="bottom" constant="8" symbolic="YES" id="LP1-nn-tgV"/>
+                <constraint firstItem="fbK-eL-Tzs" firstAttribute="top" secondItem="hRR-CI-aHa" secondAttribute="bottom" id="RTa-1a-Bh7"/>
                 <constraint firstItem="azH-Ad-Lbe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hZp-Cz-Afz"/>
                 <constraint firstItem="azH-Ad-Lbe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hd2-uY-as4"/>
-                <constraint firstAttribute="trailing" secondItem="fbK-eL-Tzs" secondAttribute="trailing" id="mpK-ko-9l8"/>
-                <constraint firstAttribute="bottom" secondItem="fbK-eL-Tzs" secondAttribute="bottom" id="npW-3C-Phw"/>
+                <constraint firstItem="hRR-CI-aHa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mmU-Yi-89X"/>
+                <constraint firstItem="hRR-CI-aHa" firstAttribute="top" secondItem="azH-Ad-Lbe" secondAttribute="bottom" id="oGw-fo-KiS"/>
+                <constraint firstAttribute="trailing" secondItem="fbK-eL-Tzs" secondAttribute="trailing" id="tew-Hh-HQN"/>
                 <constraint firstAttribute="trailing" secondItem="azH-Ad-Lbe" secondAttribute="trailing" id="wIZ-XU-Wfl"/>
-                <constraint firstItem="fbK-eL-Tzs" firstAttribute="top" secondItem="pU6-NH-uu2" secondAttribute="bottom" constant="8" symbolic="YES" id="wNq-vw-bv6"/>
+                <constraint firstAttribute="bottom" secondItem="fbK-eL-Tzs" secondAttribute="bottom" id="zUt-qe-wHw"/>
             </constraints>
             <size key="customSize" width="184" height="227"/>
             <connections>
                 <outlet property="checkBox" destination="pU6-NH-uu2" id="cdU-Rz-aYP"/>
                 <outlet property="imageView" destination="azH-Ad-Lbe" id="7OF-0M-3Tl"/>
+                <outlet property="price" destination="hRR-CI-aHa" id="MGr-pW-fHb"/>
                 <outlet property="title" destination="fbK-eL-Tzs" id="M4z-oK-gty"/>
             </connections>
             <point key="canvasLocation" x="-100.00000000000001" y="104.79910714285714"/>

@@ -284,6 +284,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Xiang Men Peanuts" id="29h-Kx-VM7"/>
+                    <connections>
+                        <outlet property="AddToCartBtn" destination="8UR-LA-Yfu" id="N7v-kV-h8E"/>
+                        <outlet property="AllergyLbl" destination="Eac-wg-out" id="f7d-LE-ezk"/>
+                        <outlet property="PriceLbl" destination="ncc-db-wYc" id="exX-zu-yMb"/>
+                        <outlet property="imageView" destination="U5t-UR-fU9" id="Vw3-QC-8oi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t21-E1-zEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -540,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDF-nb-kBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="2583"/>
+            <point key="canvasLocation" x="1875" y="2551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bt5-5L-eNL">
