@@ -1560,8 +1560,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                         <state key="normal" title="All">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="AllBtn:" destination="3In-Rt-kFl" eventType="touchUpInside" id="fch-FV-g9H"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q0-ku-Ja1">
                                         <rect key="frame" x="40" y="0.0" width="99" height="33"/>
@@ -1569,20 +1572,29 @@
                                         <state key="normal" title="Canned Food">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cannedFoodBtn:" destination="3In-Rt-kFl" eventType="touchUpInside" id="603-X1-vQr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXh-Iq-x9R">
                                         <rect key="frame" x="149" y="0.0" width="91" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                         <state key="normal" title="Condiments">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="condimentsBtn:" destination="3In-Rt-kFl" eventType="touchUpInside" id="P5Y-zC-scn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-zo-dct">
                                         <rect key="frame" x="250" y="0.0" width="75" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                         <state key="normal" title="Essentials">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="essentialsBtn:" destination="3In-Rt-kFl" eventType="touchUpInside" id="6Dj-IG-gRr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1629,7 +1641,11 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="all" destination="8HT-4x-ixa" id="9nZ-Tu-hj5"/>
+                        <outlet property="canned" destination="0q0-ku-Ja1" id="baz-9D-SwB"/>
                         <outlet property="collectionView" destination="WTy-n0-VvB" id="92K-Ia-8ZO"/>
+                        <outlet property="condiments" destination="KXh-Iq-x9R" id="Ptf-pG-Zpw"/>
+                        <outlet property="essentials" destination="EJm-zo-dct" id="zzF-Dz-m8c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDF-nb-kBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

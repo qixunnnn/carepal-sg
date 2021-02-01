@@ -9,11 +9,47 @@ import UIKit
 
 class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let itemTitle = "Ayam Brand Baked Beans"
     let cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
     let checkedImage = UIImage(named: "TickBox")! as UIImage
     let uncheckedImage = UIImage(named: "CheckBox")! as UIImage
+    let darkgrey = UIColor.init(red: 205/255, green: 205/255, blue: 205/255, alpha: 1)
+    let black = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
+    @IBOutlet weak var all: UIButton!
+    @IBAction func AllBtn(_ sender: Any) {
+     
+        all.setTitleColor(black, for: .normal)
+        essentials.setTitleColor(darkgrey, for: .normal)
+        canned.setTitleColor(darkgrey, for: .normal)
+        condiments.setTitleColor(darkgrey, for: .normal)
+        collectionView.reloadData()
+    }
+   
+    @IBOutlet weak var essentials: UIButton!
     
+    @IBOutlet weak var condiments: UIButton!
+    @IBOutlet weak var canned: UIButton!
+    @IBAction func condimentsBtn(_ sender: Any) {
+        all.setTitleColor(darkgrey, for: .normal)
+        essentials.setTitleColor(darkgrey, for: .normal)
+        canned.setTitleColor(darkgrey, for: .normal)
+        condiments.setTitleColor(black, for: .normal)
+        collectionView.reloadData()
+    }
+    @IBAction func essentialsBtn(_ sender: Any) {
+        all.setTitleColor(darkgrey, for: .normal)
+        essentials.setTitleColor(black, for: .normal)
+        canned.setTitleColor(darkgrey, for: .normal)
+        condiments.setTitleColor(darkgrey, for: .normal)
+        collectionView.reloadData()
+    }
+    
+    @IBAction func cannedFoodBtn(_ sender: Any) {
+        all.setTitleColor(darkgrey, for: .normal)
+        essentials.setTitleColor(darkgrey, for: .normal)
+        canned.setTitleColor(black, for: .normal)
+        condiments.setTitleColor(darkgrey, for: .normal)
+        collectionView.reloadData()
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cannedFood.count
     }
