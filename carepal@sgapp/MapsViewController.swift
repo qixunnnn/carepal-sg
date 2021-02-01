@@ -11,6 +11,24 @@ import CoreLocation
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    
+    @IBAction func ModeOfTransport(_ sender: Any) {
+        switch segmentControl.selectedSegmentIndex
+        {
+        case 0:
+            mot = .automobile
+            showRouteOnMap(pickupCoordinate: location.coordinate, destinationCoordinate: destination)
+            break
+            //car
+        case 1:
+            mot = .walking
+            showRouteOnMap(pickupCoordinate: location.coordinate, destinationCoordinate: destination)
+            //walk
+        default:
+            break
+        }
+    }
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var stepLbl: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -24,7 +42,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     var destination = CLLocationCoordinate2D.init()
     var tapped = false
     var location: CLLocation!
+    @IBOutlet weak var DestinationLbl: UILabel!
     public var currentCoordinates: CLLocationCoordinate2D!
+    var mot: MKDirectionsTransportType = .automobile
     
     let annoCoordinates: Array<CLLocationCoordinate2D> =
         [CLLocationCoordinate2D(latitude: 1.3485, longitude: 103.7115),//boon lay cc,
@@ -109,7 +129,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       
         mapView.mapType = MKMapType.standard
-
+        
         guard let currentlocation = locations.last else {return}
         location = currentlocation
         if(tapped)
@@ -155,7 +175,10 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         activityIndicator.startAnimating()
         self.destination = view.annotation!.coordinate
         previousLocation = nil
-        
+        if let titlet = view.annotation!.title!
+        {
+            DestinationLbl.text = "Destination: \(titlet)"
+        }
 
     }
     //create route
@@ -165,7 +188,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             request.source = MKMapItem(placemark: MKPlacemark(coordinate: pickupCoordinate, addressDictionary: nil))
             request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil))
             request.requestsAlternateRoutes = true
-            request.transportType = .automobile
+        request.transportType = mot
 
             let directions = MKDirections(request: request)
             resetMapView(withNew: directions)
