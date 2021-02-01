@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GetEssentialCollectionViewCell" id="gTV-IL-0wX" customClass="GetEssentialCollectionViewCell" customModule="carepal_sgapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="174" height="227"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="174" height="227"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ayam Brand Baked Beans" translatesAutoresizingMaskIntoConstraints="NO" id="azH-Ad-Lbe">
+                        <rect key="frame" x="0.0" y="0.0" width="174" height="172"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="172" id="6mJ-kk-WgU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayam Brand Baked Beans" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-eL-Tzs">
+                        <rect key="frame" x="0.0" y="172" width="174" height="55"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU6-NH-uu2">
+                        <rect key="frame" x="133" y="134" width="30" height="30"/>
+                        <state key="normal" image="CheckBox"/>
+                        <connections>
+                            <action selector="checkBoxBtnA:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BNk-qf-YEB"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="fbK-eL-Tzs" firstAttribute="top" secondItem="azH-Ad-Lbe" secondAttribute="bottom" id="803-cl-jd8"/>
+                <constraint firstAttribute="trailing" secondItem="pU6-NH-uu2" secondAttribute="trailing" constant="11" id="Htr-P5-cgV"/>
+                <constraint firstItem="fbK-eL-Tzs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XnD-ar-AQM"/>
+                <constraint firstItem="azH-Ad-Lbe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hZp-Cz-Afz"/>
+                <constraint firstItem="azH-Ad-Lbe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hd2-uY-as4"/>
+                <constraint firstAttribute="trailing" secondItem="fbK-eL-Tzs" secondAttribute="trailing" id="mpK-ko-9l8"/>
+                <constraint firstAttribute="bottom" secondItem="fbK-eL-Tzs" secondAttribute="bottom" id="npW-3C-Phw"/>
+                <constraint firstAttribute="trailing" secondItem="azH-Ad-Lbe" secondAttribute="trailing" id="wIZ-XU-Wfl"/>
+                <constraint firstItem="fbK-eL-Tzs" firstAttribute="top" secondItem="pU6-NH-uu2" secondAttribute="bottom" constant="8" symbolic="YES" id="wNq-vw-bv6"/>
+            </constraints>
+            <size key="customSize" width="184" height="227"/>
+            <connections>
+                <outlet property="checkBox" destination="pU6-NH-uu2" id="cdU-Rz-aYP"/>
+                <outlet property="imageView" destination="azH-Ad-Lbe" id="7OF-0M-3Tl"/>
+                <outlet property="title" destination="fbK-eL-Tzs" id="M4z-oK-gty"/>
+            </connections>
+            <point key="canvasLocation" x="-100.00000000000001" y="104.79910714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Ayam Brand Baked Beans" width="1280" height="1280"/>
+        <image name="CheckBox" width="30" height="30"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
