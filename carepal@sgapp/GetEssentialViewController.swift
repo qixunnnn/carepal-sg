@@ -111,7 +111,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GetEssentialCollectionViewCell
         var data = cell
-        let 
+       // let 
         //print(cell.title!)
         //display item info
     }
