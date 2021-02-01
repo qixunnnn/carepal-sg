@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Dk-ob-LqQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -230,26 +230,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doj-YI-LTK">
-                                <rect key="frame" x="159.5" y="64" width="95" height="28"/>
+                                <rect key="frame" x="159.5" y="108" width="95" height="29"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruU-t8-nGc">
-                                <rect key="frame" x="123.5" y="119" width="167" height="37.5"/>
+                                <rect key="frame" x="122.5" y="164" width="169" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achievement" translatesAutoresizingMaskIntoConstraints="NO" id="e1F-px-Zd3">
-                                <rect key="frame" x="110" y="164.5" width="92" height="109"/>
+                                <rect key="frame" x="109" y="210.5" width="92" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="109" id="Chb-MK-LSd"/>
                                     <constraint firstAttribute="width" constant="92" id="Q9L-P0-niK"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw2-TQ-TiD">
-                                <rect key="frame" x="124.5" y="304.5" width="165" height="56"/>
+                                <rect key="frame" x="124.5" y="350.5" width="165" height="56"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.83921568629999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="Ksv-1o-Aui"/>
@@ -265,17 +265,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="dW9-E9-300" kind="presentation" modalPresentationStyle="fullScreen" id="QN2-C6-Zod"/>
+                                    <segue destination="7jH-Gi-1ZR" kind="show" id="5tL-W4-cwJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,201" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agP-eR-UXL">
-                                <rect key="frame" x="210" y="199.5" width="78" height="36.5"/>
+                                <rect key="frame" x="209" y="245.5" width="79" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wGX-Cl-XRd">
-                                <rect key="frame" x="0.0" y="454" width="414" height="409"/>
+                                <rect key="frame" x="0.0" y="500" width="414" height="363"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -290,13 +290,13 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="81"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epM-IA-Lcu">
-                                                    <rect key="frame" x="109" y="24" width="89" height="21"/>
+                                                    <rect key="frame" x="109" y="24" width="91" height="22"/>
                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% off delivery using PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13d-Ah-53d">
-                                                    <rect key="frame" x="109" y="49" width="189" height="14"/>
+                                                    <rect key="frame" x="109" y="50" width="184" height="14"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -352,7 +352,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Vouchers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbq-l1-Koe">
-                                <rect key="frame" x="0.0" y="382.5" width="414" height="73"/>
+                                <rect key="frame" x="0.0" y="428.5" width="414" height="73"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="KxP-TN-Zzv"/>
@@ -388,11 +388,100 @@
                     <connections>
                         <outlet property="pointsLbl" destination="agP-eR-UXL" id="F88-JI-cn1"/>
                         <outlet property="tableView" destination="wGX-Cl-XRd" id="cWH-EA-uWx"/>
+                        <segue destination="qXU-4V-Cwu" kind="show" id="y5s-Tz-Zz2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ia-zN-GyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="-1580"/>
+            <point key="canvasLocation" x="432" y="-1580"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5RR-zl-Lh1">
+            <objects>
+                <viewController id="qXU-4V-Cwu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VhC-sZ-1to">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQl-vj-sXo">
+                                <rect key="frame" x="131" y="251" width="152" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c66-8Q-hVh">
+                                <rect key="frame" x="42" y="545" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abr-3x-FoG">
+                                <rect key="frame" x="42" y="365" width="200" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEc-0L-vfh">
+                                <rect key="frame" x="42" y="609" width="330" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30523928929999999" green="0.55092549719999995" blue="0.21617458949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                <state key="normal" title="Copy Reward Code">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100% off delivery using PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-3H-2U4">
+                                <rect key="frame" x="77" y="307" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-Limited to 1 use only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCs-ky-jGf">
+                                <rect key="frame" x="42" y="401" width="163" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-Expired Code will not be refunded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdF-aj-GtO">
+                                <rect key="frame" x="42" y="430" width="265" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Validity: 31 Jan 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhw-tk-jf2">
+                                <rect key="frame" x="42" y="484" width="215" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dR2-uR-Dxk">
+                                <rect key="frame" x="87" y="677" width="240" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PandaMart" translatesAutoresizingMaskIntoConstraints="NO" id="EuL-te-VRi">
+                                <rect key="frame" x="119" y="101" width="177" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y85-Gd-w0w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6f2-N1-zgS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ExJ-De-02v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273.91304347826087" y="-909.375"/>
         </scene>
         <!--Redeem-->
         <scene sceneID="Jdf-F3-JE2">
@@ -415,13 +504,13 @@
                                             <rect key="frame" x="20" y="11" width="374" height="81"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F6-hQ-Iib">
-                                            <rect key="frame" x="109" y="24" width="59.5" height="14"/>
+                                            <rect key="frame" x="109" y="24" width="60.5" height="14"/>
                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% off delivery using PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxY-I8-xKJ">
-                                            <rect key="frame" x="109" y="42" width="189" height="14"/>
+                                            <rect key="frame" x="109" y="42" width="184" height="14"/>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -435,14 +524,14 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsn-ki-PUE">
                                             <rect key="frame" x="307" y="50" width="80" height="37"/>
-                                            <color key="backgroundColor" red="0.54231608480000004" green="0.04403648626" blue="0.022501346429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37" id="nOv-tj-2gq"/>
                                                 <constraint firstAttribute="width" constant="80" id="nRh-uH-LHg"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="Use Now">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="titleColor" red="0.56563668952618462" green="0.15961825696127754" blue="0.093282924136575671" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -505,18 +594,19 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dW9-E9-300" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="JxD-0s-F1g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5xh-m4-96M">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7jH-Gi-1ZR" kind="relationship" relationship="rootViewController" id="Dne-BC-iyb"/>
+                        <segue destination="3Yk-RV-uTG" kind="relationship" relationship="rootViewController" id="ryA-Qe-WYC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Uh-gG-v9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="-1580.3571428571429"/>
+            <point key="canvasLocation" x="-303" y="-1580"/>
         </scene>
         <!--Games-->
         <scene sceneID="gTg-iC-H1L">
@@ -1253,7 +1343,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXO-E4-q36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="1583"/>
+            <point key="canvasLocation" x="10" y="1608"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="IEF-yq-Zul">
+            <objects>
+                <viewController id="5Dk-ob-LqQ" customClass="LoginViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bko-tu-dTU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_seniors" translatesAutoresizingMaskIntoConstraints="NO" id="pCf-aM-0vK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-Eu-Jzh">
+                                <rect key="frame" x="30" y="144" width="354" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9L7-UT-Zjt">
+                                <rect key="frame" x="30" y="368" width="354" height="35"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9a8-9y-l5O">
+                                <rect key="frame" x="50" y="424" width="314" height="175"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjP-AS-7UA">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="24"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="testing@gmail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0z-Du-4xw">
+                                        <rect key="frame" x="0.0" y="44" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="yes" smartQuotesType="no"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4m-rO-Gfo">
+                                        <rect key="frame" x="0.0" y="98" width="314" height="23"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="P@ssword1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-8c-XZk">
+                                        <rect key="frame" x="0.0" y="141" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-58-815">
+                                <rect key="frame" x="65" y="659" width="284" height="50"/>
+                                <color key="backgroundColor" red="0.66882127520000001" green="0.14685601000000001" blue="0.066593728960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ACf-Rq-3z9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBtn:" destination="5Dk-ob-LqQ" eventType="touchUpInside" id="dYc-ep-oLX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDe-9k-vnH">
+                                <rect key="frame" x="55" y="728" width="305" height="30"/>
+                                <state key="normal" title="Don't have an account? Click here to sign up"/>
+                                <connections>
+                                    <action selector="signUpBtn:" destination="5Dk-ob-LqQ" eventType="touchUpInside" id="3Kz-06-MM7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6GA-pF-hjy"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9L7-UT-Zjt" firstAttribute="top" secondItem="u7E-Eu-Jzh" secondAttribute="bottom" constant="24" id="3cn-iI-fa9"/>
+                            <constraint firstItem="6GA-pF-hjy" firstAttribute="trailing" secondItem="9L7-UT-Zjt" secondAttribute="trailing" constant="30" id="9TT-VH-BY2"/>
+                            <constraint firstItem="6GA-pF-hjy" firstAttribute="trailing" secondItem="9a8-9y-l5O" secondAttribute="trailing" constant="50" id="BWT-qs-DuU"/>
+                            <constraint firstItem="mDe-9k-vnH" firstAttribute="top" secondItem="jlh-58-815" secondAttribute="bottom" constant="19" id="DLU-MC-i8e"/>
+                            <constraint firstItem="mDe-9k-vnH" firstAttribute="leading" secondItem="6GA-pF-hjy" secondAttribute="leading" constant="55" id="IHC-cr-277"/>
+                            <constraint firstItem="9a8-9y-l5O" firstAttribute="leading" secondItem="6GA-pF-hjy" secondAttribute="leading" constant="50" id="KGs-i6-xX5"/>
+                            <constraint firstItem="u7E-Eu-Jzh" firstAttribute="top" secondItem="6GA-pF-hjy" secondAttribute="top" constant="100" id="Rrh-LU-4Ft"/>
+                            <constraint firstItem="9a8-9y-l5O" firstAttribute="top" secondItem="9L7-UT-Zjt" secondAttribute="bottom" constant="21" id="TGK-Zh-azT"/>
+                            <constraint firstItem="9L7-UT-Zjt" firstAttribute="leading" secondItem="6GA-pF-hjy" secondAttribute="leading" constant="30" id="XaB-ip-bRq"/>
+                            <constraint firstItem="6GA-pF-hjy" firstAttribute="trailing" secondItem="u7E-Eu-Jzh" secondAttribute="trailing" constant="30" id="e2v-O8-ykz"/>
+                            <constraint firstItem="6GA-pF-hjy" firstAttribute="trailing" secondItem="jlh-58-815" secondAttribute="trailing" constant="65" id="tIv-JF-GK2"/>
+                            <constraint firstItem="6GA-pF-hjy" firstAttribute="trailing" secondItem="mDe-9k-vnH" secondAttribute="trailing" constant="54" id="ty4-hS-36w"/>
+                            <constraint firstItem="jlh-58-815" firstAttribute="top" secondItem="9a8-9y-l5O" secondAttribute="bottom" constant="60" id="vFI-PF-JxY"/>
+                            <constraint firstItem="jlh-58-815" firstAttribute="leading" secondItem="6GA-pF-hjy" secondAttribute="leading" constant="65" id="xRB-cj-f7t"/>
+                            <constraint firstItem="u7E-Eu-Jzh" firstAttribute="leading" secondItem="6GA-pF-hjy" secondAttribute="leading" constant="30" id="yr8-SB-eOw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZNw-Qc-koi"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="U0z-Du-4xw" id="Wns-rE-Lop"/>
+                        <outlet property="passwordTxt" destination="o4f-8c-XZk" id="qgx-Kz-Rzg"/>
+                        <segue destination="dW9-E9-300" kind="presentation" identifier="temp" modalPresentationStyle="fullScreen" id="AD7-Wa-yaI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6T-DT-IWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-987" y="-1580"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1263,6 +1460,7 @@
         <image name="Board" width="513" height="446"/>
         <image name="FoodPanda" width="226" height="226"/>
         <image name="Logo" width="200" height="200"/>
+        <image name="PandaMart" width="226" height="226"/>
         <image name="School" width="225" height="225"/>
         <image name="achievement" width="136" height="162"/>
         <image name="border" width="1260" height="1230"/>

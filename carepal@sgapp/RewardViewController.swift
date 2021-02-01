@@ -33,6 +33,20 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
+        self.tableView.delegate = self
+
+        self.tableView.dataSource = self
+        self.tableView.rowHeight = 103
+        overrideUserInterfaceStyle = .light
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear( _ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.points = value?["Points"] as? Int ?? 0
@@ -52,18 +66,6 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
 //            print(x![0])
             self.tableView.reloadData()
         }
-        
-        self.tableView.delegate = self
-
-        self.tableView.dataSource = self
-        self.tableView.rowHeight = 103
-        overrideUserInterfaceStyle = .light
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear( _ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewWillDisappear( _ animated: Bool) {
