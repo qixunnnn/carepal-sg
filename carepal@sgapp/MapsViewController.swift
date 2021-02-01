@@ -175,10 +175,10 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         activityIndicator.startAnimating()
         self.destination = view.annotation!.coordinate
         previousLocation = nil
-        var titlet : String!
-        titlet = view.annotation!.title!
-        DestinationLbl.text = "Destination: \(titlet)"
-        
+        if let titlet = view.annotation!.title!
+        {
+            DestinationLbl.text = "Destination: \(titlet)"
+        }
 
     }
     //create route
