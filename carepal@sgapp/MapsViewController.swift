@@ -29,7 +29,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     let annoCoordinates: Array<CLLocationCoordinate2D> =
         [CLLocationCoordinate2D(latitude: 1.3485, longitude: 103.7115),//boon lay cc,
          CLLocationCoordinate2D(latitude: 1.3189, longitude: 103.7681),//clementi cc
-         CLLocationCoordinate2D(latitude: 1.3401, longitude: 103.7372)//clementi cc
+         CLLocationCoordinate2D(latitude: 1.3401, longitude: 103.7372)//Y
         ]
     let annoTitle: Array<String> =
         ["Boon lay CC",

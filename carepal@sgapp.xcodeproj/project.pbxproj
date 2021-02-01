@@ -38,6 +38,8 @@
 		57B4AD4C25C7678A00222FAE /* GetEssentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD4B25C7678900222FAE /* GetEssentialViewController.swift */; };
 		57B4AD5725C76A4300222FAE /* GetEssentialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AD5525C76A4300222FAE /* GetEssentialCollectionViewCell.swift */; };
 		57B4AD5825C76A4300222FAE /* GetEssentialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B4AD5625C76A4300222FAE /* GetEssentialCollectionViewCell.xib */; };
+		57BA20D125C859AE00D74A90 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA20D025C859AE00D74A90 /* CartViewController.swift */; };
+		57BA20D425C8683F00D74A90 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA20D325C8683F00D74A90 /* ItemViewController.swift */; };
 		9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720091325BE0773006C2D80 /* SignUpViewController.swift */; };
 		9720091725BE0917006C2D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9720091625BE0917006C2D80 /* GoogleService-Info.plist */; };
 		9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720092E25BE1B1D006C2D80 /* LoginViewController.swift */; };
@@ -90,6 +92,8 @@
 		57B4AD4B25C7678900222FAE /* GetEssentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEssentialViewController.swift; sourceTree = "<group>"; };
 		57B4AD5525C76A4300222FAE /* GetEssentialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEssentialCollectionViewCell.swift; sourceTree = "<group>"; };
 		57B4AD5625C76A4300222FAE /* GetEssentialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetEssentialCollectionViewCell.xib; sourceTree = "<group>"; };
+		57BA20D025C859AE00D74A90 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		57BA20D325C8683F00D74A90 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		9720091325BE0773006C2D80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9720091625BE0917006C2D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9720092E25BE1B1D006C2D80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */,
 				575BA13225BF51D800895053 /* Qixun.storyboard */,
 				575BA13625BF51ED00895053 /* Junwei.storyboard */,
+				57BA20D325C8683F00D74A90 /* ItemViewController.swift */,
+				57BA20D025C859AE00D74A90 /* CartViewController.swift */,
 				57B4AD4B25C7678900222FAE /* GetEssentialViewController.swift */,
 				57B4AD4825C746EA00222FAE /* DonateViewController.swift */,
 				57B4AD4125C6F25000222FAE /* RedeemTableViewController.swift */,
@@ -357,6 +363,7 @@
 				57B4AD5725C76A4300222FAE /* GetEssentialCollectionViewCell.swift in Sources */,
 				9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */,
 				578F394E25A4232D00E93A55 /* SceneDelegate.swift in Sources */,
+				57BA20D425C8683F00D74A90 /* ItemViewController.swift in Sources */,
 				97A0386225C1FF2B0079CEBE /* DailyCaseViewController.swift in Sources */,
 				97BE8AD625C47CA9007571C6 /* NewsTableViewController.swift in Sources */,
 				57B4AD4225C6F25100222FAE /* RedeemTableViewController.swift in Sources */,
@@ -365,6 +372,7 @@
 				575BA1AC25C05C8200895053 /* MapViewController.swift in Sources */,
 				973244F125AD5B2F00D30935 /* HomeViewController.swift in Sources */,
 				979A433725BF36F3001D5999 /* CreateProfileViewController.swift in Sources */,
+				57BA20D125C859AE00D74A90 /* CartViewController.swift in Sources */,
 				5758C7F025BD8C0A00282514 /* CheckBox.swift in Sources */,
 				5758C7DB25BD771F00282514 /* Quiz2ViewController.swift in Sources */,
 				97A0385F25C1F9CF0079CEBE /* CovidAPI.swift in Sources */,

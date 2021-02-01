@@ -16,6 +16,11 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     let black = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
     var cart = UserDefaults.standard.object(forKey: "Cart") as! [String]
     
+    @IBAction func cartBtn(_ sender: Any) {
+        UserDefaults.standard.set(cart, forKey: "Cart")
+        UserDefaults.standard.synchronize()
+        performSegue(withIdentifier: "cart", sender: nil)
+    }
     @IBOutlet weak var all: UIButton!
     @IBAction func AllBtn(_ sender: Any) {
         print(cart)
@@ -105,6 +110,8 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GetEssentialCollectionViewCell
+        var data = cell
+        let 
         //print(cell.title!)
         //display item info
     }
