@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import QRCode
+import QRCode
 
 class VoucherViewController: UIViewController{
 
@@ -15,16 +15,42 @@ class VoucherViewController: UIViewController{
     @IBOutlet weak var detailsLbl: UILabel!
     @IBOutlet weak var codeTF: UITextField!
     @IBOutlet weak var qrCode: UIImageView!
+    var ItemData = UserDefaults.standard.object(forKey: "voucher") as! [String]
     @IBAction func copyBtn(_ sender: Any) {
+        UIPasteboard.general.string = codeTF.text
+        let alert = UIAlertController(title: "Text Copied", message: "", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(ItemData[0].prefix(4) == "NTUC")
+        {
+            codeTF.text = "NTUC0001"
+            logoImageView.image = UIImage(named: "NTUC Fairprice")
+            
+            if codeTF.text != "" {
+                var QR = QRCode(codeTF.text!)
+                QR?.color = CIColor(rgba: "910003")
+                qrCode.image = QR?.image
+            }
+        }
+        else if (ItemData[0].prefix(4) == "Grab")
+        {
+            codeTF.text = "GF0001"
+            logoImageView.image = UIImage(named: "GrabFood")
+        }
+        else
+        {
+            codeTF.text = "PM0001"
+            logoImageView.image = UIImage(named: "PandaMart")
+        }
+        detailsLbl.text = ItemData[0]
+        titleLbl.text = ItemData[1]
+       // logoImageView = img
         
-//        if codeTF.text != "" {
-//            var qrCode = QRCode(codeTF.text)
-//            qrCode?.color = CIColor(rgba: "910003")
-//            qrcodeIV.image = qrCode?.image
-//        }
+       
         // Do any additional setup after loading the view.
     }
     

@@ -108,7 +108,11 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let cell = tableView.cellForRow(at: indexPath) as! RewardViewCell
+        let data = [cell.TitleLbl.text,cell.DetailLbl.text]
+        UserDefaults.standard.set(data, forKey: "voucher")
+        UserDefaults.standard.synchronize()
+        performSegue(withIdentifier: "voucher", sender: nil)
     }
     
     func alert(message:String, title:String)
