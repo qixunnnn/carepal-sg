@@ -42,8 +42,14 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
             let value = snapshot.value as? NSDictionary
             //let temp = value?["vouchers"] as? NSDictionary
             let x = value?.allKeys as? [String]
-            self.CellTitle.append(x![0])
-            print(x![0])
+            
+            for i in x!
+            {
+                self.CellTitle.append(i)
+            }
+            
+//            self.CellTitle.append(x![0])
+//            print(x![0])
             self.tableView.reloadData()
         }
         
