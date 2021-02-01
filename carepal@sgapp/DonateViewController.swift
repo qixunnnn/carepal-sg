@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class DonateViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -23,12 +26,38 @@ class DonateViewController: UIViewController,UINavigationControllerDelegate, UII
     @IBOutlet weak var otherDetailsTV: UITextView!
     @IBOutlet weak var donateBtn: CheckBox!
     @IBOutlet weak var agreeBtn: CheckBox!
+    
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
+    let storage = Storage.storage().reference()
+    
+    var conditionData = Data()
+    var expiryData = Data()
+    
     @IBAction func SubmitBtn(_ sender: Any) {
         if(donateBtn.isSelected && agreeBtn.isSelected)
         {
             //do submit data
             //perform segue back home
             //performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            expiryData = (expiryDateImg.image?.jpegData(compressionQuality: 0.8))!
+            //set upload path
+            let filePath = "Donation/testing123"
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/png"
+            
+            let ref = storage.child(filePath)
+            ref.putData(expiryData, metadata: metaData) { (metadata, error) in
+                if error == nil
+                {
+                    ref.downloadURL { (url, error) in
+                        print("Done, url is \(String(describing: url))")
+                    }
+                } else
+                {
+                    print(error)
+                }
+            }
         }
         else
         {
@@ -68,6 +97,7 @@ class DonateViewController: UIViewController,UINavigationControllerDelegate, UII
             {
                 expiryDateImg.image = pickedImage
                 expiryDateBtn.setImage(nil, for: .normal)
+                
             }
         }
         else
@@ -124,7 +154,6 @@ class DonateViewController: UIViewController,UINavigationControllerDelegate, UII
         let Lesserheight = keyboardSize.cgRectValue.height
         return Lesserheight - 200.0
     }
-
 
     /*
     // MARK: - Navigation
