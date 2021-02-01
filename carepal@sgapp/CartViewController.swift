@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class CartViewCell:UITableViewCell{
     @IBOutlet weak var ItemImg:UIImageView!
@@ -18,6 +20,8 @@ class SummaryCell:UITableViewCell{
     @IBOutlet weak var LimitItemLbl:UILabel!
 }
 
+let database = Database.database().reference()
+let userID = Auth.auth().currentUser?.uid
 
 class CartViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView:UITableView!
@@ -26,11 +30,24 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
     var fakeprice = 1.45
     var price = [1.45,2.10,3.50,5.0,1.2,0.9,6.0,1.2]
     var AllowCheckOut = true
+    var points:Double = 0.0
     
     @IBAction func CheckOutBtn(_ sender: Any) {
         if(AllowCheckOut)
         {
             //storedatabase
+            if totalPrice > points {
+                let alert = UIAlertController(title: "Unable to purchase", message: "You do not have enough allowance left", preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+                
+            }
+            else
+            {
+                database.child("users").child(userID!).setValue(points - totalPrice)
+            }
         }
         else
         {
@@ -109,7 +126,13 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
         self.tableView.dataSource = self
         overrideUserInterfaceStyle = .light
         // Do any additional setup after loading the view.
+        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.points = value?["allowance"] as? Double ?? 0.0
+        }
+        
     }
+    
     
 
     /*
