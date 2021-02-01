@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class RewardViewCell:UITableViewCell {
     
@@ -14,22 +16,37 @@ class RewardViewCell:UITableViewCell {
     @IBOutlet weak var DetailLbl: UILabel!
     @IBOutlet weak var UseNotBtn: UIButton!
     
-    
 }
 class RewardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-    let CellTitle: Array<String> =
-        ["PandaMart",
-         "NTUC Fairprice",
-         "GrabFood"//clementi cc
+    @IBOutlet weak var pointsLbl: UILabel!
+    
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
+    var points:Int = 0
+    
+    var CellTitle:[String] =
+        [//clementi cc
         ]
-    let CellDetails: Array<String> =
-        ["100% off delivery using PandaMart",
-         "15% off NTUC products",
-         "100% off delivery using GrabFood"//clementi cc
+    let CellDetails:[String] =
+        [//clementi cc
         ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.points = value?["Points"] as? Int ?? 0
+            self.pointsLbl.text = String(self.points)
+        }
+        database.child("users").child(userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            //let temp = value?["vouchers"] as? NSDictionary
+            let x = value?.allKeys as? [String]
+            self.CellTitle.append(x![0])
+            print(x![0])
+            self.tableView.reloadData()
+        }
+        
         self.tableView.delegate = self
 
         self.tableView.dataSource = self
@@ -64,15 +81,31 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "RewardCell", for: indexPath) as! RewardViewCell
     
         cell.TitleLbl.text = String(CellTitle[indexPath.row])
-        cell.DetailLbl.text = String(CellDetails[indexPath.row])
-        cell.LogoImg.image = UIImage(named: String(CellTitle[indexPath.row]))
+        cell.DetailLbl.text = ""
+        let temp = CellTitle[indexPath.row].prefix(4)
+        if temp == "Pand"{
+            cell.LogoImg.image = UIImage(named: "PandaMart")
+        }
+        else if temp == "Grab"
+        {
+            cell.LogoImg.image = UIImage(named: "GrabFood")
+        }
+        else
+        {
+            cell.LogoImg.image = UIImage(named: "NTUC Fairprice")
+        }
 
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //go into page
+
+    }
+    
+    func alert(message:String, title:String)
+    {
+
     }
     
     /*
