@@ -6,16 +6,23 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
-    var price = [1.45,2.10,3.50,5.0,1.2,0.9,6.0,1.2]
+    var cannedFood:[String] = []
+    //var cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
+    var price:[Double] = []
     let checkedImage = UIImage(named: "TickBox")! as UIImage
     let uncheckedImage = UIImage(named: "CheckBox")! as UIImage
     let darkgrey = UIColor.init(red: 205/255, green: 205/255, blue: 205/255, alpha: 1)
     let black = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
     var cart = UserDefaults.standard.object(forKey: "Cart") as! [String]
+    
+    let database = Database.database().reference()
+    let userID = Auth.auth().currentUser?.uid
     
     @IBAction func cartBtn(_ sender: Any) {
         UserDefaults.standard.set(cart, forKey: "Cart")
@@ -137,8 +144,47 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         collectionView.delegate = self
         collectionView.dataSource = self
         
-       
-        // Do any additional setup after loading the view.
+//        database.child("Storage").observeSingleEvent(of: .value) { (snapshot) in
+//            let value = snapshot.value as? NSDictionary
+//            //let temp = value?["vouchers"] as? NSDictionary
+//            let x = value?.allKeys as? [String]
+//
+//            for child in snapshot.children
+//            {
+//                let snap = child as! DataSnapshot
+//                print(snap.)
+//            }
+//            for i in x!
+//            {
+//                print(i)
+//                self.cannedFood.append(i)
+//                //let y = value?[i]
+//
+////                self.database.child("Storage").child(i).observeSingleEvent(of: .value) { (snapshot) in
+////                    let value = snapshot.value as? NSDictionary
+////                    let x = value?["Price"] as? Double ?? 0
+////                    //let y = value
+////                    self.price.append(x)
+////                    print(x)
+////                }
+//            }
+//            self.collectionView.reloadData()
+//        }
+        database.child("Storage").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                self.cannedFood.append(snap.key)
+                
+                let x = snap.value as! [String:Any]
+                
+                let price = x["Price"] as! Double
+                self.price.append(price)
+                
+            }
+            self.collectionView.reloadData()
+
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         collectionView.reloadData()

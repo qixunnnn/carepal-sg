@@ -31,8 +31,6 @@ class DonateViewController: UIViewController,UINavigationControllerDelegate, UII
     let userID = Auth.auth().currentUser?.uid
     let storage = Storage.storage().reference()
     
-    var conditionData = Data()
-    var expiryData = Data()
     
     @IBAction func SubmitBtn(_ sender: Any) {
         if(donateBtn.isSelected && agreeBtn.isSelected)
