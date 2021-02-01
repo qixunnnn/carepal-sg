@@ -37,36 +37,65 @@ class DonateViewController: UIViewController,UINavigationControllerDelegate, UII
     @IBAction func SubmitBtn(_ sender: Any) {
         if(donateBtn.isSelected && agreeBtn.isSelected)
         {
-            //do submit data
-            //perform segue back home
-            //performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-            expiryData = (expiryDateImg.image?.jpegData(compressionQuality: 0.8))!
-            //set upload path
-            let filePath = "Donation/testing123"
-            let metaData = StorageMetadata()
-            metaData.contentType = "image/png"
-            
-            let ref = storage.child(filePath)
-            ref.putData(expiryData, metadata: metaData) { (metadata, error) in
-                if error == nil
+            if brandTF.text == "" || nameTF.text == "" {
+                alert(message: "Empty Field", title: "Please enter all the fields")
+
+            }
+            else
+            {
+                if expiryDateImg.image == nil || conditionImg.image == nil {
+                    alert(message: "Empty Image", title: "Please fill in both images for condition and expiry")
+                }
+                else
                 {
-                    ref.downloadURL { (url, error) in
-                        print("Done, url is \(String(describing: url))")
-                    }
-                } else
-                {
-                    print(error)
+                    let conditionURL = uploadImage(cimage: conditionImg.image!)
+                    let expiryURL = uploadImage(cimage: expiryDateImg.image!)
+                    //["FirstName" : firstName! as NSString, "LastName":lastName! as NSString, "Contact": cNo! as NSString, "Points": 0 as NSNumber]
+                    self.database.child("Donations").childByAutoId().setValue(["userid" : self.userID! as NSString, "productname" : self.nameTF.text! as NSString, "brand" :self.brandTF.text! as NSString, "conditionURL" : conditionURL as NSString, "expiryURL": expiryURL])
+                    alert(message: "You can collect now pass the product to the community center", title: "Sucessful")
                 }
             }
+            
         }
         else
         {
             //display error
-            let alert = UIAlertController(title: "Empty Check Box!", message: "Please tick the terms and agreements", preferredStyle: .alert)
-
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            alert(message: "Empty Check Box!", title: "Please tick the terms and agreements")
         }
+    }
+    
+    func uploadImage(cimage:UIImage) -> String
+    {
+        let identifier = UUID()
+        let data = (cimage.jpegData(compressionQuality: 0.8))!
+        //set upload path
+        let filePath = "Donation/\(identifier)"
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/png"
+        
+        var sUrl:String = ""
+        let ref = storage.child(filePath)
+        ref.putData(data, metadata: metaData) { (metadata, error) in
+            if error == nil
+            {
+                ref.downloadURL { (url, error) in
+                    sUrl = String(describing: url)
+                    print("Done, url is \(String(describing: url))")
+                }
+            } else
+            {
+                print(error)
+            }
+        }
+        return sUrl
+    }
+    
+    func alert(message:String, title:String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     @IBAction func conditionBtnA(_ sender: Any) {
