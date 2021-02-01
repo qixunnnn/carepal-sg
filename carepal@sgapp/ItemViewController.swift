@@ -13,7 +13,7 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var AllergyLbl: UILabel!
     @IBOutlet weak var PriceLbl: UILabel!
     @IBOutlet weak var AddToCartBtn: UIButton!
-    //var 
+    var ItemData : [String?]?
     override func viewDidLoad() {
         super.viewDidLoad()
 

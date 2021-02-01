@@ -69,7 +69,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
         UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GetEssentialCollectionViewCell", for: indexPath) as! GetEssentialCollectionViewCell
-        cell.configue(withImg: UIImage(named:cannedFood[indexPath.row])!, withTitle: cannedFood[indexPath.row], withPrice: <#Double#> )
+        cell.configue(withImg: UIImage(named:cannedFood[indexPath.row])!, withTitle: cannedFood[indexPath.row], withPrice: price[indexPath.row] )
         cell.checkBoxAction = { [self]sender in
             print(cell.checkBox.isSelected)
             if(cell.checkBox.isSelected)
@@ -111,9 +111,9 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GetEssentialCollectionViewCell
-//        var data = [cell.title.text,cell.price.text]
-//        let destinationVC = ItemViewController()
-//        destinationVC.
+        let data = [cell.title.text,cell.price.text]
+        let destinationVC = ItemViewController()
+        destinationVC.ItemData = data
         //print(cell.title!)
         //display item info
     }
