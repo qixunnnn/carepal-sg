@@ -1,4 +1,5 @@
 PODS:
+  - BarcodeScanner (5.0.0)
   - Firebase/Analytics (7.3.0):
     - Firebase/Core
   - Firebase/Auth (7.3.0):
@@ -84,15 +85,19 @@ PODS:
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
+  - QRCode (2.0)
 
 DEPENDENCIES:
+  - BarcodeScanner
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - QRCode (~> 2.0)
 
 SPEC REPOS:
   trunk:
+    - BarcodeScanner
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -108,8 +113,10 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - QRCode
 
 SPEC CHECKSUMS:
+  BarcodeScanner: 2f5a53198eae49dc39bf61f2c1f05c04e01ff72d
   Firebase: 26223c695fe322633274198cb19dca8cb7e54416
   FirebaseAnalytics: 2580c2d62535ae7b644143d48941fcc239ea897a
   FirebaseAuth: c224a0cf1afa0949bd5c7bfcf154b4f5ce8ddef2
@@ -125,7 +132,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
 
-PODFILE CHECKSUM: 8d0e4c36fac42834828eeb1f61d645dc1f1e57a1
+PODFILE CHECKSUM: d9ffd6751a1b305bc033a6c591cc67602a29728b
 
 COCOAPODS: 1.10.0
