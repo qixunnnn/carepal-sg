@@ -112,11 +112,13 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GetEssentialCollectionViewCell
         let data = [cell.title.text,cell.price.text]
-        let destinationVC = ItemViewController()
-        destinationVC.ItemData = data
+        UserDefaults.standard.set(data, forKey: "item")
+        UserDefaults.standard.synchronize()
+        self.performSegue(withIdentifier: "item", sender: self)
         //print(cell.title!)
         //display item info
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 174, height: 227)
@@ -138,7 +140,9 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
        
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
 
     /*
     // MARK: - Navigation

@@ -12,11 +12,47 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var AllergyLbl: UILabel!
     @IBOutlet weak var PriceLbl: UILabel!
-    @IBOutlet weak var AddToCartBtn: UIButton!
-    var ItemData : [String?]?
+    var cart = UserDefaults.standard.object(forKey: "Cart") as! [String]
+    var ItemData = UserDefaults.standard.object(forKey: "item") as! [String]
+    @IBAction func AddBtn(_ sender: Any) {
+        
+        cart.append(ItemData[0])
+        print(cart)
+        UserDefaults.standard.set(cart, forKey: "Cart")
+        UserDefaults.standard.synchronize()
+        let alert = UIAlertController(title: "Successful", message: "\(ItemData[0]) has been added to your Picklist", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {action in
+            _ = self.navigationController?.popViewController(animated: true)
+            
+        }))
+        self.present(alert, animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        let price = ItemData[1]
+        let title = ItemData[0]
+        imageView.image = UIImage(named: title)
+        if(title == "Ayam Brand Baked Beans")
+        {
+            //if user have bean allergy
+            AllergyLbl.text = "This Canned food contain Beans ingredients"
+            
+        }
+        else if (title == "Xiang Men Peanut")
+        {
+            //if user have nuts allergy
+            AllergyLbl.text = "This Canned food contain Nuts ingredients"
+        }
+        else
+        {
+            AllergyLbl.text = ""
+        }
 
+        PriceLbl.text = "$" + price
+        
         // Do any additional setup after loading the view.
     }
     
