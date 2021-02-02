@@ -1107,6 +1107,9 @@
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pointsBtn" destination="kfi-2N-GjA" id="YGv-mh-gjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2t-Ih-cGC" sceneMemberID="firstResponder"/>
             </objects>
