@@ -49,7 +49,7 @@ class CreateProfileViewController: UIViewController {
         }
         else
         {
-            database.child("users").child(userID!).setValue(["FirstName" : firstName! as NSString, "LastName":lastName! as NSString, "Contact": cNo! as NSString, "Points": 0 as NSNumber, "allowance": 300]){(error: Error?, ref:DatabaseReference) in
+            database.child("users").child(userID!).setValue(["FirstName" : firstName! as NSString, "LastName":lastName! as NSString, "Contact": cNo! as NSString, "Points": 888 as NSNumber, "allowance": 300]){(error: Error?, ref:DatabaseReference) in
                 if let error = error{
                     print("Data could not be saved: \(error).")
                 }
