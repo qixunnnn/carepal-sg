@@ -46,7 +46,7 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             }
             else
             {
-                database.child("users").child(userID!).setValue(points - totalPrice)
+                database.child("users").child(userID!).child("Points").setValue(points - totalPrice)
             }
         }
         else
