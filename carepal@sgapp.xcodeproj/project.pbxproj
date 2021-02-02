@@ -43,6 +43,7 @@
 		57BA20D725C8900400D74A90 /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA20D625C8900300D74A90 /* VoucherViewController.swift */; };
 		71BC7399F09B59D8B924F367 /* Pods_carepal_sgapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ED28D238CDC3D84B66054F /* Pods_carepal_sgapp.framework */; };
 		970EF23C25C8BE58009E21ED /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970EF23B25C8BE58009E21ED /* Products.swift */; };
+		970EF23F25C8D74E009E21ED /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970EF23E25C8D74E009E21ED /* SettingsViewController.swift */; };
 		9720091425BE0773006C2D80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720091325BE0773006C2D80 /* SignUpViewController.swift */; };
 		9720091725BE0917006C2D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9720091625BE0917006C2D80 /* GoogleService-Info.plist */; };
 		9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720092E25BE1B1D006C2D80 /* LoginViewController.swift */; };
@@ -98,6 +99,7 @@
 		57BA20D325C8683F00D74A90 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		57BA20D625C8900300D74A90 /* VoucherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
 		970EF23B25C8BE58009E21ED /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		970EF23E25C8D74E009E21ED /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9720091325BE0773006C2D80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9720091625BE0917006C2D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9720092E25BE1B1D006C2D80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				97A0386125C1FF2B0079CEBE /* DailyCaseViewController.swift */,
 				97BE8AD525C47CA9007571C6 /* NewsTableViewController.swift */,
 				970EF23B25C8BE58009E21ED /* Products.swift */,
+				970EF23E25C8D74E009E21ED /* SettingsViewController.swift */,
 			);
 			path = "carepal@sgapp";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				5758C7E425BD79C500282514 /* Quiz5ViewController.swift in Sources */,
 				5796FADC25C0A98F009C533A /* GoogleMapsHelper.swift in Sources */,
+				970EF23F25C8D74E009E21ED /* SettingsViewController.swift in Sources */,
 				5758C7E125BD798300282514 /* Quiz4ViewController.swift in Sources */,
 				57AF0F0B25C1B886003FD640 /* GamesViewController.swift in Sources */,
 				9720092F25BE1B1D006C2D80 /* LoginViewController.swift in Sources */,
