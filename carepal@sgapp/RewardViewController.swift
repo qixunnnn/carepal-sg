@@ -82,6 +82,7 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
                 {
                     self.CellTitle.append(i)
                 }
+                
             }
             self.tableView.reloadData()
             
@@ -93,9 +94,8 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
                 let snap = child as! DataSnapshot
                 let value = snap.value as! Int
                 print(value)
-                for _ in 0...value{
-                    self.CellTitle.append(snap.key)
-                }
+                
+                
             }
         }
        }

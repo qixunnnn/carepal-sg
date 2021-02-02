@@ -31,6 +31,7 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
     var price = [1.45,2.10,3.50,5.0,1.2,0.9,6.0,1.2]
     var AllowCheckOut = true
     var points:Double = 0.0
+    var minusTitle:[String] = []
     
     @IBAction func CheckOutBtn(_ sender: Any) {
         if(AllowCheckOut)
@@ -46,7 +47,46 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             }
             else
             {
-                database.child("users").child(userID!).child("allowance").setValue(points - totalPrice)
+                let alert = UIAlertController(title: "Confirm", message: "Are you sure you want to purchase this?", preferredStyle:.alert)
+                
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                    
+                    database.child("Storage").child("CannedFood").observeSingleEvent(of: .value) { (snapshot) in
+                        for child in snapshot.children
+                        {
+                            let snap = child as! DataSnapshot
+                            let x = snap.value as! [String:Any]
+                            let quantity = x["Quantity"] as! Int
+
+                            for i in self.minusTitle {
+                                if i ==  snap.key{
+                                  database.child("Storage").child("CannedFood").child(i).child("Quantity").setValue(quantity-1)
+                                }
+                            }
+                        }
+                    }
+                    database.child("Storage").child("Essentials").observeSingleEvent(of: .value) { (snapshot) in
+                        for child in snapshot.children
+                        {
+                            let snap = child as! DataSnapshot
+                            let x = snap.value as! [String:Any]
+                            let quantity = x["Quantity"] as! Int
+                            
+                            for i in self.minusTitle {
+                                if i ==  snap.key{
+                                    database.child("Storage").child("Essentials").child(i).child("Quantity").setValue(quantity-1)
+                                }
+                            }
+                        }
+                    }
+                    database.child("users").child(userID!).child("allowance").setValue(self.points - self.totalPrice)
+                    self.alert(message: "You have successfully purchased!", title: "Thank you")
+                    self.performSegue(withIdentifier: "checkout", sender: self)
+                    //segue
+                }))
+                alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+                
+                self.present(alert, animated: true)
             }
         }
         else
@@ -92,6 +132,8 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             cell.ItemImg.image = UIImage(named: String(cart[indexPath.row]))
             cell.TitleLbl.text = String(cart[indexPath.row])
             cell.PriceLbl.text = "$" + String(price[indexPath.row])
+            self.minusTitle.append(cell.TitleLbl.text!)
+            
             if(String(cart[indexPath.row]) == "Ayam Brand Baked Beans")
             {
                 //if user have bean allergy
@@ -112,6 +154,13 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             return cell
         }
         
+    }
+    func alert(message: String, title:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
     }
     
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
