@@ -12,7 +12,7 @@ import FirebaseStorage
 
 class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var cannedFood:[String] = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
+    var cannedFood:[String] = ["Ayam Brand Baked Bean","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
     var toShow:[String] = []
     var Essentials = ["3-ply Mask x30","Hand Sanitizer","Packet of Wet Wipes","Toilet Roll","Anti-Bacterial Spray","Thermometer"]
     //var cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
@@ -41,8 +41,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         essentials.setTitleColor(darkgrey, for: .normal)
         canned.setTitleColor(darkgrey, for: .normal)
         condiments.setTitleColor(darkgrey, for: .normal)
-        toShow = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
-        //toShow = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan","3-ply Mask x30","Hand Sanitizer","Packet of Wet Wipes","Toilet Roll","Anti-Bacterial Spray","Thermometer"]
+        toShow = ["Ayam Brand Baked Bean","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan","3-ply Mask x30","Hand Sanitizer","Packet of Wet Wipes","Toilet Roll","Anti-Bacterial Spray","Thermometer"]
         collectionView.reloadData()
     }
    
@@ -83,6 +82,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
         UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GetEssentialCollectionViewCell", for: indexPath) as! GetEssentialCollectionViewCell
+        print(toShow[indexPath.row])
         cell.configue(withImg: UIImage(named:toShow[indexPath.row])!, withTitle: toShow[indexPath.row], withPrice: price[indexPath.row] )
         cell.checkBoxAction = { [self]sender in
             print(cell.checkBox.isSelected)

@@ -68,8 +68,8 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETA:19.45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-PH-ais">
-                                        <rect key="frame" x="309" y="118" width="79" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETA:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-PH-ais">
+                                        <rect key="frame" x="351.5" y="118" width="36.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -124,6 +124,9 @@
                     <navigationItem key="navigationItem" title="Map" id="Btg-nD-dgE">
                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="7b0-Mm-62o">
                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="qS3-7C-g2N" kind="presentation" modalPresentationStyle="fullScreen" id="HsK-2t-xAx"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -138,26 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRe-um-JiI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2821.739130434783" y="156.69642857142856"/>
-        </scene>
-        <!--Map-->
-        <scene sceneID="saR-zB-c2Y">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="deU-zW-Z3c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="3GD-ui-9iJ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gl3-GW-brJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xum-f0-Cp4" kind="relationship" relationship="rootViewController" id="klm-GJ-HHq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j8k-mc-tHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1911.594202898551" y="156.69642857142856"/>
+            <point key="canvasLocation" x="5287" y="2409"/>
         </scene>
         <!--Games-->
         <scene sceneID="rxb-g5-x4C">
@@ -193,7 +177,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="EYG-zV-0cZ" kind="show" id="fer-lm-B5E"/>
+                                            <segue destination="EYG-zV-0cZ" kind="presentation" modalPresentationStyle="fullScreen" id="fer-lm-B5E"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -263,14 +247,14 @@
                     <navigationItem key="navigationItem" title="Games" id="Ili-C5-zBd">
                         <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" id="KH7-HS-94e">
                             <connections>
-                                <segue destination="hD5-vb-Ktr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2ha-B0-pWN"/>
+                                <segue destination="hD5-vb-Ktr" kind="presentation" modalPresentationStyle="fullScreen" id="uoJ-8x-PbA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVs-5h-8cm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="1310"/>
+            <point key="canvasLocation" x="1386.9565217391305" y="1309.8214285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Agm-74-B8g">
@@ -665,6 +649,15 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gI-e6-fCl">
+                                <rect key="frame" x="38" y="58" width="13" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <segue destination="UeU-Mx-pm9" kind="presentation" modalPresentationStyle="fullScreen" id="JHD-kR-YEo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eeG-90-Riz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -697,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHd-6E-3ar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="1310"/>
+            <point key="canvasLocation" x="2126.0869565217395" y="1309.8214285714284"/>
         </scene>
         <!--Games View Controller-->
         <scene sceneID="vSx-7V-zkg">
@@ -898,7 +891,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afh-oP-B3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="1310"/>
+            <point key="canvasLocation" x="2884.057971014493" y="1309.8214285714284"/>
         </scene>
         <!--Home-->
         <scene sceneID="OcY-ua-rQ5">
@@ -958,7 +951,7 @@
                                 </constraints>
                                 <state key="normal" image="games"/>
                                 <connections>
-                                    <segue destination="My8-2V-zWy" kind="show" id="31e-wU-TfC"/>
+                                    <segue destination="UeU-Mx-pm9" kind="presentation" modalPresentationStyle="fullScreen" id="31e-wU-TfC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3Q-An-Dns">
@@ -969,7 +962,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="My8-2V-zWy" kind="show" id="1rt-Jw-iM0"/>
+                                    <segue destination="UeU-Mx-pm9" kind="presentation" modalPresentationStyle="fullScreen" id="1rt-Jw-iM0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYo-hl-RYe">
@@ -1385,7 +1378,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crl-FE-Ro3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6251" y="842"/>
+            <point key="canvasLocation" x="7160.8695652173919" y="841.74107142857144"/>
         </scene>
         <!--Home-->
         <scene sceneID="346-Ka-s2r">
@@ -2073,18 +2066,25 @@
                                 <segue destination="hD5-vb-Ktr" kind="presentation" modalPresentationStyle="fullScreen" id="J2L-jO-aDX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="dCq-fJ-t00">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Y1-hf-SNn">
-                                <rect key="frame" x="369" y="10" width="25" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
-                                </state>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" style="plain" id="dCq-fJ-t00">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Y1-hf-SNn">
+                                    <rect key="frame" x="369" y="10" width="25" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="IoO-L8-flp" kind="show" id="9pI-g4-wuN"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem image="map" catalog="system" id="FY0-rW-P04">
                                 <connections>
-                                    <segue destination="IoO-L8-flp" kind="show" id="9pI-g4-wuN"/>
+                                    <segue destination="xum-f0-Cp4" kind="show" identifier="dmap" id="yxR-oL-S7g"/>
                                 </connections>
-                            </button>
-                        </barButtonItem>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="agreeBtn" destination="TNx-rz-SYg" id="0RO-yb-r2z"/>
@@ -2100,7 +2100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qw-pv-tpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4376.811594202899" y="1656.6964285714284"/>
+            <point key="canvasLocation" x="5286.9565217391309" y="1656.6964285714284"/>
         </scene>
         <!--Donate Process & Information-->
         <scene sceneID="1Fw-wz-wYP">
@@ -2200,7 +2200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txs-hv-j20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5160.8695652173919" y="1655.3571428571429"/>
+            <point key="canvasLocation" x="6071.0144927536239" y="1655.3571428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="txe-SS-2he">
@@ -2218,12 +2218,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ui1-FZ-lKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3466.666666666667" y="1656.6964285714284"/>
+            <point key="canvasLocation" x="4376.811594202899" y="1656.6964285714284"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="XzH-8b-wkz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkg-ik-qNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ZSP-8g-Ufd" customClass="LoginViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D0Q-Re-jHq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -2331,13 +2330,13 @@
                         <segue destination="hD5-vb-Ktr" kind="presentation" identifier="home" modalPresentationStyle="fullScreen" id="5Kb-g8-yLK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkg-ik-qNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1491.304347826087" y="-1679.4642857142856"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Zae-3f-Bvr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2D9-cm-7Wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="T8X-3Z-BoK" customClass="SignUpViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="14V-J0-JU7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -2448,13 +2447,13 @@
                         <segue destination="ESx-sk-0Ve" kind="presentation" identifier="signUpToProfile" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4Zp-eR-epo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2D9-cm-7Wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-651" y="-1679"/>
         </scene>
         <!--Create Profile View Controller-->
         <scene sceneID="hIU-6w-C4T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbg-qH-43H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ESx-sk-0Ve" customClass="CreateProfileViewController" customModule="carepal_sgapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZMK-18-tB8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -2551,6 +2550,7 @@
                         <segue destination="vb3-8i-nZe" kind="presentation" identifier="ProfileToSurvey" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="EiR-nd-ax0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbg-qH-43H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="223" y="-1669"/>
         </scene>
@@ -3618,7 +3618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdL-Lz-Kig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10334.782608695654" y="1260.9375"/>
+            <point key="canvasLocation" x="11244.927536231886" y="1260.9375"/>
         </scene>
         <!--Your items-->
         <scene sceneID="4VH-Th-TBs">
@@ -3855,7 +3855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTS-IB-XVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9115.9420289855079" y="1487.9464285714284"/>
+            <point key="canvasLocation" x="10026.08695652174" y="1487.9464285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5He-84-6r3">
@@ -3874,7 +3874,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlA-de-6IK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8205.7971014492759" y="1487.9464285714284"/>
+            <point key="canvasLocation" x="9115.9420289855079" y="1487.9464285714284"/>
         </scene>
         <!--Settings-->
         <scene sceneID="yvh-dV-8VB">
@@ -3916,8 +3916,28 @@
             </objects>
             <point key="canvasLocation" x="4087" y="505"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x3Q-15-5b8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UeU-Mx-pm9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="raX-gG-6n0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ppG-Nq-TrB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="My8-2V-zWy" kind="relationship" relationship="rootViewController" id="sLl-Wz-n3g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xrj-bf-yUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476.81159420289856" y="1309.8214285714284"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="31e-wU-TfC"/>
         <segue reference="XRj-VR-m7i"/>
         <segue reference="k60-pU-oWx"/>
         <segue reference="fhB-8l-olo"/>
@@ -3926,11 +3946,10 @@
         <segue reference="0TJ-7u-vfi"/>
         <segue reference="2Pp-rg-K7R"/>
         <segue reference="jlE-7o-Xqo"/>
-        <segue reference="7bH-k5-AVs"/>
-        <segue reference="SOl-Qy-3wW"/>
+        <segue reference="HsK-2t-xAx"/>
+        <segue reference="uoJ-8x-PbA"/>
         <segue reference="jTF-jo-gW2"/>
-        <segue reference="KGR-yx-q0u"/>
-        <segue reference="1rt-Jw-iM0"/>
+        <segue reference="fer-lm-B5E"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Board" width="513" height="446"/>
@@ -3943,6 +3962,7 @@
         <image name="border" width="1260" height="1230"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="clear" catalog="system" width="128" height="114"/>
         <image name="donate" width="505" height="737"/>
@@ -3958,6 +3978,7 @@
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="language" width="500" height="333"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="math" width="600" height="379"/>
         <image name="news-1" width="218" height="216"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>

@@ -42,7 +42,7 @@ class Quiz2ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+   
     @IBAction func NextBtn(_ sender: Any) {
         
         var vegetarian:String = "nil"
