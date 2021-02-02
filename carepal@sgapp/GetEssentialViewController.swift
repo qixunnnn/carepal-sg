@@ -14,6 +14,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     
     var cannedFood:[String] = ["Ayam Brand Baked Bean","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
     var toShow:[String] = []
+    var allShow:[String] = []
     var Essentials = ["3-ply Mask x30","Hand Sanitizer","Packet of Wet Wipes","Toilet Roll","Anti-Bacterial Spray","Thermometer"]
     //var cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
     var toShowPrice:[Double] = []
@@ -45,7 +46,8 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         essentials.setTitleColor(darkgrey, for: .normal)
         canned.setTitleColor(darkgrey, for: .normal)
         condiments.setTitleColor(darkgrey, for: .normal)
-        toShow = ["Ayam Brand Baked Bean","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan","3-ply Mask x30","Hand Sanitizer","Packet of Wet Wipes","Toilet Roll","Anti-Bacterial Spray","Thermometer"]
+        toShow = allShow
+        toShowPrice = price
         collectionView.reloadData()
     }
    
@@ -208,6 +210,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
                 let snap = child as! DataSnapshot
                 print(snap.key)
                 self.toShow.append(snap.key)
+                self.allShow.append(snap.key)
                 
                 let x = snap.value as! [String:Any]
                 
@@ -226,6 +229,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
                 let snap = child as! DataSnapshot
                 print(snap.key)
                 self.toShow.append(snap.key)
+                self.allShow.append(snap.key)
                 
                 let x = snap.value as! [String:Any]
                 
