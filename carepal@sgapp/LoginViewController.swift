@@ -83,34 +83,39 @@ class LoginViewController: UIViewController {
             }
             else
             {
-                self.performSegue(withIdentifier: "temp", sender: self)
+                
                 //Login successful check if user done profile or details anot. If haven, redirect them to that page and continue
                 self.database.child("users").child((result?.user.uid)!).observeSingleEvent(of: .value) { (snapshot) in
                     //print(snapshot.value)
-//                    if snapshot.hasChild("allergy") == false
-//                    {
-//                        self.performSegue(withIdentifier: "LoginTo2", sender: self)
-//                    }
-//                    else if snapshot.hasChild("dietary") == false
-//                    {
-//                        self.performSegue(withIdentifier: "LoginTo3", sender: self)
-//                    }
-//                    else if snapshot.hasChild("medical") == false
-//                    {
-//                        self.performSegue(withIdentifier: "LoginTo4", sender: self)
-//                    }
-//                    else if snapshot.hasChild("heightandweight") == false
-//                    {
-//                        self.performSegue(withIdentifier: "LoginTo5", sender: self)
-//                    }
-//                    else if snapshot.hasChild("Contact") == false
-//                    {
-//                        self.performSegue(withIdentifier: "LoginToProfile", sender: self)
-//                    }
-//                    else
-//                    {
-//                        //Go Home
-//                    }
+                    if snapshot.hasChild("Contact") == false
+                                        {
+                                            self.performSegue(withIdentifier: "LoginToProfile", sender: self)
+                                        }
+                                        else if snapshot.hasChild("allergy") == false
+                                        {
+                                            self.performSegue(withIdentifier: "LoginTo2", sender: self)
+                                        }
+                                        else if snapshot.hasChild("dietary") == false
+                                        {
+                                            self.performSegue(withIdentifier: "LoginTo3", sender: self)
+                                        }
+                                        else if snapshot.hasChild("medical") == false
+                                        {
+                                            self.performSegue(withIdentifier: "LoginTo4", sender: self)
+                                        }
+                                        else if snapshot.hasChild("heightandweight") == false
+                                        {
+                                            self.performSegue(withIdentifier: "LoginTo5", sender: self)
+                                        }
+                                        else if snapshot.hasChild("Contact") == false
+                                        {
+                                            self.performSegue(withIdentifier: "LoginToProfile", sender: self)
+                                        }
+                                        else
+                                        {
+                                            //Go Home
+                                            self.performSegue(withIdentifier: "home", sender: self)
+                                        }
                 }
             }
         }

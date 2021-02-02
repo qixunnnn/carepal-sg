@@ -18,9 +18,9 @@ class DailyCaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getData {(CovidAPI) in
-//            
-//        }
+        getData {(CovidAPI) in
+            
+        }
     }
     
     private func getData(completionHandler: @escaping (CovidAPI) -> Void)

@@ -47,7 +47,7 @@ class VoucherViewController: UIViewController{
             logoImageView.image = UIImage(named: "PandaMart")
         }
         detailsLbl.text = ItemData[0]
-        titleLbl.text = ItemData[1]
+      
        // logoImageView = img
         
        

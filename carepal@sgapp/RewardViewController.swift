@@ -41,12 +41,6 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.dataSource = self
         self.tableView.rowHeight = 103
         overrideUserInterfaceStyle = .light
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear( _ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
         database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.points = value?["Points"] as? Int ?? 0
@@ -64,12 +58,42 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
                     self.CellTitle.append(i)
                 }
             }
+            self.tableView.reloadData()
+        // Do any additional setup after loading the view.
+        }
+    }
+       override func viewWillAppear( _ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        CellTitle.removeAll()
+        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.points = value?["Points"] as? Int ?? 0
+            self.pointsLbl.text = String(self.points)
+        }
+        database.child("users").child(userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            //let temp = value?["vouchers"] as? NSDictionary
+            let x = value?.allKeys as? [String]
+            
+            if(x != nil)
+            {
+                for i in x!
+                {
+                    self.CellTitle.append(i)
+                }
+            }
+            self.tableView.reloadData()
+            
+        // Do any additional setup after loading the view.
+        }
             
 //            self.CellTitle.append(x![0])
 //            print(x![0])
-            self.tableView.reloadData()
+            
         }
-    }
+    
+ 
 
     override func viewWillDisappear( _ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -112,7 +136,7 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RewardViewCell
-        let data = [cell.TitleLbl.text,cell.DetailLbl.text]
+        let data = [cell.TitleLbl.text]
         UserDefaults.standard.set(data, forKey: "voucher")
         UserDefaults.standard.synchronize()
         performSegue(withIdentifier: "voucher", sender: nil)
