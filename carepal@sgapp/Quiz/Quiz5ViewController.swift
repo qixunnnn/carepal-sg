@@ -83,10 +83,10 @@ class Quiz5ViewController: UIViewController {
     }
     
     @IBAction func DoneBtn(_ sender: Any) {
-        let error = validateFields()
         
-        if error != "" {
-            self.alert(message: error, title: "")
+        if (bmiTF.text == "" || heightTF.text == "" || weightTF.text == "")
+        {
+            self.alert(message: "Please make sure that there are no empty text field", title: "Error")
         }
         else
         {
@@ -117,14 +117,7 @@ class Quiz5ViewController: UIViewController {
 
         self.present(alert, animated: true)
     }
-    func validateFields() -> String{
-        
-        if heightTF.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" || weightTF.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-        {
-            return "Please fill in all fields"
-        }
-        return ""
-    }
+   
 
     /*
     // MARK: - Navigation

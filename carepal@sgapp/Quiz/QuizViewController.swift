@@ -10,8 +10,6 @@ import UIKit
 class QuizViewController: UIViewController {
     
     @IBOutlet weak var nextBtn: UIButton!
-    @IBOutlet weak var languageTF: UILabel!
-    @IBOutlet weak var PreferredTF: UILabel!
     
     //title divided into two TF(label)
     @IBOutlet weak var HelpUsAnsTF: UILabel!
@@ -22,13 +20,6 @@ class QuizViewController: UIViewController {
     
     let appDelegate = AppDelegate.init()
     //---------------------first page----------------
-    @IBAction func EngBtn(_ sender: Any) {
-        UserDefaults.standard.set("en", forKey: "i18n_language")
-        
-    }
-    @IBAction func ChiBtn(_ sender: Any) {
-        UserDefaults.standard.set("zh_Hans", forKey: "i18n_language")
-    }
     @IBAction func q1nextBtn(_ sender: Any) {
 
         performSegue(withIdentifier: "q1", sender: nil)
@@ -42,8 +33,6 @@ class QuizViewController: UIViewController {
         q1ProgressiveView.progress = 0
             FirstTimeHereTF.text = TranslateText.quiz1headerTxt1
             HelpUsAnsTF.text = TranslateText.quiz1headerTxt2
-            PreferredTF.text = TranslateText.quiz1headerTxt3
-            languageTF.text = TranslateText.quiz1headerTxt4
             nextBtn.setTitle(TranslateText.quiz1btnTxt, for: .normal)
        
         // Do any additional setup after loading the view.

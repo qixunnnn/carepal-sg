@@ -16,7 +16,10 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     var toShow:[String] = []
     var Essentials = ["3-ply Mask x30","Hand Sanitizer","Packet of Wet Wipes","Toilet Roll","Anti-Bacterial Spray","Thermometer"]
     //var cannedFood = ["Ayam Brand Baked Beans","Ayam Brand Tuna","Xiang Men Peanut","HOSEN Mushroom","HOSEN Longan","HOSEN Rambutan"]
+    var toShowPrice:[Double] = []
     var price:[Double] = []
+    var eprice:[Double] = []
+    var sprice:[Double] = []
     let checkedImage = UIImage(named: "TickBox")! as UIImage
     let uncheckedImage = UIImage(named: "CheckBox")! as UIImage
     let darkgrey = UIColor.init(red: 205/255, green: 205/255, blue: 205/255, alpha: 1)
@@ -56,6 +59,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         canned.setTitleColor(darkgrey, for: .normal)
         condiments.setTitleColor(black, for: .normal)
         toShow = cannedFood
+        toShowPrice = price
         collectionView.reloadData()
     }
     @IBAction func essentialsBtn(_ sender: Any) {
@@ -64,6 +68,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         canned.setTitleColor(darkgrey, for: .normal)
         condiments.setTitleColor(darkgrey, for: .normal)
         toShow = Essentials
+        toShowPrice = eprice
         collectionView.reloadData()
     }
     
@@ -74,6 +79,50 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         condiments.setTitleColor(darkgrey, for: .normal)
         //to show recommened
         toShow = cannedFood
+        toShowPrice = price
+        if let abmi = Double(bmi)
+        {
+            if(abmi < 18.5)
+            {
+                //underweight
+            }
+            else if(abmi > 25.0)
+            {
+                //overweght
+                let i = toShow.firstIndex(of: "Ayam Brand Tuna")!
+                toShow.remove(at: i)
+                toShowPrice.remove(at: i)
+                
+            }
+        }
+        
+        if(allergy.contains("fish") || (medical.contains("obesity")))
+        {
+            if let i = toShow.firstIndex(of: "Ayam Brand Tuna")
+            {
+                toShow.remove(at: i)
+                toShowPrice.remove(at: i)
+            }
+        }
+        
+        if(allergy.contains("nuts") || (medical.contains("cholesterol")))
+        {
+            if let i = toShow.firstIndex(of: "Xiang Men Peanut")
+            {
+                toShow.remove(at: i)
+                toShowPrice.remove(at: i)
+            }
+        }
+        
+        if(medical.contains("diabetes"))
+        {
+            if let i = toShow.firstIndex(of: "HOSEN Longan")
+            {
+                toShow.remove(at: i)
+                toShowPrice.remove(at: i)
+            }
+        }
+        
         collectionView.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -84,7 +133,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GetEssentialCollectionViewCell", for: indexPath) as! GetEssentialCollectionViewCell
         print(toShow[indexPath.row])
-        cell.configue(withImg: UIImage(named:toShow[indexPath.row])!, withTitle: toShow[indexPath.row], withPrice: price[indexPath.row] )
+        cell.configue(withImg: UIImage(named:toShow[indexPath.row])!, withTitle: toShow[indexPath.row], withPrice: toShowPrice[indexPath.row] )
         cell.checkBoxAction = { [self]sender in
             print(cell.checkBox.isSelected)
             if(cell.checkBox.isSelected)
@@ -165,6 +214,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
                 let price = x["Price"] as! Double
                 print(price)
                 self.price.append(price)
+                self.toShowPrice.append(price)
                 
             }
             self.collectionView.reloadData()
@@ -183,6 +233,8 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
                 print(price)
 
                 self.price.append(price)
+                self.toShowPrice.append(price)
+                self.eprice.append(price)
                 
             }
             self.collectionView.reloadData()

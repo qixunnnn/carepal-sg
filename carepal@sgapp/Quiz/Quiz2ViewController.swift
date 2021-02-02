@@ -40,6 +40,10 @@ class Quiz2ViewController: UIViewController {
         progressPV.progress = 0.2
         overrideUserInterfaceStyle = .light
         
+    
+        
+        nextBtn.setTitle(TranslateText.quiz1btnTxt, for: .normal)
+        
         // Do any additional setup after loading the view.
     }
    

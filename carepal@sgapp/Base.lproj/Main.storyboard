@@ -2566,28 +2566,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="449" height="911"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First time here?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJM-Yv-dPn">
-                                <rect key="frame" x="135.5" y="80" width="143" height="25.5"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us answer a few questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWU-5J-tpu">
-                                <rect key="frame" x="37" y="111.5" width="340.5" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your preferred" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLJ-aq-RBy">
-                                <rect key="frame" x="45" y="220" width="327" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First time here?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLJ-aq-RBy">
+                                <rect key="frame" x="96" y="233" width="222.5" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="language?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm9-Yx-IbN">
-                                <rect key="frame" x="137" y="264" width="143" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us answer a few qustions so that we can help recommend you donation foods" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm9-Yx-IbN">
+                                <rect key="frame" x="20" y="283" width="374" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="6NH-lY-VDi"/>
+                                    <constraint firstAttribute="height" constant="242" id="XLh-BO-OgE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2599,78 +2589,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRH-ov-hKQ">
-                                <rect key="frame" x="70" y="372" width="277" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <state key="normal" title="English">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="EngBtn:" destination="vb3-8i-nZe" eventType="touchUpInside" id="vjv-b4-cZI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocw-eB-s1I">
-                                <rect key="frame" x="69" y="460" width="277" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <state key="normal" title="繁体中文">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ChiBtn:" destination="vb3-8i-nZe" eventType="touchUpInside" id="s9I-B4-CAp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHF-Y5-dmc">
-                                <rect key="frame" x="69" y="548" width="277" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <state key="normal" title="Bahasa Melayu">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FQ-Pr-rV2">
-                                <rect key="frame" x="69" y="634" width="277" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <state key="normal" title="தமிழ்">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fno-XZ-bfY">
                                 <rect key="frame" x="69" y="819" width="277" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-NG-Zya">
-                                <rect key="frame" x="69" y="746" width="277" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-NG-Zya">
+                                <rect key="frame" x="68.5" y="746" width="277" height="48"/>
                                 <color key="backgroundColor" red="0.66882127520000001" green="0.14685601000000001" blue="0.066593728960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="a9Q-tU-uhs"/>
+                                    <constraint firstAttribute="width" constant="277" id="g0z-eh-FD2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <state key="normal" title="NEXT">
+                                <state key="normal" title="Ok">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2693,18 +2624,18 @@
                         <viewLayoutGuide key="safeArea" id="4h0-LT-0hx"/>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="YWU-5J-tpu" firstAttribute="top" secondItem="pJM-Yv-dPn" secondAttribute="bottom" constant="6" id="BLh-2m-mO6"/>
-                            <constraint firstItem="pJM-Yv-dPn" firstAttribute="centerX" secondItem="vzb-nZ-sxm" secondAttribute="centerX" id="BVg-L7-TRe"/>
-                            <constraint firstItem="YWU-5J-tpu" firstAttribute="centerX" secondItem="vzb-nZ-sxm" secondAttribute="centerX" id="LV0-9q-pjq"/>
-                            <constraint firstItem="pJM-Yv-dPn" firstAttribute="top" secondItem="4h0-LT-0hx" secondAttribute="top" constant="36" id="zG2-Au-BKf"/>
+                            <constraint firstItem="KLJ-aq-RBy" firstAttribute="top" secondItem="4h0-LT-0hx" secondAttribute="top" constant="189" id="17a-Um-GAC"/>
+                            <constraint firstItem="qm9-Yx-IbN" firstAttribute="centerX" secondItem="vzb-nZ-sxm" secondAttribute="centerX" id="Abf-D1-Fc5"/>
+                            <constraint firstItem="mMo-NG-Zya" firstAttribute="top" secondItem="qm9-Yx-IbN" secondAttribute="bottom" constant="221" id="WUE-On-di9"/>
+                            <constraint firstItem="qm9-Yx-IbN" firstAttribute="top" secondItem="KLJ-aq-RBy" secondAttribute="bottom" constant="11.5" id="ciZ-tE-q8l"/>
+                            <constraint firstItem="mMo-NG-Zya" firstAttribute="centerX" secondItem="vzb-nZ-sxm" secondAttribute="centerX" id="ss8-0r-76O"/>
+                            <constraint firstItem="KLJ-aq-RBy" firstAttribute="centerX" secondItem="vzb-nZ-sxm" secondAttribute="centerX" id="zqj-6y-G8d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FFB-dZ-8gt"/>
                     <connections>
-                        <outlet property="FirstTimeHereTF" destination="pJM-Yv-dPn" id="z1k-8T-YGG"/>
-                        <outlet property="HelpUsAnsTF" destination="YWU-5J-tpu" id="aqN-o5-j9Z"/>
-                        <outlet property="PreferredTF" destination="KLJ-aq-RBy" id="g3l-ET-mvx"/>
-                        <outlet property="languageTF" destination="qm9-Yx-IbN" id="RH5-of-bAJ"/>
+                        <outlet property="FirstTimeHereTF" destination="KLJ-aq-RBy" id="7Zy-Jo-sfd"/>
+                        <outlet property="HelpUsAnsTF" destination="qm9-Yx-IbN" id="PRD-GI-8TS"/>
                         <outlet property="nextBtn" destination="mMo-NG-Zya" id="ecb-cD-Qjl"/>
                         <outlet property="q1ProgressiveView" destination="Fno-XZ-bfY" id="7lK-B7-FyP"/>
                         <segue destination="ifS-fu-yqd" kind="presentation" identifier="q1" modalTransitionStyle="crossDissolve" id="apE-yM-RBN"/>
@@ -2712,7 +2643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTw-Hl-biN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2835" y="-731"/>
+            <point key="canvasLocation" x="-2836.2318840579715" y="-731.25"/>
         </scene>
         <!--Quiz2 View Controller-->
         <scene sceneID="7Ss-c9-q4g">
@@ -3737,6 +3668,7 @@
                     <navigationItem key="navigationItem" title="Your items" id="yjt-ec-5ph"/>
                     <connections>
                         <outlet property="tableView" destination="qon-pv-Slm" id="Mdf-nX-UUa"/>
+                        <segue destination="hD5-vb-Ktr" kind="presentation" identifier="checkout" modalPresentationStyle="fullScreen" id="vqU-sj-Bq0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYt-l8-Lac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3758,7 +3690,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                         <state key="normal" title="All">
-                                            <color key="titleColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="AllBtn:" destination="bLj-pB-2nE" eventType="touchUpInside" id="cYM-8K-OyO"/>
@@ -3768,7 +3700,7 @@
                                         <rect key="frame" x="40" y="0.0" width="112" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                         <state key="normal" title="Recommended">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="cannedFoodBtn:" destination="bLj-pB-2nE" eventType="touchUpInside" id="QJ5-o6-WBh"/>
@@ -3940,14 +3872,14 @@
         <segue reference="31e-wU-TfC"/>
         <segue reference="XRj-VR-m7i"/>
         <segue reference="k60-pU-oWx"/>
-        <segue reference="fhB-8l-olo"/>
-        <segue reference="GEX-da-VMi"/>
-        <segue reference="GD9-no-tdh"/>
-        <segue reference="0TJ-7u-vfi"/>
+        <segue reference="d2H-Z7-frI"/>
+        <segue reference="zMC-QT-GS8"/>
+        <segue reference="ZYr-zw-7ui"/>
+        <segue reference="4Gj-Po-0dK"/>
         <segue reference="2Pp-rg-K7R"/>
         <segue reference="jlE-7o-Xqo"/>
         <segue reference="HsK-2t-xAx"/>
-        <segue reference="uoJ-8x-PbA"/>
+        <segue reference="vqU-sj-Bq0"/>
         <segue reference="jTF-jo-gW2"/>
         <segue reference="fer-lm-B5E"/>
     </inferredMetricsTieBreakers>

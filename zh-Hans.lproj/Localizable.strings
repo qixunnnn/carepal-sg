@@ -6,7 +6,6 @@
   
 */
 "quiz1_header1" = "第一次来这里？";
-"quiz1_header2" = "帮助我们回答几个问题";
-"quiz1_header3" = "您首选的语言";
-"quiz1_header4" = "是什么";
+"quiz1_header2" = "帮助我们回答一些问题，以便我们可以帮助推荐您捐赠的食物";
 "quiz1_btn1" = "下一题";
+
