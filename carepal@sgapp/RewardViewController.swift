@@ -41,26 +41,26 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.dataSource = self
         self.tableView.rowHeight = 103
         overrideUserInterfaceStyle = .light
-        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            self.points = value?["Points"] as? Int ?? 0
-            self.pointsLbl.text = String(self.points)
-        }
-        database.child("users").child(userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            //let temp = value?["vouchers"] as? NSDictionary
-            let x = value?.allKeys as? [String]
-            
-            if(x != nil)
-            {
-                for i in x!
-                {
-                    self.CellTitle.append(i)
-                }
-            }
-            self.tableView.reloadData()
+//        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+//            let value = snapshot.value as? NSDictionary
+//            self.points = value?["Points"] as? Int ?? 0
+//            self.pointsLbl.text = String(self.points)
+//        }
+//        database.child("users").child(userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
+//            let value = snapshot.value as? NSDictionary
+//            //let temp = value?["vouchers"] as? NSDictionary
+//            let x = value?.allKeys as? [String]
+//
+//            if(x != nil)
+//            {
+//                for i in x!
+//                {
+//                    self.CellTitle.append(i)
+//                }
+//            }
+//            self.tableView.reloadData()
         // Do any additional setup after loading the view.
-        }
+        //}
     }
        override func viewWillAppear( _ animated: Bool) {
         super.viewWillAppear(animated)

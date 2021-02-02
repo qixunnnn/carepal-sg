@@ -1415,26 +1415,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s46-dG-nWH">
-                                <rect key="frame" x="159.5" y="108" width="95" height="29"/>
+                                <rect key="frame" x="159.5" y="108" width="95" height="28"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOL-ng-qHW">
-                                <rect key="frame" x="122.5" y="164" width="169" height="38.5"/>
+                                <rect key="frame" x="123.5" y="163" width="167" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achievement" translatesAutoresizingMaskIntoConstraints="NO" id="sw0-ac-jOt">
-                                <rect key="frame" x="109" y="210.5" width="92" height="109"/>
+                                <rect key="frame" x="110" y="208.5" width="92" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92" id="A1Q-u9-K6U"/>
                                     <constraint firstAttribute="height" constant="109" id="tua-Pz-7tr"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D43-5o-hs5">
-                                <rect key="frame" x="124.5" y="350.5" width="165" height="56"/>
+                                <rect key="frame" x="124.5" y="348.5" width="165" height="56"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.83921568629999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="VaC-9D-KgE"/>
@@ -1454,13 +1454,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,201" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKe-da-wBX">
-                                <rect key="frame" x="209" y="245.5" width="79" height="37.5"/>
+                                <rect key="frame" x="210" y="243.5" width="78" height="36.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Djv-c4-kxK">
-                                <rect key="frame" x="0.0" y="500" width="414" height="314"/>
+                                <rect key="frame" x="0.0" y="498" width="414" height="316"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -1475,7 +1475,7 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="81"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PandaMart" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFi-mI-pFO">
-                                                    <rect key="frame" x="109" y="24" width="204" height="14.5"/>
+                                                    <rect key="frame" x="109" y="24" width="204" height="14"/>
                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1531,7 +1531,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Vouchers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7y-6S-ISi">
-                                <rect key="frame" x="0.0" y="428.5" width="414" height="73"/>
+                                <rect key="frame" x="0.0" y="426.5" width="414" height="73"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="RS1-fO-fcG"/>
@@ -1703,13 +1703,13 @@
                                             <rect key="frame" x="20" y="11" width="374" height="81"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUe-ae-Yn7">
-                                            <rect key="frame" x="109" y="24" width="60.5" height="14"/>
+                                            <rect key="frame" x="109" y="24" width="59.5" height="14"/>
                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% off delivery using PandaMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTM-oi-kgJ">
-                                            <rect key="frame" x="109" y="42" width="184" height="14"/>
+                                            <rect key="frame" x="109" y="42" width="189" height="14"/>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -2080,10 +2080,10 @@
                                 <state key="normal">
                                     <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <segue destination="IoO-L8-flp" kind="show" id="9pI-g4-wuN"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="IoO-L8-flp" kind="show" id="zKv-0Y-n4a"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -3927,7 +3927,7 @@
         <segue reference="2Pp-rg-K7R"/>
         <segue reference="jlE-7o-Xqo"/>
         <segue reference="7bH-k5-AVs"/>
-        <segue reference="5Kb-g8-yLK"/>
+        <segue reference="J2L-jO-aDX"/>
         <segue reference="jTF-jo-gW2"/>
         <segue reference="KGR-yx-q0u"/>
         <segue reference="1rt-Jw-iM0"/>
