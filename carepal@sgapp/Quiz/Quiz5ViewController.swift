@@ -85,8 +85,8 @@ class Quiz5ViewController: UIViewController {
     @IBAction func DoneBtn(_ sender: Any) {
         let error = validateFields()
         
-        if error != "" {
-            self.alert(message: error, title: "")
+        if error == "" {
+            self.alert(message: error, title: "Please try again")
         }
         else
         {
@@ -119,7 +119,7 @@ class Quiz5ViewController: UIViewController {
     }
     func validateFields() -> String{
         
-        if heightTF.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" || weightTF.text!.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        if heightTF.text! == "" || weightTF.text! == ""
         {
             return "Please fill in all fields"
         }
