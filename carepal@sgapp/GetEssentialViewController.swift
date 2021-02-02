@@ -21,6 +21,9 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     let black = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
     var cart = UserDefaults.standard.object(forKey: "Cart") as! [String]
     
+    var bmi:String = ""
+    var medical:[String] = []
+    
     let database = Database.database().reference()
     let userID = Auth.auth().currentUser?.uid
     
@@ -183,7 +186,26 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
                 
             }
             self.collectionView.reloadData()
-
+        }
+        
+        database.child("users").child(userID!).child("heightandweight").observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let x = value?["bmi"] as? String
+            print(x)
+            //BMI ^
+            self.bmi = x ?? "0"
+            self.collectionView.reloadData()
+        }
+        
+        database.child("users").child(userID!).child("medical").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                if snap.value as! String == "true" {
+                    self.medical.append(snap.key)
+                }
+            }
+            print(self.medical)
         }
     }
     override func viewDidAppear(_ animated: Bool) {
