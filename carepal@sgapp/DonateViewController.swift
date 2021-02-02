@@ -46,11 +46,13 @@ class DonateViewController: UIViewController,UINavigationControllerDelegate, UII
                 }
                 else
                 {
+                    self.performSegue(withIdentifier: "dmap", sender: nil)
                     let conditionURL = uploadImage(cimage: conditionImg.image!)
                     let expiryURL = uploadImage(cimage: expiryDateImg.image!)
                     //["FirstName" : firstName! as NSString, "LastName":lastName! as NSString, "Contact": cNo! as NSString, "Points": 0 as NSNumber]
                     self.database.child("Donations").childByAutoId().setValue(["userid" : self.userID! as NSString, "productname" : self.nameTF.text! as NSString, "brand" :self.brandTF.text! as NSString, "conditionURL" : conditionURL as NSString, "expiryURL": expiryURL])
-                    alert(message: "You can collect now pass the product to the community center", title: "Sucessful")
+                    alert(message: "You can collect now pass the product to any community center currently working with us", title: "Sucessful")
+                    
                 }
             }
             

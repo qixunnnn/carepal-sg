@@ -59,10 +59,14 @@ class Quiz3ViewController: UIViewController {
     override func viewDidLoad() {
         overrideUserInterfaceStyle = .light
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         progressPV.progress = 0.4
         // Do any additional setup after loading the view.
     }
-    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation
