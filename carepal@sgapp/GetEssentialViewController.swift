@@ -25,6 +25,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     
     var bmi:String = ""
     var medical:[String] = []
+    var allergy:[String] = []
     
     let database = Database.database().reference()
     let userID = Auth.auth().currentUser?.uid
@@ -205,6 +206,17 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
                 }
             }
             print(self.medical)
+        }
+        
+        database.child("users").child(userID!).child("allergy").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                if snap.value as! String == "true" {
+                    self.allergy.append(snap.key)
+                }
+            }
+            print(self.allergy)
         }
     }
     override func viewDidAppear(_ animated: Bool) {
