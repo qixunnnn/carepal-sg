@@ -77,9 +77,7 @@ class RedeemTableViewController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print()
-        //go into page
+                //go into page
         let alert = UIAlertController(title: "Are you sure?", message: "Are you sure you want to purchase  \(CellDetails[indexPath.row]) ?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
@@ -87,17 +85,21 @@ class RedeemTableViewController: UITableViewController {
             
             if(newPoints > 0)
             {
-                var xz:Int = 0
+                var quantity:Int = 0
                 self.database.child("users").child(self.userID!).child("Points").setValue(newPoints)
                 self.alert(message: "You have purchase successfully",title: "Successfully purchased")
                 self.database.child("users").child(self.userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
-                    let value = snapshot.value as? [String:Any]
-                    print(value)
-                    //xz = value?[self.CellTitle] as? Int ?? 0
-                    //now can 1 only idk why the fuck
+                    for child in snapshot.children
+                    {
+                        let snap = child as! DataSnapshot
+                        if snap.key == (self.CellTitle[indexPath.row] + " " + self.CellDetails[indexPath.row]) {
+                            self.database.child("users").child(self.userID!).child("vouchers").child(self.CellTitle[indexPath.row] + " " + self.CellDetails[indexPath.row]).setValue(snap.value as! Int + 1)
+                            quantity = snap.value as! Int
+                            print(quantity)
+                        }
+                    }
+                    
                 }
-                self.database.child("users").child(self.userID!).child("vouchers").child(self.CellTitle[indexPath.row] + " " + self.CellDetails[indexPath.row]).setValue(xz+1)
-                
                 tableView.reloadData()
             }
             else

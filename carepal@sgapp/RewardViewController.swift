@@ -87,11 +87,18 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
             
         // Do any additional setup after loading the view.
         }
-            
-//            self.CellTitle.append(x![0])
-//            print(x![0])
-            
+        database.child("users").child(userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                let value = snap.value as! Int
+                print(value)
+                for _ in 0...value{
+                    self.CellTitle.append(snap.key)
+                }
+            }
         }
+       }
     
  
 
