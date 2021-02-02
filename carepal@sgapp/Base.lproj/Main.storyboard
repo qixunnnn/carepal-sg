@@ -3752,7 +3752,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OuI-15-0xM">
-                                <rect key="frame" x="44.5" y="98" width="325" height="33"/>
+                                <rect key="frame" x="35.5" y="98" width="343" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrQ-fv-pBh">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
@@ -3765,9 +3765,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9p-ID-ZM1">
-                                        <rect key="frame" x="40" y="0.0" width="99" height="33"/>
+                                        <rect key="frame" x="40" y="0.0" width="112" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                        <state key="normal" title="Canned Food">
+                                        <state key="normal" title="Recommended">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -3775,9 +3775,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kl-aW-YVM">
-                                        <rect key="frame" x="149" y="0.0" width="91" height="33"/>
+                                        <rect key="frame" x="162" y="0.0" width="96" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                        <state key="normal" title="Condiments">
+                                        <state key="normal" title="CannedFood">
                                             <color key="titleColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
@@ -3785,7 +3785,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT7-0i-EBF">
-                                        <rect key="frame" x="250" y="0.0" width="75" height="33"/>
+                                        <rect key="frame" x="268" y="0.0" width="75" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                         <state key="normal" title="Essentials">
                                             <color key="titleColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3927,7 +3927,7 @@
         <segue reference="2Pp-rg-K7R"/>
         <segue reference="jlE-7o-Xqo"/>
         <segue reference="7bH-k5-AVs"/>
-        <segue reference="J2L-jO-aDX"/>
+        <segue reference="SOl-Qy-3wW"/>
         <segue reference="jTF-jo-gW2"/>
         <segue reference="KGR-yx-q0u"/>
         <segue reference="1rt-Jw-iM0"/>
