@@ -36,7 +36,11 @@ class GamesViewController: UIViewController {
         statusLabel.alpha = 0
         overrideUserInterfaceStyle = .light
         // Do any additional setup after loading the view.
-       
+        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.points = value?["Points"] as? Int ?? 0 //cUser points
+            
+        }
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -128,16 +132,12 @@ class GamesViewController: UIViewController {
             if(score == 30)
             {
                 alert = UIAlertController(title: "Congrats!", message: "Thank you for playing your, you have gain the maximum points which is 30!", preferredStyle: .alert)
+                
+
+                database.child("users").child(userID!).child("Points").setValue(points+30)
             }
             else
             {
-                database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
-                    let value = snapshot.value as? NSDictionary
-                    self.points = value?["Points"] as? Int ?? 0 //cUser points
-                    
-                }
-                database.child("users").child(userID!).child("Points").setValue(points+30)
-                
                 alert = UIAlertController(title: "Game Over!", message: "Thank you for playing your final score is \(score), the maximum points you can get from this stage is 30", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Play Again", style: .default, handler: {action in
                     //restart game
