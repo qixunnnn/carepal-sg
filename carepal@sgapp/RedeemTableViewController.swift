@@ -53,13 +53,6 @@ class RedeemTableViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            self.points = value?["Points"] as? Int ?? 0 //cUser points
-            self.pointsLbl.setTitle(String(self.points), for: .normal)
-        }
-    }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {

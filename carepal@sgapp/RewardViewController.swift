@@ -57,9 +57,12 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
             //let temp = value?["vouchers"] as? NSDictionary
             let x = value?.allKeys as? [String]
             
-            for i in x!
+            if(x != nil)
             {
-                self.CellTitle.append(i)
+                for i in x!
+                {
+                    self.CellTitle.append(i)
+                }
             }
             
 //            self.CellTitle.append(x![0])
@@ -89,7 +92,7 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "RewardCell", for: indexPath) as! RewardViewCell
     
         cell.TitleLbl.text = String(CellTitle[indexPath.row])
-        cell.DetailLbl.text = ""
+        //cell.DetailLbl.text = ""
         let temp = CellTitle[indexPath.row].prefix(4)
         if temp == "Pand"{
             cell.LogoImg.image = UIImage(named: "PandaMart")
