@@ -15,6 +15,7 @@ class RewardViewCell:UITableViewCell {
     @IBOutlet weak var TitleLbl: UILabel!
     @IBOutlet weak var DetailLbl: UILabel!
     @IBOutlet weak var UseNotBtn: UIButton!
+    @IBOutlet weak var QuantityLbl: UILabel!
     
 }
 class RewardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -24,6 +25,7 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
     let database = Database.database().reference()
     let userID = Auth.auth().currentUser?.uid
     var points:Int = 0
+    var temp:[Int] = []
     
     var CellTitle:[String] =
         [//clementi cc
@@ -89,17 +91,21 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         }
         database.child("users").child(userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
-            for child in snapshot.children
+            let value = snapshot.value as? NSDictionary
+            //let temp = value?["vouchers"] as? NSDictionary
+            let x = value?.allValues as? [Int]
+            
+            if(x != nil)
             {
-                let snap = child as! DataSnapshot
-                let value = snap.value as! Int
-                print(value)
-                
+                for i in x!
+                {
+                    self.temp.append(i)
+                }
                 
             }
         }
+        print(temp)
        }
-    
  
 
     override func viewWillDisappear( _ animated: Bool) {
@@ -123,6 +129,7 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "RewardCell", for: indexPath) as! RewardViewCell
     
         cell.TitleLbl.text = String(CellTitle[indexPath.row])
+        cell.QuantityLbl.text = "x " + String(temp[indexPath.row])
         //cell.DetailLbl.text = ""
         let temp = CellTitle[indexPath.row].prefix(4)
         if temp == "Pand"{
