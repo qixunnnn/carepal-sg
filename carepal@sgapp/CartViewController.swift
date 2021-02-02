@@ -46,7 +46,7 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             }
             else
             {
-                database.child("users").child(userID!).child("Points").setValue(points - totalPrice)
+                database.child("users").child(userID!).child("allowance").setValue(points - totalPrice)
             }
         }
         else
@@ -75,7 +75,7 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryCell", for: indexPath) as! SummaryCell
             cell.TotalPriceLbl.text = "Total Value:$" + String(format: "%.2f", totalPrice)
-            cell.LimitItemLbl.text = "Max Value you are entitled to claim: " + ""
+            cell.LimitItemLbl.text = "Max Value you are entitled to claim: $" + String(points)
             return cell
         }
         else
@@ -130,7 +130,6 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             let value = snapshot.value as? NSDictionary
             self.points = value?["allowance"] as? Double ?? 0.0
         }
-        
     }
     
     
