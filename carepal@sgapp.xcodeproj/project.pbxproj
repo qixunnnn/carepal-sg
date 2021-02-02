@@ -20,8 +20,6 @@
 		5758C7E425BD79C500282514 /* Quiz5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7E325BD79C500282514 /* Quiz5ViewController.swift */; };
 		5758C7EC25BD88BB00282514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758C7EB25BD88BB00282514 /* Assets.xcassets */; };
 		5758C7F025BD8C0A00282514 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758C7EF25BD8C0A00282514 /* CheckBox.swift */; };
-		575BA13325BF51D800895053 /* Qixun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575BA13225BF51D800895053 /* Qixun.storyboard */; };
-		575BA13725BF51ED00895053 /* Junwei.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575BA13625BF51ED00895053 /* Junwei.storyboard */; };
 		575BA1AC25C05C8200895053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575BA1AA25C05C8100895053 /* MapViewController.swift */; };
 		578F394C25A4232D00E93A55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F394B25A4232D00E93A55 /* AppDelegate.swift */; };
 		578F394E25A4232D00E93A55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F394D25A4232D00E93A55 /* SceneDelegate.swift */; };
@@ -75,8 +73,6 @@
 		5758C7E325BD79C500282514 /* Quiz5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz5ViewController.swift; sourceTree = "<group>"; };
 		5758C7EB25BD88BB00282514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5758C7EF25BD8C0A00282514 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		575BA13225BF51D800895053 /* Qixun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Qixun.storyboard; sourceTree = "<group>"; };
-		575BA13625BF51ED00895053 /* Junwei.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Junwei.storyboard; sourceTree = "<group>"; };
 		575BA1AA25C05C8100895053 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		578F394825A4232D00E93A55 /* carepal@sgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carepal@sgapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		578F394B25A4232D00E93A55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,8 +170,6 @@
 			children = (
 				575BA1AA25C05C8100895053 /* MapViewController.swift */,
 				5796FADB25C0A98F009C533A /* GoogleMapsHelper.swift */,
-				575BA13225BF51D800895053 /* Qixun.storyboard */,
-				575BA13625BF51ED00895053 /* Junwei.storyboard */,
 				57BA20D625C8900300D74A90 /* VoucherViewController.swift */,
 				57BA20D325C8683F00D74A90 /* ItemViewController.swift */,
 				57BA20D025C859AE00D74A90 /* CartViewController.swift */,
@@ -297,9 +291,7 @@
 				57327B1225BA0DF1005F946B /* Lato-Bold.ttf in Resources */,
 				578F395325A4232D00E93A55 /* Main.storyboard in Resources */,
 				5758C7D025BD597000282514 /* Localizable.strings in Resources */,
-				575BA13725BF51ED00895053 /* Junwei.storyboard in Resources */,
 				57327B1525BA0E47005F946B /* Lato-Italic.ttf in Resources */,
-				575BA13325BF51D800895053 /* Qixun.storyboard in Resources */,
 				5758C7EC25BD88BB00282514 /* Assets.xcassets in Resources */,
 				57B4AD5825C76A4300222FAE /* GetEssentialCollectionViewCell.xib in Resources */,
 				57327B0E25BA0D65005F946B /* Lato-Regular.ttf in Resources */,

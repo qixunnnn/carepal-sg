@@ -74,8 +74,16 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
         if(indexPath.row+1 > cart.count)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryCell", for: indexPath) as! SummaryCell
-            cell.TotalPriceLbl.text = "Total Value:$" + String(format: "%.2f", totalPrice)
-            cell.LimitItemLbl.text = "Max Value you are entitled to claim: $" + String(format: "%.2f",self.points)
+            database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                self.points = value?["allowance"] as? Double ?? 0.0
+                print(self.points)
+                
+                cell.TotalPriceLbl.text = "Total Value:$" + String(format: "%.2f", self.totalPrice)
+                cell.LimitItemLbl.text = "Max Value you are entitled to claim: $" + String(format: "%.2f",self.points)
+            }
+            
+            
             return cell
         }
         else

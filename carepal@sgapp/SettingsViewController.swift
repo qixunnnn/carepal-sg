@@ -22,6 +22,7 @@ class SettingsViewController: UIViewController {
         {
             try firebaseAuth.signOut()
             //go home
+            performSegue(withIdentifier: "logout", sender: nil)
         }
         catch let error as NSError
         {
