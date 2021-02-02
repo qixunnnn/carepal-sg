@@ -151,41 +151,36 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
         collectionView.delegate = self
         collectionView.dataSource = self
         
-//        database.child("Storage").observeSingleEvent(of: .value) { (snapshot) in
-//            let value = snapshot.value as? NSDictionary
-//            //let temp = value?["vouchers"] as? NSDictionary
-//            let x = value?.allKeys as? [String]
-//
-//            for child in snapshot.children
-//            {
-//                let snap = child as! DataSnapshot
-//                print(snap.)
-//            }
-//            for i in x!
-//            {
-//                print(i)
-//                self.cannedFood.append(i)
-//                //let y = value?[i]
-//
-////                self.database.child("Storage").child(i).observeSingleEvent(of: .value) { (snapshot) in
-////                    let value = snapshot.value as? NSDictionary
-////                    let x = value?["Price"] as? Double ?? 0
-////                    //let y = value
-////                    self.price.append(x)
-////                    print(x)
-////                }
-//            }
-//            self.collectionView.reloadData()
-//        }
-        database.child("Storage").observeSingleEvent(of: .value) { (snapshot) in
+
+        database.child("Storage").child("CannedFood").observeSingleEvent(of: .value) { (snapshot) in
             for child in snapshot.children
             {
                 let snap = child as! DataSnapshot
+                print(snap.key)
                 self.toShow.append(snap.key)
                 
                 let x = snap.value as! [String:Any]
                 
                 let price = x["Price"] as! Double
+                print(price)
+                self.price.append(price)
+                
+            }
+            self.collectionView.reloadData()
+        }
+        
+        database.child("Storage").child("Essentials").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                print(snap.key)
+                self.toShow.append(snap.key)
+                
+                let x = snap.value as! [String:Any]
+                
+                let price = x["Price"] as! Double
+                print(price)
+
                 self.price.append(price)
                 
             }

@@ -25,12 +25,6 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
         //var price = [1.45,2.10,3.50,5.0,1.2,0.9,6.0,1.2]
-        database.child("Storage").child("Ayam Brand Baked Beans").setValue(["Price": 1.45, "Quantity": 318])
-        database.child("Storage").child("Ayam Brand Tuna").setValue(["Price": 2.10, "Quantity": 83])
-        database.child("Storage").child("Xiang Men Peanut").setValue(["Price": 3.50, "Quantity": 2812])
-        database.child("Storage").child("HOSEN Mushroom").setValue(["Price": 5.0, "Quantity": 289])
-        database.child("Storage").child("HOSEN Longan").setValue(["Price": 1.2, "Quantity": 391])
-        database.child("Storage").child("HOSEN Rambutan").setValue(["Price": 1.5, "Quantity": 2981])
 
     }
     override func viewWillAppear(_ animated: Bool) {
