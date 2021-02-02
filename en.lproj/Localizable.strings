@@ -9,10 +9,3 @@
 "quiz1_header2" = "Help us answer a few qustions so that we can help recommend you donation foods";
 "quiz1_btn1" = "NEXT";
 
-"quiz2_header1" = "Do you have any special"
-"quiz2_header2" = "dietary habits?"
-"quiz2_op1" = "Vegetarian"
-"quiz2_op2" = "Vegan"
-"quiz2_op3" = "No Pork(Halal)"
-"quiz2_op4" = "No Beef"
-"quiz2_op5" = "Others:"
