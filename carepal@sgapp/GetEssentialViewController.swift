@@ -41,7 +41,6 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     }
     @IBOutlet weak var all: UIButton!
     @IBAction func AllBtn(_ sender: Any) {
-        print(cart)
         all.setTitleColor(black, for: .normal)
         essentials.setTitleColor(darkgrey, for: .normal)
         canned.setTitleColor(darkgrey, for: .normal)

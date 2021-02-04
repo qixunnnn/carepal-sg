@@ -32,7 +32,7 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
     var AllowCheckOut = true
     var points:Double = 0.0
     var minusTitle:[String] = []
-    var nopressed = false
+    var nopressed = 0
     
     @IBAction func CheckOutBtn(_ sender: Any) {
         if(AllowCheckOut)
@@ -81,17 +81,21 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
                         }
                     }
                     database.child("users").child(userID!).child("allowance").setValue(self.points - self.totalPrice)
+                    self.performSegue(withIdentifier: "checkout", sender: nil)
+                    self.cart.removeAll()
+                    UserDefaults.standard.set(self.cart, forKey: "Cart")
+                    UserDefaults.standard.synchronize()
                     self.alert(message: "You have successfully purchased!", title: "Thank you")
                    
                     //segue
                     
-                    self.performSegue(withIdentifier: "checkout", sender: self)
+                   
                 }))
                 alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
                 
                 self.present(alert, animated: true)
                
-                self.performSegue(withIdentifier: "checkout", sender: self)
+               
                 
             }
         }
@@ -136,13 +140,27 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             }))
             self.present(alert, animated: true)
         }
+        
+        
+    
+       
+       
+               
+            
+        
     }
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cart.count + 1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
+    }
+    func present()
+    {
+        performSegue(withIdentifier: "checkout", sender: nil)
     }
 
     
