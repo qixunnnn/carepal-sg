@@ -21,6 +21,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     var price:[Double] = []
     var eprice:[Double] = []
     var sprice:[Double] = []
+    
     let checkedImage = UIImage(named: "TickBox")! as UIImage
     let uncheckedImage = UIImage(named: "CheckBox")! as UIImage
     let darkgrey = UIColor.init(red: 205/255, green: 205/255, blue: 205/255, alpha: 1)
@@ -30,6 +31,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
     var bmi:String = ""
     var medical:[String] = []
     var allergy:[String] = []
+    var dietary:[String] = []
     
     let database = Database.database().reference()
     let userID = Auth.auth().currentUser?.uid
@@ -272,6 +274,17 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
                 }
             }
             print(self.allergy)
+        }
+        
+        database.child("users").child(userID!).child("dietary").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                if snap.value as! String == "true" {
+                    self.dietary.append(snap.key)
+                }
+            }
+            print(self.dietary)
         }
     }
     override func viewDidAppear(_ animated: Bool) {
