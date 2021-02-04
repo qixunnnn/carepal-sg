@@ -95,6 +95,7 @@ class SignUpViewController: UIViewController {
                 // Check for errors
                 if let error = error
                 {
+                    self.alert(message: error.localizedDescription, title: "Try again")
                     //Got error creating user
                     print(error.localizedDescription)
                     //self.alert(message: error.localizedDescription, title: "Failed to create")
