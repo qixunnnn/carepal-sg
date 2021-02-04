@@ -21,6 +21,8 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
     var fetchArticles = [Article]()
     var allImages = [UIImage]()
     var filteredData: [String] = []
+    var imageData: [String] = []
+    var dateDate: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,14 +53,14 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         //let cNew = fetchArticles[indexPath.row] //Passing later
         
-        cell.titleText?.text = fetchArticles[indexPath.row].title
+        cell.titleText?.text = filteredData[indexPath.row]
         
         cell.titleText.numberOfLines = 0
         cell.titleText.sizeToFit()
         
         //Convert URL to image
-        if fetchArticles[indexPath.row].urlToImage != nil {
-            let url = URL(string: fetchArticles[indexPath.row].urlToImage!)
+        if imageData[indexPath.row] != "" {
+            let url = URL(string: imageData[indexPath.row])
 
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
@@ -75,7 +77,7 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
         
         //Convert string to date
         //let dateFormatter = DateFormatter()
-        let date = fetchArticles[indexPath.row].publishedAt
+        let date = dateDate[indexPath.row]
         cell.dateText.text = date
         return cell
     }
@@ -105,6 +107,8 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
                 //print(self.fetchArticles)
                 for x in response.articles
                 {
+                    self.dateDate.append(x.publishedAt)
+                    self.imageData.append(x.urlToImage ?? "")
                     self.filteredData.append(x.title)
                 }
                 DispatchQueue.main.sync {
@@ -123,10 +127,14 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
     //Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = []
-        
+        imageData = []
+        dateDate = []
+
         if searchText == "" {
             for a in fetchArticles {
                 filteredData.append(a.title)
+                imageData.append(a.urlToImage ?? "")
+                dateDate.append(a.publishedAt)
             }
         }
         else
@@ -134,10 +142,14 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
             for a in fetchArticles {
                 if a.title.lowercased().contains(searchText.lowercased()) {
                     filteredData.append(a.title)
+                    imageData.append(a.urlToImage ?? "")
+                    dateDate.append(a.publishedAt)
                 }
             }
-            self.tableView.reloadData()
+            print(filteredData)
         }
+        self.tableView.reloadData()
+
     }
 }
 
