@@ -32,6 +32,7 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
     var AllowCheckOut = true
     var points:Double = 0.0
     var minusTitle:[String] = []
+    var nopressed = false
     
     @IBAction func CheckOutBtn(_ sender: Any) {
         if(AllowCheckOut)
@@ -81,12 +82,17 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
                     }
                     database.child("users").child(userID!).child("allowance").setValue(self.points - self.totalPrice)
                     self.alert(message: "You have successfully purchased!", title: "Thank you")
-                    self.performSegue(withIdentifier: "checkout", sender: self)
+                   
                     //segue
+                    
+                    self.performSegue(withIdentifier: "checkout", sender: self)
                 }))
                 alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
                 
                 self.present(alert, animated: true)
+               
+                self.performSegue(withIdentifier: "checkout", sender: self)
+                
             }
         }
         else
@@ -96,7 +102,37 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             alert.addAction(UIAlertAction(title: "Im buying for my family", style: .default, handler: {action in
                 //storedatabse
-                
+                database.child("Storage").child("CannedFood").observeSingleEvent(of: .value) { (snapshot) in
+                    for child in snapshot.children
+                    {
+                        let snap = child as! DataSnapshot
+                        let x = snap.value as! [String:Any]
+                        let quantity = x["Quantity"] as! Int
+
+                        for i in self.minusTitle {
+                            if i ==  snap.key{
+                              database.child("Storage").child("CannedFood").child(i).child("Quantity").setValue(quantity-1)
+                            }
+                        }
+                    }
+                }
+                database.child("Storage").child("Essentials").observeSingleEvent(of: .value) { (snapshot) in
+                    for child in snapshot.children
+                    {
+                        let snap = child as! DataSnapshot
+                        let x = snap.value as! [String:Any]
+                        let quantity = x["Quantity"] as! Int
+                        
+                        for i in self.minusTitle {
+                            if i ==  snap.key{
+                                database.child("Storage").child("Essentials").child(i).child("Quantity").setValue(quantity-1)
+                            }
+                        }
+                    }
+                }
+                database.child("users").child(userID!).child("allowance").setValue(self.points - self.totalPrice)
+                self.alert(message: "You have successfully purchased!", title: "Thank you")
+                self.performSegue(withIdentifier: "checkout", sender: self)
             }))
             self.present(alert, animated: true)
         }

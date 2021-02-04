@@ -43,6 +43,7 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.dataSource = self
         self.tableView.rowHeight = 103
         overrideUserInterfaceStyle = .light
+        self.tableView.reloadData()
 //        database.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
 //            let value = snapshot.value as? NSDictionary
 //            self.points = value?["Points"] as? Int ?? 0
@@ -105,6 +106,7 @@ class RewardViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
         print(temp)
+       
        }
  
 

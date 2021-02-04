@@ -89,6 +89,16 @@ class RedeemTableViewController: UITableViewController {
                 self.database.child("users").child(self.userID!).child("Points").setValue(newPoints)
                 self.alert(message: "You have purchase successfully",title: "Successfully purchased")
                 self.database.child("users").child(self.userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
+                                    if snapshot.hasChild(self.CellTitle[indexPath.row] + " " + self.CellDetails[indexPath.row])
+                                    {
+                                        
+                                    }
+                                    else
+                                    {
+                                        self.database.child("users").child(self.userID!).child("vouchers").child(self.CellTitle[indexPath.row] + " " + self.CellDetails[indexPath.row]).setValue(1)
+                                    }
+                                    }
+                self.database.child("users").child(self.userID!).child("vouchers").observeSingleEvent(of: .value) { (snapshot) in
                     for child in snapshot.children
                     {
                         let snap = child as! DataSnapshot
