@@ -99,7 +99,7 @@ class GetEssentialViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
         
-        if(allergy.contains("fish") || (medical.contains("obesity")))
+        if(allergy.contains("fish") || (medical.contains("obesity")) || (dietary.contains("vegetarian")) || (dietary.contains("vegan")))
         {
             if let i = toShow.firstIndex(of: "Ayam Brand Tuna")
             {
