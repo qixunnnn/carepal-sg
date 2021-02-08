@@ -75,10 +75,18 @@ class NewsTableViewController: UITableViewController, UISearchBarDelegate {
         cell.headerImg.layer.cornerRadius = 10
         
         
-        //Convert string to date
-        //let dateFormatter = DateFormatter()
-        let date = dateDate[indexPath.row]
-        cell.dateText.text = date
+        let string = dateDate[indexPath.row].prefix(10);
+        
+        
+        // Create Date Formatter
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: String(string))
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        
+        cell.dateText.text = dateFormatter.string(from: date!)
+        
+        //cell.dateText.text = String(dateDate[indexPath.row].prefix(10));
         return cell
     }
     
