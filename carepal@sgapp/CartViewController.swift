@@ -46,6 +46,14 @@ class CartViewController: UIViewController,UITableViewDataSource, UITableViewDel
                 self.present(alert, animated: true)
                 
             }
+            else if(cart.count == 0)
+            {
+                let alert = UIAlertController(title: "Unable to purchase", message: "Empty Cart", preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+            }
             else
             {
                 let alert = UIAlertController(title: "Confirm", message: "Are you sure you want to purchase this?", preferredStyle:.alert)
